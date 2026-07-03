@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MarketPulse - Sector Drilldown</title>
+    <link rel="icon" href="assets/favicon.svg" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body data-page="sectors">
+    <header class="site-header">
+      <a class="brand" href="index.html"><span class="pulse-mark" aria-hidden="true"></span><span>MARKET<span>PULSE</span></span></a>
+      <div class="header-actions">
+        <a class="page-link active" href="sectors.html">Sector Drilldown</a>
+        <a class="page-link" href="playbook.html">Trade Setup</a>
+        <button class="subscribe">Subscribe</button>
+      </div>
+    </header>
+    <main class="page-shell detail-page">
+      <p class="date-label" data-bind="dateLabel"></p>
+      <h1>Sector Rotation Drilldown</h1>
+      <p class="lead">Money flow leaders, beneficiaries, and best F&O picks from the same stored brief data.</p>
+      <section class="panel sector-panel expanded">
+        <div class="section-head"><h2>Full Sector Table</h2><div class="legend" id="sectorLegend"></div></div>
+        <div class="table-wrap"><table class="sector-table" id="sectorTable"></table></div>
+      </section>
+
+      <section class="alert-cta">
+        <div>
+          <h2 data-bind="footerCta.title">Never miss the morning brief.</h2>
+          <p data-bind="footerCta.subtitle">One alert when the new daily edition is ready.</p>
+        </div>
+        <button class="alert-button" type="button" id="openAlerts">Get mobile alerts</button>
+      </section>
+
+      <section class="sources-row" aria-label="Sources">
+        <strong>Sources</strong>
+        <div id="sourcesList">
+          <a href="#" aria-label="Source: AP Global Markets">AP Global Markets</a>
+          <a href="#" aria-label="Source: Nifty close">Nifty close</a>
+          <a href="#" aria-label="Source: 19 June market close">19 June market close</a>
+          <a href="#" aria-label="Source: FII / DII reference">FII / DII reference</a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <a class="brand footer-brand" href="index.html" aria-label="MarketPulse home">
+        <span class="pulse-mark" aria-hidden="true"></span>
+        <span>MARKET<span>PULSE</span></span>
+      </a>
+      <p data-bind="footerCta.disclaimer">Independent market intelligence for educational use only.</p>
+      <span data-bind="footerCta.copyright">© 2026 Market Pulse Desk</span>
+    </footer>
+
+    <div class="modal-backdrop" id="alertsModal" hidden>
+      <div class="alerts-dialog" role="dialog" aria-modal="true" aria-labelledby="alertsTitle">
+        <button class="modal-close" type="button" id="closeAlerts" aria-label="Close mobile alerts form">&times;</button>
+        <h2 id="alertsTitle">Get mobile alerts</h2>
+        <p>Enter your mobile number and we will notify you when the morning brief is ready.</p>
+        <form id="alertsForm">
+          <label for="mobileNumber">Mobile number</label>
+          <input id="mobileNumber" name="mobileNumber" type="tel" inputmode="tel" autocomplete="tel" placeholder="+91 98765 43210" required />
+          <button class="subscribe alert-submit" type="submit">Save alert</button>
+        </form>
+        <p class="alert-status" id="alertsStatus" role="status"></p>
+      </div>
+    </div>
+    <script type="module" src="scripts/app.js"></script>
+  </body>
+</html>

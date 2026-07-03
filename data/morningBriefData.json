@@ -1,0 +1,14 @@
+{
+  "modelName": "morningBriefData",
+  "note": "The Next.js app imports the typed source of truth from lib/morningBriefData.ts. This JSON file mirrors the storage contract expected from a future AI/data pipeline: every market value should include value, change, status, source, and asOf.",
+  "example": {
+    "nifty": {
+      "value": 24080,
+      "change": 133,
+      "changePercent": 0.55,
+      "status": "verified",
+      "source": "NSE",
+      "asOf": "2026-07-01T15:30:00+05:30"
+    }
+  }
+}

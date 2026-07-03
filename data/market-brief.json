@@ -1,0 +1,100 @@
+{
+  "dateLabel": "WED, 1 JUL 2026",
+  "headline": "Morning Market Brief",
+  "summary": "Indian equities set for a cautious positive start with supportive global cues, lower crude prices and strong domestic flows. Stay selective and protect capital.",
+  "bias": "BULLISH",
+  "asOf": "Data as of 1 Jul 2026, 8:00 AM IST",
+  "moodIndex": {
+    "score": 62,
+    "zone": "Greed",
+    "updated": "Updated on : 1st Jul 2026",
+    "ranges": [
+      { "color": "green", "zone": "Extreme Fear", "range": "0-25" },
+      { "color": "yellow", "zone": "Fear", "range": "26-45" },
+      { "color": "gray", "zone": "Neutral", "range": "46-55" },
+      { "color": "orange", "zone": "Greed", "range": "56-75" },
+      { "color": "red", "zone": "Extreme Greed", "range": "76-100" }
+    ]
+  },
+  "marketSnapshot": [
+    { "name": "Nifty 50", "value": "24,080.00", "change": "+133.00 (+0.55%)", "tone": "up" },
+    { "name": "Bank Nifty", "value": "57,920.00", "change": "+234.25 (+0.41%)", "tone": "up" },
+    { "name": "GIFT Nifty", "value": "24,125.00", "change": "+145.00 (+0.61%)", "tone": "up" },
+    { "name": "India VIX", "value": "13.05", "change": "-0.23 (-1.73%)", "tone": "down" }
+  ],
+  "globalCues": [
+    { "icon": "🇺🇸", "name": "US Markets", "value": "Positive", "tone": "up" },
+    { "icon": "🇭🇰", "name": "Asian Markets", "value": "Positive", "tone": "up" },
+    { "icon": "●", "name": "Brent Crude", "mid": "$72.40", "value": "-0.6%", "tone": "down" },
+    { "icon": "🇺🇸", "name": "USD Index", "mid": "105.21", "value": "+0.2%", "tone": "up" },
+    { "icon": "●", "name": "Gold (Spot)", "mid": "$2,341", "value": "+0.4%", "tone": "up" }
+  ],
+  "activity": {
+    "flows": [
+      { "name": "FII Net", "value": "-₹1,350 Cr", "label": "(Negative)", "tone": "down" },
+      { "name": "DII Net", "value": "+₹2,800 Cr", "label": "(Positive)", "tone": "up" }
+    ],
+    "note": "Domestic institutions continue to support the market."
+  },
+  "confidence": { "score": "6.8", "label": "Cautiously Bullish" },
+  "sectors": [
+    { "rank": 1, "sector": "Defence", "icon": "shield", "score": 92, "status": "Strongest", "delta": "+2", "statusTone": "strong", "why": ["Government orders & policy push", "Strong order books & exports", "Heavy institutional buying"], "beneficiaries": ["HAL", "BEL", "Bharat Forge", "BDL", "Cochin Shipyard"], "pick": "BHARAT FORGE", "conviction": "High Conviction" },
+    { "rank": 2, "sector": "Pharma", "icon": "nodes", "score": 88, "status": "Improving", "delta": "+1", "statusTone": "improving", "why": ["Defensive buying in market", "USFDA outlook improving", "Weak INR supports exports"], "beneficiaries": ["Lupin", "Dr Reddy's", "Laurus Labs", "Sun Pharma"], "pick": "LUPIN", "conviction": "High Conviction" },
+    { "rank": 3, "sector": "Capital Goods", "icon": "factory", "score": 81, "status": "Improving", "delta": "+2", "statusTone": "improving", "why": ["Manufacturing capex cycle", "Infra spending acceleration", "Private sector capex pickup"], "beneficiaries": ["Siemens", "ABB", "Cummins", "Bharat Forge"], "pick": "SIEMENS", "conviction": "High Conviction" },
+    { "rank": 4, "sector": "PSU Banks", "icon": "bank", "score": 74, "status": "Improving", "delta": "+1", "statusTone": "improving", "why": ["Credit growth stays strong", "Attractive valuations", "Govt. spending & infra push"], "beneficiaries": ["SBI", "Canara Bank", "Bank of Baroda", "PNB"], "pick": "SBI", "conviction": "Moderate Conviction" },
+    { "rank": 5, "sector": "Infrastructure", "icon": "tower", "score": 68, "status": "Neutral", "delta": "0", "statusTone": "neutral", "why": ["Govt. capex in focus", "Order inflow steady", "Execution challenges remain"], "beneficiaries": ["L&T", "NCC", "IRCON", "NBCC"], "pick": "L&T", "conviction": "Moderate Conviction" },
+    { "rank": 6, "sector": "Auto", "icon": "car", "score": 56, "status": "Weakening", "delta": "-1", "statusTone": "weakening", "why": ["Monsoon uncertainty", "Rural demand still sluggish", "High inventory in dealers"], "beneficiaries": ["Maruti Suzuki", "Tata Motors", "M&M"], "pick": "MARUTI", "conviction": "Low Conviction" },
+    { "rank": 7, "sector": "Metals", "icon": "mine", "score": 48, "status": "Weakening", "delta": "-1", "statusTone": "weakening", "why": ["China demand concerns", "Commodity prices soft", "Margin pressure"], "beneficiaries": ["Tata Steel", "JSW Steel", "Hindalco"], "pick": "HINDALCO", "conviction": "Low Conviction" },
+    { "rank": 8, "sector": "IT", "icon": "monitor", "score": 41, "status": "Weakening", "delta": "-2", "statusTone": "weakening", "why": ["US dollar strength", "Weak global tech sentiment", "Profit booking in IT"], "beneficiaries": ["TCS", "Infosys", "HCL Tech", "Wipro"], "pick": "TCS", "conviction": "Low Conviction" }
+  ],
+  "swingOpportunities": [
+    { "stock": "Bharat Forge", "sector": "Defence", "conviction": "9.6/10", "why": "Strong accumulation, defence leadership, exports, FAO" },
+    { "stock": "HAL", "sector": "Defence", "conviction": "9.5/10", "why": "Robust order book, govt backing, FAO" },
+    { "stock": "BEL", "sector": "Defence", "conviction": "9.4/10", "why": "Strong earnings visibility, radar & electronics leader" },
+    { "stock": "Lupin", "sector": "Pharma", "conviction": "9.3/10", "why": "Defensive + export demand, rel. strength" },
+    { "stock": "Laurus Labs", "sector": "Pharma", "conviction": "8.9/10", "why": "Strong API business, US opportunity, accumulation" }
+  ],
+  "btstIdeas": [
+    { "name": "Lupin", "entry": "Above 1,480", "sl": "1,455", "target": "1,520 / 1,550" },
+    { "name": "Bharat Forge", "entry": "Above 1,215", "sl": "1,190", "target": "1,245 / 1,275" },
+    { "name": "SBI", "entry": "Above 840", "sl": "825", "target": "855 / 870" }
+  ],
+  "indexLevels": [
+    { "name": "Resistance 1", "value": "24,150" },
+    { "name": "Resistance 2", "value": "24,250" },
+    { "name": "Support 1", "value": "23,900" },
+    { "name": "Support 2", "value": "23,750" }
+  ],
+  "indexSummary": { "trend": "Uptrend", "bias": "Mild Positive" },
+  "optionsSetup": [
+    { "name": "PCR (Total)", "value": "0.98", "note": "Neutral" },
+    { "name": "Max Pain", "value": "24,000" },
+    { "name": "Call OI (Max)", "value": "24,200" },
+    { "name": "Put OI (Max)", "value": "24,000", "tone": "down" },
+    { "name": "Fresh Long Build-up", "value": "24,050 CE, 57,800 PE" },
+    { "name": "Fresh Short Build-up", "value": "24,250 CE", "tone": "down" }
+  ],
+  "macroCalendar": [
+    { "time": "11:30 AM", "event": "India GDP Growth Q1 (Final)", "impact": 4, "sectors": "All" },
+    { "time": "01:00 PM", "event": "US CB Consumer Confidence", "impact": 3, "sectors": "IT, Auto, FMCG, Banks" },
+    { "time": "07:30 PM", "event": "US Dallas Fed Manufacturing Index", "impact": 3, "sectors": "Metals, Industrial, Capital Goods" }
+  ],
+  "risks": [
+    "Volatility in global markets ahead of US jobs data",
+    "Crude oil price spike above $75",
+    "Rupee weakness may pressure FII flows",
+    "Monsoon progress below normal remains a risk"
+  ],
+  "tradingPlan": [
+    { "type": "up", "title": "If market opens gap up", "items": ["Avoid chasing the gap", "Wait for 15-30 mins consolidation", "Buy only in strong sectors on pullbacks"] },
+    { "type": "flat", "title": "If market opens flat", "items": ["Focus on relative strength stocks", "Look for breakouts with volume", "Avoid weak sectors"] },
+    { "type": "down", "title": "If market opens gap down", "items": ["Watch support at 23,900", "If support holds, look for buying in strong sectors", "Avoid panic selling"] }
+  ],
+  "footerCta": {
+    "title": "Never miss the morning brief.",
+    "subtitle": "One alert when the new daily edition is ready.",
+    "disclaimer": "Independent market intelligence for educational use only.",
+    "copyright": "© 2026 Market Pulse Desk",
+    "sources": ["AP Global Markets", "Nifty close", "19 June market close", "FII / DII reference"]
+  }
+}

@@ -3,35 +3,40 @@ name: Update Morning Brief
 on:
   workflow_dispatch:
   schedule:
-    # 8:00 AM IST = 2:30 AM UTC
+    # 8:00 AM IST, Monday-Friday. GitHub Actions schedules use UTC.
     - cron: "30 2 * * 1-5"
 
 permissions:
   contents: write
 
 jobs:
-  update-brief:
+  update-morning-brief:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout repo
+      - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Setup Node
+      - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
           node-version: 20
+          cache: npm
 
       - name: Install dependencies
         run: npm ci
 
       - name: Generate morning brief data
+        env:
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+          OPENAI_MODEL: ${{ vars.OPENAI_MODEL }}
+          OPENAI_ENABLE_WEB_SEARCH: "true"
         run: npm run generate:brief
 
-      - name: Commit updated brief
+      - name: Commit updated data
         run: |
-          git config user.name "marketpulse-bot"
-          git config user.email "marketpulse-bot@users.noreply.github.com"
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add data/currentMorningBriefData.json
           git diff --cached --quiet || git commit -m "Update morning brief data"
           git push

@@ -184,31 +184,36 @@ async function generateWithOpenAI({ rawMarketData, template, generatedAt }) {
 
   const model = process.env.OPENAI_MODEL || "gpt-4.1-mini";
   const useWebSearch = process.env.OPENAI_ENABLE_WEB_SEARCH === "true";
+  const requestBody = {
+    model,
+    input: [
+      {
+        role: "system",
+        content: "You produce strict JSON for a financial dashboard. You verify data, avoid fabrication, and mark missing data unavailable."
+      },
+      {
+        role: "user",
+        content: briefPrompt({ rawMarketData, template, generatedAt })
+      }
+    ],
+    tools: useWebSearch ? [{ type: "web_search_preview" }] : []
+  };
+
+  if (!useWebSearch) {
+    requestBody.text = {
+      format: {
+        type: "json_object"
+      }
+    };
+  }
+
   const response = await fetch(openAiApiUrl, {
     method: "POST",
     headers: {
       Authorization: `Bearer ${apiKey}`,
       "Content-Type": "application/json"
     },
-    body: JSON.stringify({
-      model,
-      input: [
-        {
-          role: "system",
-          content: "You produce strict JSON for a financial dashboard. You verify data, avoid fabrication, and mark missing data unavailable."
-        },
-        {
-          role: "user",
-          content: briefPrompt({ rawMarketData, template, generatedAt })
-        }
-      ],
-      tools: useWebSearch ? [{ type: "web_search_preview" }] : [],
-      text: {
-        format: {
-          type: "json_object"
-        }
-      }
-    })
+    body: JSON.stringify(requestBody)
   });
 
   const responseText = await response.text();

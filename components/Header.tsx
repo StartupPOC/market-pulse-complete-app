@@ -1,7 +1,5 @@
 "use client";
 
-const navItems = ["Today", "Markets", "Ideas", "Risk", "Archive"];
-
 export function Header() {
   return (
     <header className="sticky top-0 z-20 border-b border-pulse-border bg-white/95 backdrop-blur">
@@ -12,13 +10,6 @@ export function Header() {
             MARKET<span className="text-pulse-green">PULSE</span>
           </span>
         </a>
-        <nav className="flex items-center gap-8 max-md:order-3 max-md:w-full max-md:overflow-x-auto" aria-label="Main navigation">
-          {navItems.map((item, index) => (
-            <a key={item} className={`whitespace-nowrap border-b-[3px] py-8 text-sm font-bold ${index === 0 ? "border-pulse-green text-pulse-green" : "border-transparent text-pulse-ink"}`} href={`#${item.toLowerCase()}`}>
-              {item}
-            </a>
-          ))}
-        </nav>
         <div className="flex items-center gap-3">
           <button className="rounded bg-pulse-green px-5 py-4 text-sm font-black text-white shadow-soft" type="button">
             Subscribe

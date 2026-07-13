@@ -17,13 +17,26 @@ import {
 import { Header } from "./Header";
 import { MarketMoodGauge } from "./MarketMoodGauge";
 
+function formatRefreshedTime(value: string) {
+  return new Intl.DateTimeFormat("en-IN", {
+    day: "2-digit",
+    month: "2-digit",
+    year: "numeric",
+    hour: "2-digit",
+    minute: "2-digit",
+    second: "2-digit",
+    hour12: false,
+    timeZone: "Asia/Kolkata"
+  }).format(new Date(value));
+}
+
 export function MorningBriefClient({ initialData }: { initialData: MorningBriefData }) {
   const [alertsOpen, setAlertsOpen] = useState(false);
   const [mobile, setMobile] = useState("");
   const [alertStatus, setAlertStatus] = useState("");
   const data = initialData;
 
-  const refreshedLabel = useMemo(() => new Date(data.lastRefreshed).toLocaleString(), [data.lastRefreshed]);
+  const refreshedLabel = useMemo(() => formatRefreshedTime(data.lastRefreshed), [data.lastRefreshed]);
 
   const saveMobileAlert = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
@@ -39,9 +52,9 @@ export function MorningBriefClient({ initialData }: { initialData: MorningBriefD
   return (
     <>
       <Header />
-      <main className="mx-auto max-w-[1320px] px-8 py-12 max-sm:px-4">
-        <section id="today" className="mb-7 grid grid-cols-[minmax(0,1fr)_700px] items-center gap-10 max-xl:grid-cols-1">
-          <HeroBrief page={data.page} lastRefreshed={data.lastRefreshed} />
+      <main className="mx-auto max-w-[1560px] px-8 py-16 max-sm:px-4">
+        <section id="today" className="mb-7 grid grid-cols-[minmax(0,1fr)_370px] items-center gap-12 max-xl:grid-cols-1">
+          <HeroBrief page={data.page} refreshedLabel={refreshedLabel} />
           <MarketMoodGauge mood={data.moodIndex} />
         </section>
 

@@ -45,18 +45,18 @@ function SectionCard({ title, children, className = "" }: { title: string; child
   );
 }
 
-export function HeroBrief({ page, lastRefreshed }: { page: MorningBriefData["page"]; lastRefreshed: string }) {
+export function HeroBrief({ page, refreshedLabel }: { page: MorningBriefData["page"]; refreshedLabel: string }) {
   return (
     <div>
-      <p className="mb-11 text-xs font-black uppercase text-pulse-ink">{displayValue(page.dateLabel)}</p>
-      <h1 className="font-serif text-[64px] font-black leading-none tracking-normal text-pulse-ink max-sm:text-5xl">{displayValue(page.title)}</h1>
-      <p className="my-10 max-w-3xl text-lg leading-9 text-[#273033]">{displayValue(page.summary)}</p>
+      <p className="mb-10 text-sm font-black uppercase tracking-[0.16em] text-pulse-muted">{displayValue(page.dateLabel)}</p>
+      <h1 className="font-serif text-[92px] font-black leading-[0.95] tracking-normal text-pulse-ink max-2xl:text-[78px] max-lg:text-[64px] max-sm:text-5xl">{displayValue(page.title)}</h1>
+      <p className="my-10 max-w-[980px] text-[28px] leading-[1.45] text-[#273033] max-2xl:text-2xl max-lg:text-xl">{displayValue(page.summary)}</p>
       <div className="flex items-center gap-10 max-sm:flex-col max-sm:items-start max-sm:gap-4">
-        <strong className="min-w-36 rounded border border-pulse-border px-5 py-4 text-center font-serif text-2xl font-black uppercase text-pulse-green">{displayValue(page.bias)}</strong>
-        <span className="text-sm font-medium text-[#293234]">Market bias for the day</span>
+        <strong className="min-w-44 rounded border border-pulse-border px-6 py-5 text-center font-serif text-3xl font-black uppercase text-pulse-green">{displayValue(page.bias)}</strong>
+        <span className="text-lg font-medium text-[#293234]">Market bias for the day</span>
       </div>
-      <p className="mt-6 text-xs text-pulse-muted">{displayValue(page.timestamp)}</p>
-      <p className="mt-2 text-xs text-pulse-muted">Last refreshed: {new Date(lastRefreshed).toLocaleString()}</p>
+      <p className="mt-8 text-sm text-pulse-muted">{displayValue(page.timestamp)}</p>
+      <p className="mt-2 text-xs text-pulse-muted">Last refreshed: {refreshedLabel}</p>
     </div>
   );
 }

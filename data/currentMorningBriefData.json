@@ -1,64 +1,64 @@
 {
-  "generatedAt": "2026-07-03T20:20:56.335+05:30",
-  "lastRefreshed": "2026-07-03T20:20:56.335+05:30",
+  "generatedAt": "2026-07-13T18:17:15.266+05:30",
+  "lastRefreshed": "2026-07-13T18:17:15.266+05:30",
   "page": {
     "dateLabel": {
-      "value": "WED, 1 JUL 2026",
+      "value": "MON, 13 JUL 2026",
       "change": null,
       "changePercent": null,
       "status": "verified",
-      "source": "Mock Morning Brief Store",
-      "asOf": "2026-07-01T08:00:00+05:30"
+      "source": "MarketPulse desk",
+      "asOf": "2026-07-13T08:00:00+05:30"
     },
     "title": {
       "value": "Morning Market Brief",
       "change": null,
       "changePercent": null,
       "status": "verified",
-      "source": "Mock Morning Brief Store",
-      "asOf": "2026-07-01T08:00:00+05:30"
+      "source": "MarketPulse desk",
+      "asOf": "2026-07-13T08:00:00+05:30"
     },
     "summary": {
-      "value": "Indian equities set for a cautious positive start with supportive global cues, lower crude prices and strong domestic flows. Stay selective and protect capital.",
+      "value": "Market data for July 13, 2026 is currently unavailable. Please consult official sources for updates.",
       "change": null,
       "changePercent": null,
       "status": "verified",
-      "source": "Mock Morning Brief Store",
-      "asOf": "2026-07-01T08:00:00+05:30"
+      "source": "MarketPulse desk",
+      "asOf": "2026-07-13T18:17:15.266+05:30"
     },
     "bias": {
-      "value": "Bullish",
+      "value": null,
       "change": null,
       "changePercent": null,
-      "status": "verified",
-      "source": "Mock Morning Brief Store",
-      "asOf": "2026-07-01T08:00:00+05:30"
+      "status": "unavailable",
+      "source": "MarketPulse desk",
+      "asOf": "2026-07-13T18:17:15.266+05:30"
     },
     "timestamp": {
-      "value": "Data as of 1 Jul 2026, 8:00 AM IST",
+      "value": "Data as of 13 Jul 2026, 6:17 PM IST",
       "change": null,
       "changePercent": null,
       "status": "verified",
-      "source": "Mock Morning Brief Store",
-      "asOf": "2026-07-01T08:00:00+05:30"
+      "source": "MarketPulse system",
+      "asOf": "2026-07-13T18:17:15.266+05:30"
     }
   },
   "moodIndex": {
     "score": {
-      "value": 62,
+      "value": null,
       "change": null,
       "changePercent": null,
-      "status": "verified",
+      "status": "unavailable",
       "source": "MarketPulse model",
-      "asOf": "2026-07-01T08:00:00+05:30"
+      "asOf": "2026-07-13T08:00:00+05:30"
     },
     "label": {
-      "value": "Greed",
+      "value": null,
       "change": null,
       "changePercent": null,
-      "status": "verified",
+      "status": "unavailable",
       "source": "MarketPulse model",
-      "asOf": "2026-07-01T08:00:00+05:30"
+      "asOf": "2026-07-13T08:00:00+05:30"
     },
     "ranges": [
       {
@@ -90,1132 +90,219 @@
   },
   "marketSnapshot": {
     "nifty": {
-      "value": 24080,
-      "change": 133,
-      "changePercent": 0.55,
-      "status": "verified",
+      "value": null,
+      "change": null,
+      "changePercent": null,
+      "status": "unavailable",
       "source": "NSE",
-      "asOf": "2026-07-01T15:30:00+05:30"
+      "asOf": "2026-07-13T15:30:00+05:30"
     },
     "bankNifty": {
-      "value": 57920,
-      "change": 234.25,
-      "changePercent": 0.41,
-      "status": "verified",
+      "value": null,
+      "change": null,
+      "changePercent": null,
+      "status": "unavailable",
       "source": "NSE",
-      "asOf": "2026-07-01T15:30:00+05:30"
+      "asOf": "2026-07-13T15:30:00+05:30"
     },
     "giftNifty": {
-      "value": 24125,
-      "change": 145,
-      "changePercent": 0.61,
-      "status": "verified",
+      "value": null,
+      "change": null,
+      "changePercent": null,
+      "status": "unavailable",
       "source": "GIFT Nifty",
-      "asOf": "2026-07-01T08:00:00+05:30"
+      "asOf": "2026-07-13T08:00:00+05:30"
     },
     "indiaVix": {
-      "value": 13.05,
-      "change": -0.23,
-      "changePercent": -1.73,
-      "status": "verified",
+      "value": null,
+      "change": null,
+      "changePercent": null,
+      "status": "unavailable",
       "source": "NSE",
-      "asOf": "2026-07-01T15:30:00+05:30"
+      "asOf": "2026-07-13T15:30:00+05:30"
     }
   },
-  "globalCues": [
-    {
-      "name": "US Markets",
-      "displayValue": "Positive",
-      "changeLabel": "Positive",
-      "tone": "positive",
-      "metric": {
-        "value": "Positive",
-        "change": null,
-        "changePercent": null,
-        "status": "verified",
-        "source": "AP Global Markets",
-        "asOf": "2026-07-01T08:00:00+05:30"
-      }
-    },
-    {
-      "name": "Asian Markets",
-      "displayValue": "Positive",
-      "changeLabel": "Positive",
-      "tone": "positive",
-      "metric": {
-        "value": "Positive",
-        "change": null,
-        "changePercent": null,
-        "status": "verified",
-        "source": "AP Global Markets",
-        "asOf": "2026-07-01T08:00:00+05:30"
-      }
-    },
-    {
-      "name": "Brent Crude",
-      "displayValue": "$72.40",
-      "changeLabel": "-0.6%",
-      "tone": "negative",
-      "metric": {
-        "value": 72.4,
-        "change": null,
-        "changePercent": -0.6,
-        "status": "verified",
-        "source": "Commodity reference",
-        "asOf": "2026-07-01T08:00:00+05:30"
-      }
-    },
-    {
-      "name": "USD Index",
-      "displayValue": "105.21",
-      "changeLabel": "+0.2%",
-      "tone": "positive",
-      "metric": {
-        "value": 105.21,
-        "change": null,
-        "changePercent": 0.2,
-        "status": "verified",
-        "source": "Currency reference",
-        "asOf": "2026-07-01T08:00:00+05:30"
-      }
-    },
-    {
-      "name": "Gold (Spot)",
-      "displayValue": "$2,341",
-      "changeLabel": "+0.4%",
-      "tone": "positive",
-      "metric": {
-        "value": 2341,
-        "change": null,
-        "changePercent": 0.4,
-        "status": "verified",
-        "source": "Commodity reference",
-        "asOf": "2026-07-01T08:00:00+05:30"
-      }
-    }
-  ],
+  "globalCues": [],
   "fiiDii": {
     "fiiNet": {
-      "value": -1350,
+      "value": null,
       "change": null,
       "changePercent": null,
-      "status": "verified",
+      "status": "unavailable",
       "source": "FII / DII reference",
-      "asOf": "2026-06-30T18:00:00+05:30"
+      "asOf": "2026-07-13T08:00:00+05:30"
     },
     "diiNet": {
-      "value": 2800,
+      "value": null,
       "change": null,
       "changePercent": null,
-      "status": "verified",
+      "status": "unavailable",
       "source": "FII / DII reference",
-      "asOf": "2026-06-30T18:00:00+05:30"
+      "asOf": "2026-07-13T08:00:00+05:30"
     },
     "interpretation": {
-      "value": "Domestic institutions continue to support the market.",
+      "value": null,
       "change": null,
       "changePercent": null,
-      "status": "verified",
+      "status": "unavailable",
       "source": "MarketPulse desk",
-      "asOf": "2026-07-01T08:00:00+05:30"
+      "asOf": "2026-07-13T08:00:00+05:30"
     }
   },
   "confidence": {
     "score": {
-      "value": 6.8,
+      "value": null,
       "change": null,
       "changePercent": null,
-      "status": "verified",
+      "status": "unavailable",
       "source": "MarketPulse model",
-      "asOf": "2026-07-01T08:00:00+05:30"
+      "asOf": "2026-07-13T08:00:00+05:30"
     },
     "label": {
-      "value": "Cautiously Bullish",
+      "value": null,
       "change": null,
       "changePercent": null,
-      "status": "verified",
+      "status": "unavailable",
       "source": "MarketPulse model",
-      "asOf": "2026-07-01T08:00:00+05:30"
+      "asOf": "2026-07-13T08:00:00+05:30"
     }
   },
-  "sectors": [
-    {
-      "rank": 1,
-      "sector": "Defence",
-      "moneyFlowScore": {
-        "value": 92,
-        "change": null,
-        "changePercent": null,
-        "status": "verified",
-        "source": "MarketPulse model",
-        "asOf": "2026-07-01T08:00:00+05:30"
-      },
-      "statusVsPrevious": {
-        "value": "Strongest (+2)",
-        "change": null,
-        "changePercent": null,
-        "status": "verified",
-        "source": "MarketPulse model",
-        "asOf": "2026-07-01T08:00:00+05:30"
-      },
-      "whyMoving": {
-        "value": [
-          "Government orders & policy push",
-          "Strong order books & exports",
-          "Heavy institutional buying"
-        ],
-        "change": null,
-        "changePercent": null,
-        "status": "verified",
-        "source": "MarketPulse desk",
-        "asOf": "2026-07-01T08:00:00+05:30"
-      },
-      "beneficiaries": {
-        "value": [
-          "HAL",
-          "BEL",
-          "Bharat Forge",
-          "BDL",
-          "Cochin Shipyard"
-        ],
-        "change": null,
-        "changePercent": null,
-        "status": "verified",
-        "source": "MarketPulse desk",
-        "asOf": "2026-07-01T08:00:00+05:30"
-      },
-      "bestFnoPick": {
-        "value": "BHARAT FORGE",
-        "change": null,
-        "changePercent": null,
-        "status": "verified",
-        "source": "MarketPulse desk",
-        "asOf": "2026-07-01T08:00:00+05:30"
-      }
-    },
-    {
-      "rank": 2,
-      "sector": "Pharma",
-      "moneyFlowScore": {
-        "value": 88,
-        "change": null,
-        "changePercent": null,
-        "status": "verified",
-        "source": "MarketPulse model",
-        "asOf": "2026-07-01T08:00:00+05:30"
-      },
-      "statusVsPrevious": {
-        "value": "Improving (+1)",
-        "change": null,
-        "changePercent": null,
-        "status": "verified",
-        "source": "MarketPulse model",
-        "asOf": "2026-07-01T08:00:00+05:30"
-      },
-      "whyMoving": {
-        "value": [
-          "Defensive buying in market",
-          "USFDA outlook improving",
-          "Weak INR supports exports"
-        ],
-        "change": null,
-        "changePercent": null,
-        "status": "verified",
-        "source": "MarketPulse desk",
-        "asOf": "2026-07-01T08:00:00+05:30"
-      },
-      "beneficiaries": {
-        "value": [
-          "Lupin",
-          "Dr Reddy's",
-          "Laurus Labs",
-          "Sun Pharma"
-        ],
-        "change": null,
-        "changePercent": null,
-        "status": "verified",
-        "source": "MarketPulse desk",
-        "asOf": "2026-07-01T08:00:00+05:30"
-      },
-      "bestFnoPick": {
-        "value": "LUPIN",
-        "change": null,
-        "changePercent": null,
-        "status": "verified",
-        "source": "MarketPulse desk",
-        "asOf": "2026-07-01T08:00:00+05:30"
-      }
-    },
-    {
-      "rank": 3,
-      "sector": "Capital Goods",
-      "moneyFlowScore": {
-        "value": 81,
-        "change": null,
-        "changePercent": null,
-        "status": "verified",
-        "source": "MarketPulse model",
-        "asOf": "2026-07-01T08:00:00+05:30"
-      },
-      "statusVsPrevious": {
-        "value": "Improving (+2)",
-        "change": null,
-        "changePercent": null,
-        "status": "verified",
-        "source": "MarketPulse model",
-        "asOf": "2026-07-01T08:00:00+05:30"
-      },
-      "whyMoving": {
-        "value": [
-          "Manufacturing capex cycle",
-          "Infra spending acceleration",
-          "Private sector capex pickup"
-        ],
-        "change": null,
-        "changePercent": null,
-        "status": "verified",
-        "source": "MarketPulse desk",
-        "asOf": "2026-07-01T08:00:00+05:30"
-      },
-      "beneficiaries": {
-        "value": [
-          "Siemens",
-          "ABB",
-          "Cummins",
-          "Bharat Forge"
-        ],
-        "change": null,
-        "changePercent": null,
-        "status": "verified",
-        "source": "MarketPulse desk",
-        "asOf": "2026-07-01T08:00:00+05:30"
-      },
-      "bestFnoPick": {
-        "value": "SIEMENS",
-        "change": null,
-        "changePercent": null,
-        "status": "verified",
-        "source": "MarketPulse desk",
-        "asOf": "2026-07-01T08:00:00+05:30"
-      }
-    },
-    {
-      "rank": 4,
-      "sector": "PSU Banks",
-      "moneyFlowScore": {
-        "value": 74,
-        "change": null,
-        "changePercent": null,
-        "status": "verified",
-        "source": "MarketPulse model",
-        "asOf": "2026-07-01T08:00:00+05:30"
-      },
-      "statusVsPrevious": {
-        "value": "Improving (+1)",
-        "change": null,
-        "changePercent": null,
-        "status": "verified",
-        "source": "MarketPulse model",
-        "asOf": "2026-07-01T08:00:00+05:30"
-      },
-      "whyMoving": {
-        "value": [
-          "Credit growth stays strong",
-          "Attractive valuations",
-          "Govt. spending & infra push"
-        ],
-        "change": null,
-        "changePercent": null,
-        "status": "verified",
-        "source": "MarketPulse desk",
-        "asOf": "2026-07-01T08:00:00+05:30"
-      },
-      "beneficiaries": {
-        "value": [
-          "SBI",
-          "Canara Bank",
-          "Bank of Baroda",
-          "PNB"
-        ],
-        "change": null,
-        "changePercent": null,
-        "status": "verified",
-        "source": "MarketPulse desk",
-        "asOf": "2026-07-01T08:00:00+05:30"
-      },
-      "bestFnoPick": {
-        "value": "SBI",
-        "change": null,
-        "changePercent": null,
-        "status": "verified",
-        "source": "MarketPulse desk",
-        "asOf": "2026-07-01T08:00:00+05:30"
-      }
-    },
-    {
-      "rank": 5,
-      "sector": "Infrastructure",
-      "moneyFlowScore": {
-        "value": 68,
-        "change": null,
-        "changePercent": null,
-        "status": "verified",
-        "source": "MarketPulse model",
-        "asOf": "2026-07-01T08:00:00+05:30"
-      },
-      "statusVsPrevious": {
-        "value": "Neutral (0)",
-        "change": null,
-        "changePercent": null,
-        "status": "verified",
-        "source": "MarketPulse model",
-        "asOf": "2026-07-01T08:00:00+05:30"
-      },
-      "whyMoving": {
-        "value": [
-          "Govt. capex in focus",
-          "Order inflow steady",
-          "Execution challenges remain"
-        ],
-        "change": null,
-        "changePercent": null,
-        "status": "verified",
-        "source": "MarketPulse desk",
-        "asOf": "2026-07-01T08:00:00+05:30"
-      },
-      "beneficiaries": {
-        "value": [
-          "L&T",
-          "NCC",
-          "IRCON",
-          "NBCC"
-        ],
-        "change": null,
-        "changePercent": null,
-        "status": "verified",
-        "source": "MarketPulse desk",
-        "asOf": "2026-07-01T08:00:00+05:30"
-      },
-      "bestFnoPick": {
-        "value": "L&T",
-        "change": null,
-        "changePercent": null,
-        "status": "verified",
-        "source": "MarketPulse desk",
-        "asOf": "2026-07-01T08:00:00+05:30"
-      }
-    },
-    {
-      "rank": 6,
-      "sector": "Auto",
-      "moneyFlowScore": {
-        "value": 56,
-        "change": null,
-        "changePercent": null,
-        "status": "verified",
-        "source": "MarketPulse model",
-        "asOf": "2026-07-01T08:00:00+05:30"
-      },
-      "statusVsPrevious": {
-        "value": "Weakening (-1)",
-        "change": null,
-        "changePercent": null,
-        "status": "verified",
-        "source": "MarketPulse model",
-        "asOf": "2026-07-01T08:00:00+05:30"
-      },
-      "whyMoving": {
-        "value": [
-          "Monsoon uncertainty",
-          "Rural demand still sluggish",
-          "High inventory in dealers"
-        ],
-        "change": null,
-        "changePercent": null,
-        "status": "verified",
-        "source": "MarketPulse desk",
-        "asOf": "2026-07-01T08:00:00+05:30"
-      },
-      "beneficiaries": {
-        "value": [
-          "Maruti Suzuki",
-          "Tata Motors",
-          "M&M"
-        ],
-        "change": null,
-        "changePercent": null,
-        "status": "verified",
-        "source": "MarketPulse desk",
-        "asOf": "2026-07-01T08:00:00+05:30"
-      },
-      "bestFnoPick": {
-        "value": "MARUTI",
-        "change": null,
-        "changePercent": null,
-        "status": "verified",
-        "source": "MarketPulse desk",
-        "asOf": "2026-07-01T08:00:00+05:30"
-      }
-    },
-    {
-      "rank": 7,
-      "sector": "Metals",
-      "moneyFlowScore": {
-        "value": 48,
-        "change": null,
-        "changePercent": null,
-        "status": "verified",
-        "source": "MarketPulse model",
-        "asOf": "2026-07-01T08:00:00+05:30"
-      },
-      "statusVsPrevious": {
-        "value": "Weakening (-1)",
-        "change": null,
-        "changePercent": null,
-        "status": "verified",
-        "source": "MarketPulse model",
-        "asOf": "2026-07-01T08:00:00+05:30"
-      },
-      "whyMoving": {
-        "value": [
-          "China demand concerns",
-          "Commodity prices soft",
-          "Margin pressure"
-        ],
-        "change": null,
-        "changePercent": null,
-        "status": "verified",
-        "source": "MarketPulse desk",
-        "asOf": "2026-07-01T08:00:00+05:30"
-      },
-      "beneficiaries": {
-        "value": [
-          "Tata Steel",
-          "JSW Steel",
-          "Hindalco"
-        ],
-        "change": null,
-        "changePercent": null,
-        "status": "verified",
-        "source": "MarketPulse desk",
-        "asOf": "2026-07-01T08:00:00+05:30"
-      },
-      "bestFnoPick": {
-        "value": "HINDALCO",
-        "change": null,
-        "changePercent": null,
-        "status": "verified",
-        "source": "MarketPulse desk",
-        "asOf": "2026-07-01T08:00:00+05:30"
-      }
-    },
-    {
-      "rank": 8,
-      "sector": "IT",
-      "moneyFlowScore": {
-        "value": 41,
-        "change": null,
-        "changePercent": null,
-        "status": "verified",
-        "source": "MarketPulse model",
-        "asOf": "2026-07-01T08:00:00+05:30"
-      },
-      "statusVsPrevious": {
-        "value": "Weakening (-2)",
-        "change": null,
-        "changePercent": null,
-        "status": "verified",
-        "source": "MarketPulse model",
-        "asOf": "2026-07-01T08:00:00+05:30"
-      },
-      "whyMoving": {
-        "value": [
-          "US dollar strength",
-          "Weak global tech sentiment",
-          "Profit booking in IT"
-        ],
-        "change": null,
-        "changePercent": null,
-        "status": "verified",
-        "source": "MarketPulse desk",
-        "asOf": "2026-07-01T08:00:00+05:30"
-      },
-      "beneficiaries": {
-        "value": [
-          "TCS",
-          "Infosys",
-          "HCL Tech",
-          "Wipro"
-        ],
-        "change": null,
-        "changePercent": null,
-        "status": "verified",
-        "source": "MarketPulse desk",
-        "asOf": "2026-07-01T08:00:00+05:30"
-      },
-      "bestFnoPick": {
-        "value": "TCS",
-        "change": null,
-        "changePercent": null,
-        "status": "verified",
-        "source": "MarketPulse desk",
-        "asOf": "2026-07-01T08:00:00+05:30"
-      }
-    }
-  ],
-  "swingOpportunities": [
-    {
-      "stock": {
-        "value": "Bharat Forge",
-        "change": null,
-        "changePercent": null,
-        "status": "verified",
-        "source": "Mock Morning Brief Store",
-        "asOf": "2026-07-01T08:00:00+05:30"
-      },
-      "sector": {
-        "value": "Defence",
-        "change": null,
-        "changePercent": null,
-        "status": "verified",
-        "source": "Mock Morning Brief Store",
-        "asOf": "2026-07-01T08:00:00+05:30"
-      },
-      "conviction": {
-        "value": "9.6/10",
-        "change": null,
-        "changePercent": null,
-        "status": "verified",
-        "source": "Mock Morning Brief Store",
-        "asOf": "2026-07-01T08:00:00+05:30"
-      },
-      "reason": {
-        "value": "Strong accumulation, defence leadership, exports, FAO",
-        "change": null,
-        "changePercent": null,
-        "status": "verified",
-        "source": "Mock Morning Brief Store",
-        "asOf": "2026-07-01T08:00:00+05:30"
-      }
-    },
-    {
-      "stock": {
-        "value": "HAL",
-        "change": null,
-        "changePercent": null,
-        "status": "verified",
-        "source": "Mock Morning Brief Store",
-        "asOf": "2026-07-01T08:00:00+05:30"
-      },
-      "sector": {
-        "value": "Defence",
-        "change": null,
-        "changePercent": null,
-        "status": "verified",
-        "source": "Mock Morning Brief Store",
-        "asOf": "2026-07-01T08:00:00+05:30"
-      },
-      "conviction": {
-        "value": "9.5/10",
-        "change": null,
-        "changePercent": null,
-        "status": "verified",
-        "source": "Mock Morning Brief Store",
-        "asOf": "2026-07-01T08:00:00+05:30"
-      },
-      "reason": {
-        "value": "Robust order book, govt backing, FAO",
-        "change": null,
-        "changePercent": null,
-        "status": "verified",
-        "source": "Mock Morning Brief Store",
-        "asOf": "2026-07-01T08:00:00+05:30"
-      }
-    },
-    {
-      "stock": {
-        "value": "BEL",
-        "change": null,
-        "changePercent": null,
-        "status": "verified",
-        "source": "Mock Morning Brief Store",
-        "asOf": "2026-07-01T08:00:00+05:30"
-      },
-      "sector": {
-        "value": "Defence",
-        "change": null,
-        "changePercent": null,
-        "status": "verified",
-        "source": "Mock Morning Brief Store",
-        "asOf": "2026-07-01T08:00:00+05:30"
-      },
-      "conviction": {
-        "value": "9.4/10",
-        "change": null,
-        "changePercent": null,
-        "status": "verified",
-        "source": "Mock Morning Brief Store",
-        "asOf": "2026-07-01T08:00:00+05:30"
-      },
-      "reason": {
-        "value": "Strong earnings visibility, radar & electronics leader",
-        "change": null,
-        "changePercent": null,
-        "status": "verified",
-        "source": "Mock Morning Brief Store",
-        "asOf": "2026-07-01T08:00:00+05:30"
-      }
-    },
-    {
-      "stock": {
-        "value": "Lupin",
-        "change": null,
-        "changePercent": null,
-        "status": "verified",
-        "source": "Mock Morning Brief Store",
-        "asOf": "2026-07-01T08:00:00+05:30"
-      },
-      "sector": {
-        "value": "Pharma",
-        "change": null,
-        "changePercent": null,
-        "status": "verified",
-        "source": "Mock Morning Brief Store",
-        "asOf": "2026-07-01T08:00:00+05:30"
-      },
-      "conviction": {
-        "value": "9.3/10",
-        "change": null,
-        "changePercent": null,
-        "status": "verified",
-        "source": "Mock Morning Brief Store",
-        "asOf": "2026-07-01T08:00:00+05:30"
-      },
-      "reason": {
-        "value": "Defensive + export demand, rel. strength",
-        "change": null,
-        "changePercent": null,
-        "status": "verified",
-        "source": "Mock Morning Brief Store",
-        "asOf": "2026-07-01T08:00:00+05:30"
-      }
-    },
-    {
-      "stock": {
-        "value": "Laurus Labs",
-        "change": null,
-        "changePercent": null,
-        "status": "verified",
-        "source": "Mock Morning Brief Store",
-        "asOf": "2026-07-01T08:00:00+05:30"
-      },
-      "sector": {
-        "value": "Pharma",
-        "change": null,
-        "changePercent": null,
-        "status": "verified",
-        "source": "Mock Morning Brief Store",
-        "asOf": "2026-07-01T08:00:00+05:30"
-      },
-      "conviction": {
-        "value": "8.9/10",
-        "change": null,
-        "changePercent": null,
-        "status": "verified",
-        "source": "Mock Morning Brief Store",
-        "asOf": "2026-07-01T08:00:00+05:30"
-      },
-      "reason": {
-        "value": "Strong API business, US opportunity, accumulation",
-        "change": null,
-        "changePercent": null,
-        "status": "verified",
-        "source": "Mock Morning Brief Store",
-        "asOf": "2026-07-01T08:00:00+05:30"
-      }
-    }
-  ],
-  "btstIdeas": [
-    {
-      "stock": {
-        "value": "Lupin",
-        "change": null,
-        "changePercent": null,
-        "status": "verified",
-        "source": "Mock Morning Brief Store",
-        "asOf": "2026-07-01T08:00:00+05:30"
-      },
-      "entry": {
-        "value": "Above 1,480",
-        "change": null,
-        "changePercent": null,
-        "status": "verified",
-        "source": "Mock Morning Brief Store",
-        "asOf": "2026-07-01T08:00:00+05:30"
-      },
-      "stopLoss": {
-        "value": "1,455",
-        "change": null,
-        "changePercent": null,
-        "status": "verified",
-        "source": "Mock Morning Brief Store",
-        "asOf": "2026-07-01T08:00:00+05:30"
-      },
-      "target": {
-        "value": "1,520 / 1,550",
-        "change": null,
-        "changePercent": null,
-        "status": "verified",
-        "source": "Mock Morning Brief Store",
-        "asOf": "2026-07-01T08:00:00+05:30"
-      }
-    },
-    {
-      "stock": {
-        "value": "Bharat Forge",
-        "change": null,
-        "changePercent": null,
-        "status": "verified",
-        "source": "Mock Morning Brief Store",
-        "asOf": "2026-07-01T08:00:00+05:30"
-      },
-      "entry": {
-        "value": "Above 1,215",
-        "change": null,
-        "changePercent": null,
-        "status": "verified",
-        "source": "Mock Morning Brief Store",
-        "asOf": "2026-07-01T08:00:00+05:30"
-      },
-      "stopLoss": {
-        "value": "1,190",
-        "change": null,
-        "changePercent": null,
-        "status": "verified",
-        "source": "Mock Morning Brief Store",
-        "asOf": "2026-07-01T08:00:00+05:30"
-      },
-      "target": {
-        "value": "1,245 / 1,275",
-        "change": null,
-        "changePercent": null,
-        "status": "verified",
-        "source": "Mock Morning Brief Store",
-        "asOf": "2026-07-01T08:00:00+05:30"
-      }
-    },
-    {
-      "stock": {
-        "value": "SBI",
-        "change": null,
-        "changePercent": null,
-        "status": "verified",
-        "source": "Mock Morning Brief Store",
-        "asOf": "2026-07-01T08:00:00+05:30"
-      },
-      "entry": {
-        "value": "Above 840",
-        "change": null,
-        "changePercent": null,
-        "status": "verified",
-        "source": "Mock Morning Brief Store",
-        "asOf": "2026-07-01T08:00:00+05:30"
-      },
-      "stopLoss": {
-        "value": "825",
-        "change": null,
-        "changePercent": null,
-        "status": "verified",
-        "source": "Mock Morning Brief Store",
-        "asOf": "2026-07-01T08:00:00+05:30"
-      },
-      "target": {
-        "value": "855 / 870",
-        "change": null,
-        "changePercent": null,
-        "status": "verified",
-        "source": "Mock Morning Brief Store",
-        "asOf": "2026-07-01T08:00:00+05:30"
-      }
-    }
-  ],
+  "sectors": [],
+  "swingOpportunities": [],
+  "btstIdeas": [],
   "indexLevels": {
     "resistance1": {
-      "value": 24150,
+      "value": null,
       "change": null,
       "changePercent": null,
-      "status": "verified",
+      "status": "unavailable",
       "source": "Nifty close",
-      "asOf": "2026-07-01T08:00:00+05:30"
+      "asOf": "2026-07-13T08:00:00+05:30"
     },
     "resistance2": {
-      "value": 24250,
+      "value": null,
       "change": null,
       "changePercent": null,
-      "status": "verified",
+      "status": "unavailable",
       "source": "Nifty close",
-      "asOf": "2026-07-01T08:00:00+05:30"
+      "asOf": "2026-07-13T08:00:00+05:30"
     },
     "support1": {
-      "value": 23900,
+      "value": null,
       "change": null,
       "changePercent": null,
-      "status": "verified",
+      "status": "unavailable",
       "source": "Nifty close",
-      "asOf": "2026-07-01T08:00:00+05:30"
+      "asOf": "2026-07-13T08:00:00+05:30"
     },
     "support2": {
-      "value": 23750,
+      "value": null,
       "change": null,
       "changePercent": null,
-      "status": "verified",
+      "status": "unavailable",
       "source": "Nifty close",
-      "asOf": "2026-07-01T08:00:00+05:30"
+      "asOf": "2026-07-13T08:00:00+05:30"
     },
     "trend": {
-      "value": "Uptrend",
+      "value": null,
       "change": null,
       "changePercent": null,
-      "status": "verified",
+      "status": "unavailable",
       "source": "MarketPulse model",
-      "asOf": "2026-07-01T08:00:00+05:30"
+      "asOf": "2026-07-13T08:00:00+05:30"
     },
     "bias": {
-      "value": "Mild Positive",
+      "value": null,
       "change": null,
       "changePercent": null,
-      "status": "verified",
+      "status": "unavailable",
       "source": "MarketPulse model",
-      "asOf": "2026-07-01T08:00:00+05:30"
+      "asOf": "2026-07-13T08:00:00+05:30"
     }
   },
   "optionsSetup": {
     "pcr": {
-      "value": 0.98,
+      "value": null,
       "change": null,
       "changePercent": null,
-      "status": "verified",
+      "status": "unavailable",
       "source": "Options reference",
-      "asOf": "2026-07-01T08:00:00+05:30"
+      "asOf": "2026-07-13T08:00:00+05:30"
     },
     "maxPain": {
-      "value": 24000,
+      "value": null,
       "change": null,
       "changePercent": null,
-      "status": "verified",
+      "status": "unavailable",
       "source": "Options reference",
-      "asOf": "2026-07-01T08:00:00+05:30"
+      "asOf": "2026-07-13T08:00:00+05:30"
     },
     "maxCallOi": {
-      "value": 24200,
+      "value": null,
       "change": null,
       "changePercent": null,
-      "status": "verified",
+      "status": "unavailable",
       "source": "Options reference",
-      "asOf": "2026-07-01T08:00:00+05:30"
+      "asOf": "2026-07-13T08:00:00+05:30"
     },
     "maxPutOi": {
-      "value": 24000,
+      "value": null,
       "change": null,
       "changePercent": null,
-      "status": "verified",
+      "status": "unavailable",
       "source": "Options reference",
-      "asOf": "2026-07-01T08:00:00+05:30"
+      "asOf": "2026-07-13T08:00:00+05:30"
     },
     "freshLongBuildUp": {
-      "value": "24,050 CE, 57,800 PE",
+      "value": null,
       "change": null,
       "changePercent": null,
-      "status": "verified",
+      "status": "unavailable",
       "source": "Options reference",
-      "asOf": "2026-07-01T08:00:00+05:30"
+      "asOf": "2026-07-13T08:00:00+05:30"
     },
     "freshShortBuildUp": {
-      "value": "24,250 CE",
+      "value": null,
       "change": null,
       "changePercent": null,
-      "status": "verified",
+      "status": "unavailable",
       "source": "Options reference",
-      "asOf": "2026-07-01T08:00:00+05:30"
+      "asOf": "2026-07-13T08:00:00+05:30"
     }
   },
-  "macroCalendar": [
-    {
-      "time": {
-        "value": "11:30 AM",
-        "change": null,
-        "changePercent": null,
-        "status": "verified",
-        "source": "Mock Morning Brief Store",
-        "asOf": "2026-07-01T08:00:00+05:30"
-      },
-      "event": {
-        "value": "India GDP Growth Q1 (Final)",
-        "change": null,
-        "changePercent": null,
-        "status": "verified",
-        "source": "Mock Morning Brief Store",
-        "asOf": "2026-07-01T08:00:00+05:30"
-      },
-      "importance": {
-        "value": 4,
-        "change": null,
-        "changePercent": null,
-        "status": "verified",
-        "source": "Mock Morning Brief Store",
-        "asOf": "2026-07-01T08:00:00+05:30"
-      },
-      "affectedSectors": {
-        "value": "All",
-        "change": null,
-        "changePercent": null,
-        "status": "verified",
-        "source": "Mock Morning Brief Store",
-        "asOf": "2026-07-01T08:00:00+05:30"
-      },
-      "expectedImpact": {
-        "value": "Broad market sensitivity",
-        "change": null,
-        "changePercent": null,
-        "status": "verified",
-        "source": "Mock Morning Brief Store",
-        "asOf": "2026-07-01T08:00:00+05:30"
-      }
-    },
-    {
-      "time": {
-        "value": "01:00 PM",
-        "change": null,
-        "changePercent": null,
-        "status": "verified",
-        "source": "Mock Morning Brief Store",
-        "asOf": "2026-07-01T08:00:00+05:30"
-      },
-      "event": {
-        "value": "US CB Consumer Confidence",
-        "change": null,
-        "changePercent": null,
-        "status": "verified",
-        "source": "Mock Morning Brief Store",
-        "asOf": "2026-07-01T08:00:00+05:30"
-      },
-      "importance": {
-        "value": 3,
-        "change": null,
-        "changePercent": null,
-        "status": "verified",
-        "source": "Mock Morning Brief Store",
-        "asOf": "2026-07-01T08:00:00+05:30"
-      },
-      "affectedSectors": {
-        "value": "IT, Auto, FMCG, Banks",
-        "change": null,
-        "changePercent": null,
-        "status": "verified",
-        "source": "Mock Morning Brief Store",
-        "asOf": "2026-07-01T08:00:00+05:30"
-      },
-      "expectedImpact": {
-        "value": "Global risk sentiment",
-        "change": null,
-        "changePercent": null,
-        "status": "verified",
-        "source": "Mock Morning Brief Store",
-        "asOf": "2026-07-01T08:00:00+05:30"
-      }
-    },
-    {
-      "time": {
-        "value": "07:30 PM",
-        "change": null,
-        "changePercent": null,
-        "status": "verified",
-        "source": "Mock Morning Brief Store",
-        "asOf": "2026-07-01T08:00:00+05:30"
-      },
-      "event": {
-        "value": "US Dallas Fed Manufacturing Index",
-        "change": null,
-        "changePercent": null,
-        "status": "verified",
-        "source": "Mock Morning Brief Store",
-        "asOf": "2026-07-01T08:00:00+05:30"
-      },
-      "importance": {
-        "value": 3,
-        "change": null,
-        "changePercent": null,
-        "status": "verified",
-        "source": "Mock Morning Brief Store",
-        "asOf": "2026-07-01T08:00:00+05:30"
-      },
-      "affectedSectors": {
-        "value": "Metals, Industrial, Capital Goods",
-        "change": null,
-        "changePercent": null,
-        "status": "verified",
-        "source": "Mock Morning Brief Store",
-        "asOf": "2026-07-01T08:00:00+05:30"
-      },
-      "expectedImpact": {
-        "value": "Cyclical demand signal",
-        "change": null,
-        "changePercent": null,
-        "status": "verified",
-        "source": "Mock Morning Brief Store",
-        "asOf": "2026-07-01T08:00:00+05:30"
-      }
-    }
-  ],
+  "macroCalendar": [],
   "keyRisks": {
-    "value": [
-      "Volatility in global markets ahead of US jobs data",
-      "Crude oil price spike above $75",
-      "Rupee weakness may pressure FII flows",
-      "Monsoon progress below normal remains a risk"
-    ],
+    "value": null,
     "change": null,
     "changePercent": null,
-    "status": "verified",
-    "source": "Mock Morning Brief Store",
-    "asOf": "2026-07-01T08:00:00+05:30"
+    "status": "unavailable",
+    "source": "MarketPulse desk",
+    "asOf": "2026-07-13T18:17:15.266+05:30"
   },
   "tradingPlan": {
     "gapUp": {
-      "value": [
-        "Avoid chasing the gap",
-        "Wait for 15-30 mins consolidation",
-        "Buy only in strong sectors on pullbacks"
-      ],
+      "value": null,
       "change": null,
       "changePercent": null,
-      "status": "verified",
-      "source": "Mock Morning Brief Store",
-      "asOf": "2026-07-01T08:00:00+05:30"
+      "status": "unavailable",
+      "source": "MarketPulse desk",
+      "asOf": "2026-07-13T18:17:15.266+05:30"
     },
     "flat": {
-      "value": [
-        "Focus on relative strength stocks",
-        "Look for breakouts with volume",
-        "Avoid weak sectors"
-      ],
+      "value": null,
       "change": null,
       "changePercent": null,
-      "status": "verified",
-      "source": "Mock Morning Brief Store",
-      "asOf": "2026-07-01T08:00:00+05:30"
+      "status": "unavailable",
+      "source": "MarketPulse desk",
+      "asOf": "2026-07-13T18:17:15.266+05:30"
     },
     "gapDown": {
-      "value": [
-        "Watch support at 23,900",
-        "If support holds, look for buying in strong sectors",
-        "Avoid panic selling"
-      ],
+      "value": null,
       "change": null,
       "changePercent": null,
-      "status": "verified",
-      "source": "Mock Morning Brief Store",
-      "asOf": "2026-07-01T08:00:00+05:30"
+      "status": "unavailable",
+      "source": "MarketPulse desk",
+      "asOf": "2026-07-13T18:17:15.266+05:30"
     }
   },
   "footer": {
@@ -1224,45 +311,42 @@
       "change": null,
       "changePercent": null,
       "status": "verified",
-      "source": "Mock Morning Brief Store",
-      "asOf": "2026-07-01T08:00:00+05:30"
+      "source": "MarketPulse desk",
+      "asOf": "2026-07-13T08:00:00+05:30"
     },
     "ctaSubtitle": {
       "value": "One alert when the new daily edition is ready.",
       "change": null,
       "changePercent": null,
       "status": "verified",
-      "source": "Mock Morning Brief Store",
-      "asOf": "2026-07-01T08:00:00+05:30"
+      "source": "MarketPulse desk",
+      "asOf": "2026-07-13T08:00:00+05:30"
     },
     "sources": {
       "value": [
-        "AP Global Markets",
-        "Nifty close",
-        "19 June market close",
-        "FII / DII reference"
+        "MarketPulse system"
       ],
       "change": null,
       "changePercent": null,
       "status": "verified",
-      "source": "Mock Morning Brief Store",
-      "asOf": "2026-07-01T08:00:00+05:30"
+      "source": "MarketPulse desk",
+      "asOf": "2026-07-13T18:17:15.266+05:30"
     },
     "disclaimer": {
       "value": "Independent market intelligence for educational use only.",
       "change": null,
       "changePercent": null,
       "status": "verified",
-      "source": "Mock Morning Brief Store",
-      "asOf": "2026-07-01T08:00:00+05:30"
+      "source": "MarketPulse desk",
+      "asOf": "2026-07-13T18:17:15.266+05:30"
     },
     "copyright": {
       "value": "© 2026 Market Pulse Desk",
       "change": null,
       "changePercent": null,
       "status": "verified",
-      "source": "Mock Morning Brief Store",
-      "asOf": "2026-07-01T08:00:00+05:30"
+      "source": "MarketPulse desk",
+      "asOf": "2026-07-13T18:17:15.266+05:30"
     }
   }
 }

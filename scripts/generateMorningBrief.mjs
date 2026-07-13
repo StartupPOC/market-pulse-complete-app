@@ -128,6 +128,46 @@ function extractJson(text) {
   }
 }
 
+async function callOpenAI({ apiKey, body }) {
+  const response = await fetch(openAiApiUrl, {
+    method: "POST",
+    headers: {
+      Authorization: `Bearer ${apiKey}`,
+      "Content-Type": "application/json"
+    },
+    body: JSON.stringify(body)
+  });
+
+  const responseText = await response.text();
+  if (!response.ok) {
+    throw new Error(`OpenAI API failed: ${response.status} ${responseText}`);
+  }
+
+  return JSON.parse(responseText);
+}
+
+function researchPrompt({ rawMarketData, generatedAt }) {
+  return `Research today's Indian market morning brief inputs for ${generatedAt} Asia/Kolkata.
+
+Find concise, source-grounded notes for:
+- Nifty 50, Bank Nifty, GIFT Nifty, India VIX
+- US markets, Asian markets, Brent crude, USD index, gold spot
+- FII net and DII net
+- Nifty support/resistance, trend, bias
+- options setup: PCR, max pain, max call OI, max put OI, fresh long/short build-up
+- relevant sector rotation candidates, top beneficiary stocks, risks, macro calendar
+
+Rules:
+- Do not invent numbers.
+- If you cannot verify something, say "unavailable".
+- Prefer official exchange/source data when accessible.
+- Keep notes concise and include source names and as-of timing where available.
+
+Raw market data supplied by caller:
+${JSON.stringify(rawMarketData, null, 2)}
+`;
+}
+
 function briefPrompt({ rawMarketData, template, generatedAt }) {
   const shape = {
     generatedAt: "ISO timestamp",
@@ -184,6 +224,31 @@ async function generateWithOpenAI({ rawMarketData, template, generatedAt }) {
 
   const model = process.env.OPENAI_MODEL || "gpt-4.1-mini";
   const useWebSearch = process.env.OPENAI_ENABLE_WEB_SEARCH === "true";
+  let researchedNotes = "";
+
+  if (useWebSearch) {
+    console.log("Researching market data with OpenAI web search...");
+    const researchResponse = await callOpenAI({
+      apiKey,
+      body: {
+        model,
+        input: [
+          {
+            role: "system",
+            content: "You research market data carefully. Summarize findings with source names and mark unverified data unavailable."
+          },
+          {
+            role: "user",
+            content: researchPrompt({ rawMarketData, generatedAt })
+          }
+        ],
+        tools: [{ type: "web_search_preview" }]
+      }
+    });
+    researchedNotes = extractOutputText(researchResponse);
+  }
+
+  console.log("Generating strict morningBriefData JSON...");
   const requestBody = {
     model,
     input: [
@@ -193,35 +258,25 @@ async function generateWithOpenAI({ rawMarketData, template, generatedAt }) {
       },
       {
         role: "user",
-        content: briefPrompt({ rawMarketData, template, generatedAt })
+        content: briefPrompt({
+          rawMarketData: {
+            suppliedRawData: rawMarketData,
+            researchedNotes: researchedNotes || "No web-search notes available."
+          },
+          template,
+          generatedAt
+        })
       }
     ],
-    tools: useWebSearch ? [{ type: "web_search_preview" }] : []
-  };
-
-  if (!useWebSearch) {
-    requestBody.text = {
+    tools: [],
+    text: {
       format: {
         type: "json_object"
       }
-    };
-  }
+    }
+  };
 
-  const response = await fetch(openAiApiUrl, {
-    method: "POST",
-    headers: {
-      Authorization: `Bearer ${apiKey}`,
-      "Content-Type": "application/json"
-    },
-    body: JSON.stringify(requestBody)
-  });
-
-  const responseText = await response.text();
-  if (!response.ok) {
-    throw new Error(`OpenAI API failed: ${response.status} ${responseText}`);
-  }
-
-  const parsedResponse = JSON.parse(responseText);
+  const parsedResponse = await callOpenAI({ apiKey, body: requestBody });
   return extractJson(extractOutputText(parsedResponse));
 }
 

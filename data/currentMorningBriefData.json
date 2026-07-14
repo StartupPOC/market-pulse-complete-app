@@ -1,46 +1,46 @@
 {
-  "generatedAt": "2026-07-13T18:17:15.266+05:30",
-  "lastRefreshed": "2026-07-13T18:17:15.266+05:30",
+  "generatedAt": "2026-07-14T10:44:16.035+05:30",
+  "lastRefreshed": "2026-07-14T10:44:16.035+05:30",
   "page": {
     "dateLabel": {
-      "value": "MON, 13 JUL 2026",
+      "value": "TUE, 14 JUL 2026",
       "change": null,
       "changePercent": null,
       "status": "verified",
-      "source": "MarketPulse desk",
-      "asOf": "2026-07-13T08:00:00+05:30"
+      "source": "MarketPulse system",
+      "asOf": "2026-07-14T10:44:16.035+05:30"
     },
     "title": {
       "value": "Morning Market Brief",
       "change": null,
       "changePercent": null,
       "status": "verified",
-      "source": "MarketPulse desk",
-      "asOf": "2026-07-13T08:00:00+05:30"
+      "source": "MarketPulse system",
+      "asOf": "2026-07-14T10:44:16.035+05:30"
     },
     "summary": {
-      "value": "Market data for July 13, 2026 is currently unavailable. Please consult official sources for updates.",
+      "value": "Current market data for July 14, 2026 is unavailable. Please refer to official sources for latest details.",
       "change": null,
       "changePercent": null,
       "status": "verified",
-      "source": "MarketPulse desk",
-      "asOf": "2026-07-13T18:17:15.266+05:30"
+      "source": "MarketPulse system",
+      "asOf": "2026-07-14T10:44:16.035+05:30"
     },
     "bias": {
       "value": null,
       "change": null,
       "changePercent": null,
       "status": "unavailable",
-      "source": "MarketPulse desk",
-      "asOf": "2026-07-13T18:17:15.266+05:30"
+      "source": "MarketPulse system",
+      "asOf": "2026-07-14T10:44:16.035+05:30"
     },
     "timestamp": {
-      "value": "Data as of 13 Jul 2026, 6:17 PM IST",
+      "value": "Data as of 14 Jul 2026, 10:44 AM IST",
       "change": null,
       "changePercent": null,
       "status": "verified",
       "source": "MarketPulse system",
-      "asOf": "2026-07-13T18:17:15.266+05:30"
+      "asOf": "2026-07-14T10:44:16.035+05:30"
     }
   },
   "moodIndex": {
@@ -49,16 +49,16 @@
       "change": null,
       "changePercent": null,
       "status": "unavailable",
-      "source": "MarketPulse model",
-      "asOf": "2026-07-13T08:00:00+05:30"
+      "source": "MarketPulse system",
+      "asOf": "2026-07-14T10:44:16.035+05:30"
     },
     "label": {
       "value": null,
       "change": null,
       "changePercent": null,
       "status": "unavailable",
-      "source": "MarketPulse model",
-      "asOf": "2026-07-13T08:00:00+05:30"
+      "source": "MarketPulse system",
+      "asOf": "2026-07-14T10:44:16.035+05:30"
     },
     "ranges": [
       {
@@ -95,7 +95,7 @@
       "changePercent": null,
       "status": "unavailable",
       "source": "NSE",
-      "asOf": "2026-07-13T15:30:00+05:30"
+      "asOf": "2026-07-14T10:44:16.035+05:30"
     },
     "bankNifty": {
       "value": null,
@@ -103,7 +103,7 @@
       "changePercent": null,
       "status": "unavailable",
       "source": "NSE",
-      "asOf": "2026-07-13T15:30:00+05:30"
+      "asOf": "2026-07-14T10:44:16.035+05:30"
     },
     "giftNifty": {
       "value": null,
@@ -111,7 +111,7 @@
       "changePercent": null,
       "status": "unavailable",
       "source": "GIFT Nifty",
-      "asOf": "2026-07-13T08:00:00+05:30"
+      "asOf": "2026-07-14T10:44:16.035+05:30"
     },
     "indiaVix": {
       "value": null,
@@ -119,10 +119,81 @@
       "changePercent": null,
       "status": "unavailable",
       "source": "NSE",
-      "asOf": "2026-07-13T15:30:00+05:30"
+      "asOf": "2026-07-14T10:44:16.035+05:30"
     }
   },
-  "globalCues": [],
+  "globalCues": [
+    {
+      "name": "US Markets",
+      "displayValue": null,
+      "changeLabel": null,
+      "tone": null,
+      "metric": {
+        "value": null,
+        "change": null,
+        "changePercent": null,
+        "status": "unavailable",
+        "source": "AP Global Markets",
+        "asOf": "2026-07-14T10:44:16.035+05:30"
+      }
+    },
+    {
+      "name": "Asian Markets",
+      "displayValue": null,
+      "changeLabel": null,
+      "tone": null,
+      "metric": {
+        "value": null,
+        "change": null,
+        "changePercent": null,
+        "status": "unavailable",
+        "source": "AP Global Markets",
+        "asOf": "2026-07-14T10:44:16.035+05:30"
+      }
+    },
+    {
+      "name": "Brent Crude",
+      "displayValue": null,
+      "changeLabel": null,
+      "tone": null,
+      "metric": {
+        "value": null,
+        "change": null,
+        "changePercent": null,
+        "status": "unavailable",
+        "source": "Commodity reference",
+        "asOf": "2026-07-14T10:44:16.035+05:30"
+      }
+    },
+    {
+      "name": "USD Index",
+      "displayValue": null,
+      "changeLabel": null,
+      "tone": null,
+      "metric": {
+        "value": null,
+        "change": null,
+        "changePercent": null,
+        "status": "unavailable",
+        "source": "Currency reference",
+        "asOf": "2026-07-14T10:44:16.035+05:30"
+      }
+    },
+    {
+      "name": "Gold (Spot)",
+      "displayValue": null,
+      "changeLabel": null,
+      "tone": null,
+      "metric": {
+        "value": null,
+        "change": null,
+        "changePercent": null,
+        "status": "unavailable",
+        "source": "Commodity reference",
+        "asOf": "2026-07-14T10:44:16.035+05:30"
+      }
+    }
+  ],
   "fiiDii": {
     "fiiNet": {
       "value": null,
@@ -130,7 +201,7 @@
       "changePercent": null,
       "status": "unavailable",
       "source": "FII / DII reference",
-      "asOf": "2026-07-13T08:00:00+05:30"
+      "asOf": "2026-07-14T10:44:16.035+05:30"
     },
     "diiNet": {
       "value": null,
@@ -138,7 +209,7 @@
       "changePercent": null,
       "status": "unavailable",
       "source": "FII / DII reference",
-      "asOf": "2026-07-13T08:00:00+05:30"
+      "asOf": "2026-07-14T10:44:16.035+05:30"
     },
     "interpretation": {
       "value": null,
@@ -146,7 +217,7 @@
       "changePercent": null,
       "status": "unavailable",
       "source": "MarketPulse desk",
-      "asOf": "2026-07-13T08:00:00+05:30"
+      "asOf": "2026-07-14T10:44:16.035+05:30"
     }
   },
   "confidence": {
@@ -156,7 +227,7 @@
       "changePercent": null,
       "status": "unavailable",
       "source": "MarketPulse model",
-      "asOf": "2026-07-13T08:00:00+05:30"
+      "asOf": "2026-07-14T10:44:16.035+05:30"
     },
     "label": {
       "value": null,
@@ -164,7 +235,7 @@
       "changePercent": null,
       "status": "unavailable",
       "source": "MarketPulse model",
-      "asOf": "2026-07-13T08:00:00+05:30"
+      "asOf": "2026-07-14T10:44:16.035+05:30"
     }
   },
   "sectors": [],
@@ -177,7 +248,7 @@
       "changePercent": null,
       "status": "unavailable",
       "source": "Nifty close",
-      "asOf": "2026-07-13T08:00:00+05:30"
+      "asOf": "2026-07-14T10:44:16.035+05:30"
     },
     "resistance2": {
       "value": null,
@@ -185,7 +256,7 @@
       "changePercent": null,
       "status": "unavailable",
       "source": "Nifty close",
-      "asOf": "2026-07-13T08:00:00+05:30"
+      "asOf": "2026-07-14T10:44:16.035+05:30"
     },
     "support1": {
       "value": null,
@@ -193,7 +264,7 @@
       "changePercent": null,
       "status": "unavailable",
       "source": "Nifty close",
-      "asOf": "2026-07-13T08:00:00+05:30"
+      "asOf": "2026-07-14T10:44:16.035+05:30"
     },
     "support2": {
       "value": null,
@@ -201,7 +272,7 @@
       "changePercent": null,
       "status": "unavailable",
       "source": "Nifty close",
-      "asOf": "2026-07-13T08:00:00+05:30"
+      "asOf": "2026-07-14T10:44:16.035+05:30"
     },
     "trend": {
       "value": null,
@@ -209,7 +280,7 @@
       "changePercent": null,
       "status": "unavailable",
       "source": "MarketPulse model",
-      "asOf": "2026-07-13T08:00:00+05:30"
+      "asOf": "2026-07-14T10:44:16.035+05:30"
     },
     "bias": {
       "value": null,
@@ -217,7 +288,7 @@
       "changePercent": null,
       "status": "unavailable",
       "source": "MarketPulse model",
-      "asOf": "2026-07-13T08:00:00+05:30"
+      "asOf": "2026-07-14T10:44:16.035+05:30"
     }
   },
   "optionsSetup": {
@@ -227,7 +298,7 @@
       "changePercent": null,
       "status": "unavailable",
       "source": "Options reference",
-      "asOf": "2026-07-13T08:00:00+05:30"
+      "asOf": "2026-07-14T10:44:16.035+05:30"
     },
     "maxPain": {
       "value": null,
@@ -235,7 +306,7 @@
       "changePercent": null,
       "status": "unavailable",
       "source": "Options reference",
-      "asOf": "2026-07-13T08:00:00+05:30"
+      "asOf": "2026-07-14T10:44:16.035+05:30"
     },
     "maxCallOi": {
       "value": null,
@@ -243,7 +314,7 @@
       "changePercent": null,
       "status": "unavailable",
       "source": "Options reference",
-      "asOf": "2026-07-13T08:00:00+05:30"
+      "asOf": "2026-07-14T10:44:16.035+05:30"
     },
     "maxPutOi": {
       "value": null,
@@ -251,7 +322,7 @@
       "changePercent": null,
       "status": "unavailable",
       "source": "Options reference",
-      "asOf": "2026-07-13T08:00:00+05:30"
+      "asOf": "2026-07-14T10:44:16.035+05:30"
     },
     "freshLongBuildUp": {
       "value": null,
@@ -259,7 +330,7 @@
       "changePercent": null,
       "status": "unavailable",
       "source": "Options reference",
-      "asOf": "2026-07-13T08:00:00+05:30"
+      "asOf": "2026-07-14T10:44:16.035+05:30"
     },
     "freshShortBuildUp": {
       "value": null,
@@ -267,7 +338,7 @@
       "changePercent": null,
       "status": "unavailable",
       "source": "Options reference",
-      "asOf": "2026-07-13T08:00:00+05:30"
+      "asOf": "2026-07-14T10:44:16.035+05:30"
     }
   },
   "macroCalendar": [],
@@ -276,8 +347,8 @@
     "change": null,
     "changePercent": null,
     "status": "unavailable",
-    "source": "MarketPulse desk",
-    "asOf": "2026-07-13T18:17:15.266+05:30"
+    "source": "MarketPulse system",
+    "asOf": "2026-07-14T10:44:16.035+05:30"
   },
   "tradingPlan": {
     "gapUp": {
@@ -285,24 +356,24 @@
       "change": null,
       "changePercent": null,
       "status": "unavailable",
-      "source": "MarketPulse desk",
-      "asOf": "2026-07-13T18:17:15.266+05:30"
+      "source": "MarketPulse system",
+      "asOf": "2026-07-14T10:44:16.035+05:30"
     },
     "flat": {
       "value": null,
       "change": null,
       "changePercent": null,
       "status": "unavailable",
-      "source": "MarketPulse desk",
-      "asOf": "2026-07-13T18:17:15.266+05:30"
+      "source": "MarketPulse system",
+      "asOf": "2026-07-14T10:44:16.035+05:30"
     },
     "gapDown": {
       "value": null,
       "change": null,
       "changePercent": null,
       "status": "unavailable",
-      "source": "MarketPulse desk",
-      "asOf": "2026-07-13T18:17:15.266+05:30"
+      "source": "MarketPulse system",
+      "asOf": "2026-07-14T10:44:16.035+05:30"
     }
   },
   "footer": {
@@ -311,42 +382,44 @@
       "change": null,
       "changePercent": null,
       "status": "verified",
-      "source": "MarketPulse desk",
-      "asOf": "2026-07-13T08:00:00+05:30"
+      "source": "MarketPulse system",
+      "asOf": "2026-07-14T10:44:16.035+05:30"
     },
     "ctaSubtitle": {
       "value": "One alert when the new daily edition is ready.",
       "change": null,
       "changePercent": null,
       "status": "verified",
-      "source": "MarketPulse desk",
-      "asOf": "2026-07-13T08:00:00+05:30"
+      "source": "MarketPulse system",
+      "asOf": "2026-07-14T10:44:16.035+05:30"
     },
     "sources": {
       "value": [
-        "MarketPulse system"
+        "AP Global Markets",
+        "Nifty close",
+        "FII / DII reference"
       ],
       "change": null,
       "changePercent": null,
       "status": "verified",
-      "source": "MarketPulse desk",
-      "asOf": "2026-07-13T18:17:15.266+05:30"
+      "source": "MarketPulse system",
+      "asOf": "2026-07-14T10:44:16.035+05:30"
     },
     "disclaimer": {
       "value": "Independent market intelligence for educational use only.",
       "change": null,
       "changePercent": null,
       "status": "verified",
-      "source": "MarketPulse desk",
-      "asOf": "2026-07-13T18:17:15.266+05:30"
+      "source": "MarketPulse system",
+      "asOf": "2026-07-14T10:44:16.035+05:30"
     },
     "copyright": {
       "value": "© 2026 Market Pulse Desk",
       "change": null,
       "changePercent": null,
       "status": "verified",
-      "source": "MarketPulse desk",
-      "asOf": "2026-07-13T18:17:15.266+05:30"
+      "source": "MarketPulse system",
+      "asOf": "2026-07-14T10:44:16.035+05:30"
     }
   }
 }

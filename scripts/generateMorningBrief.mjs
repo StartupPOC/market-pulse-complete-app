@@ -7,6 +7,110 @@ const rootDir = process.cwd();
 const sourcePath = path.join(rootDir, "lib", "morningBriefData.ts");
 const outputPath = path.join(rootDir, "data", "currentMorningBriefData.json");
 const openAiApiUrl = "https://api.openai.com/v1/responses";
+const analystBriefInstructions = `You are an expert Indian equity market analyst and risk-first F&O trader.
+
+Generate a MORNING MARKET BRIEF for Indian markets for today.
+
+IMPORTANT RULES:
+1. Do not invent any market data.
+2. Search the web for latest verified data before writing.
+3. Every market data point must mention source and timestamp/as-of where available.
+4. If any data is unavailable, write "Data unavailable" instead of guessing.
+5. Do not give fresh stock recommendation unless price action, sector strength, volume, F&O/OI/IV, and event risk are verified.
+6. If F&O/OI/IV is not verified, mark all stock names as "Watchlist only".
+7. Use Indian market context: NSE, BSE, Nifty, Bank Nifty, Gift Nifty, India VIX, FII/DII, crude, USDINR, US markets, Asian markets, macro events.
+8. Keep tone practical, concise, and risk-first.
+9. Include Market Mood Index mandatorily.
+10. Include Macro Calendar mandatorily.
+11. Include Market Drivers mandatorily.
+12. Sector Rotation must be a table, not prose.
+
+TRADING PROFILE:
+- Total trading capital: ₹30 lakh
+- Swing capital: ₹25 lakh
+- Options capital: ₹5 lakh
+- Style: Swing + BTST + F&O
+- Target return: 5-10%
+- Avoid: operator-driven stocks, low liquidity stocks, penny stocks
+- Options rule: no averaging unless strongly verified; avoid far OTM CE/PE in volatile market
+
+OUTPUT CONTENT TO RESEARCH:
+
+1. Market Bias
+- Bullish
+- Mildly bullish
+- Neutral
+- Cautious
+- Bearish
+Explain why in 3-5 lines.
+
+2. Market Snapshot
+Include Nifty previous close, Sensex previous close, Bank Nifty previous close, Gift Nifty, India VIX, Brent crude, USDINR, FII cash flow, DII cash flow.
+Each row must include value, change if available, source, as-of timestamp.
+
+3. Market Mood Index
+Give score from 0-100:
+0-25 Extreme Fear
+26-45 Fear
+46-55 Neutral
+56-75 Greed
+76-100 Extreme Greed
+Factors must include Gift Nifty, previous day Nifty movement, FII/DII flows, crude oil, US markets, Asian markets, India VIX, major macro/event risk.
+
+4. Market Drivers
+Include crude oil, US market overnight, Asian market cues, Rupee/Dollar, FII/DII flow, earnings/events, geopolitical/macro news.
+
+5. Global Cues
+Include US indices, Asian indices, crude, gold, dollar index, US 10Y yield.
+
+6. Sector Rotation
+Use table only.
+Columns: Rank | Sector | Rotation Status | Reason | Stocks to Watch | Risk.
+Only include 6-8 important sectors.
+Classify as Strongest, Strong, Improving, Neutral, Weakening, Weakest.
+Must compare macro fit:
+- IT vs rupee/Nasdaq
+- Banks vs FII/yields/CPI
+- Realty vs interest-rate expectations
+- Pharma as defensive
+- Oil-sensitive sectors vs crude
+- Defence/capital goods as momentum themes
+
+7. Nifty and Bank Nifty Levels
+Give support/resistance.
+Do not invent levels if unavailable from credible technical source. If using analyst judgement, clearly mark "Analyst estimate".
+
+8. F&O Watchlist
+Only include F&O stocks if F&O eligibility is verified.
+For each: Stock | Bias | Why | Entry condition | Stop loss | Target | Status.
+Status must be Qualified, Watchlist only, or Avoid.
+Do not mark Qualified unless OI/IV and sector strength are verified.
+
+9. Swing Watchlist
+Stock | Sector | Why watch | Entry condition | SL | Target | Status.
+Only give "Watchlist only" unless EOD close, volume and sector strength are verified.
+
+10. Stocks / Sectors to Avoid
+Include far OTM options if volatility is high, crude-sensitive sectors if crude is rising, result-event stocks if IV crush risk exists, overextended gap-up stocks.
+
+11. Macro Calendar
+Include India and global events: CPI/WPI if relevant, RBI/Fed events, US CPI/jobs data, major earnings, crude inventory/geopolitical events.
+
+12. Current Holdings Risk Check
+If current holdings are not provided, write: "No current holdings provided."
+
+13. Final Trading Plan
+Give scenario-based plan:
+- If market opens gap up
+- If market opens flat
+- If market opens gap down
+- If Nifty breaks support
+- If Nifty sustains above resistance
+End with best sector for today, highest-risk sector today, fresh trade allowed or not, final one-line verdict.
+
+STRICT DISCLAIMERS:
+- This is educational market analysis, not investment advice.
+- Do not recommend trades without verified data.`;
 
 function toIstIso(date = new Date()) {
   const istOffsetMs = 5.5 * 60 * 60 * 1000;
@@ -147,21 +251,12 @@ async function callOpenAI({ apiKey, body }) {
 }
 
 function researchPrompt({ rawMarketData, generatedAt }) {
-  return `Research today's Indian market morning brief inputs for ${generatedAt} Asia/Kolkata.
+  return `${analystBriefInstructions}
 
-Find concise, source-grounded notes for:
-- Nifty 50, Bank Nifty, GIFT Nifty, India VIX
-- US markets, Asian markets, Brent crude, USD index, gold spot
-- FII net and DII net
-- Nifty support/resistance, trend, bias
-- options setup: PCR, max pain, max call OI, max put OI, fresh long/short build-up
-- relevant sector rotation candidates, top beneficiary stocks, risks, macro calendar
+Research today's Indian market morning brief inputs for ${generatedAt} Asia/Kolkata.
 
-Rules:
-- Do not invent numbers.
-- If you cannot verify something, say "unavailable".
-- Prefer official exchange/source data when accessible.
-- Keep notes concise and include source names and as-of timing where available.
+Return concise source-grounded research notes. Markdown tables are okay in this research step.
+Do not invent data. Use "Data unavailable" where sources are not verified.
 
 Raw market data supplied by caller:
 ${JSON.stringify(rawMarketData, null, 2)}
@@ -194,6 +289,9 @@ function briefPrompt({ rawMarketData, template, generatedAt }) {
 Current generation timestamp: ${generatedAt}
 Timezone: Asia/Kolkata
 
+Use these analyst instructions as the business requirements for the content:
+${analystBriefInstructions}
+
 Critical rules:
 - Return ONLY valid JSON. No markdown.
 - Match the exact object structure shown in the template shape.
@@ -201,11 +299,37 @@ Critical rules:
 - status must be one of: verified, unavailable, stale.
 - Never invent market data, levels, flows, OI, sector rankings, or stock ideas.
 - If a value is not verified from raw data or web-search evidence, use value: null, change: null, changePercent: null, status: "unavailable".
+- For every field used by the webpage, return a DataPoint object in this format:
+  {
+    "value": actual_value_or_null,
+    "change": numeric_change_or_null,
+    "changePercent": numeric_change_percent_or_null,
+    "status": "verified" | "stale" | "unavailable",
+    "source": "source name or Data unavailable",
+    "asOf": "ISO timestamp or current generation timestamp"
+  }
+- If data is missing, unverified, paywalled, conflicting, or too stale, set value: null, change: null, changePercent: null, status: "unavailable", source: "Data unavailable", asOf: current generation timestamp.
+- For watchlists, use "Watchlist only" in relevant text fields when verification is incomplete. Do not mark any idea as qualified unless price action, sector strength, volume, OI/IV, and event risk are verified.
 - Use concise source names and ISO asOf timestamps.
 - Keep moodIndex.ranges exactly as shown.
 - Keep footer CTA/disclaimer stable.
 - Sector rows should include only sectors with enough evidence; otherwise return an empty array or unavailable DataPoints.
 - This is educational market intelligence, not investment advice.
+
+Map the analyst brief into the webpage JSON like this:
+- Market Bias -> page.bias and page.summary.
+- Market Mood Index -> moodIndex.score, moodIndex.label, and confidence score/label.
+- Market Snapshot -> marketSnapshot; Sensex and USDINR are researched but not displayed on the current page.
+- Global Cues -> globalCues; include US markets, Asian markets, Brent crude, USD index, Gold. US 10Y is researched but not displayed on the current page.
+- FII/DII -> fiiDii.
+- Sector Rotation -> sectors. Convert rotation status to statusVsPrevious. Convert stocks to watch to beneficiaries. Use bestFnoPick only when verified; otherwise "Watchlist only".
+- Nifty/Bank Nifty Levels -> indexLevels. The current page displays Nifty levels only; prioritize Nifty.
+- F&O Watchlist -> btstIdeas only when entry/SL/target are verified; otherwise use "Watchlist only" strings and unavailable status where needed.
+- Swing Watchlist -> swingOpportunities.
+- Options/OI data -> optionsSetup. If PCR, max pain, max call OI, max put OI, fresh long build-up, or fresh short build-up are not verified, mark unavailable.
+- Macro Calendar -> macroCalendar.
+- Stocks/Sectors to Avoid, Market Drivers, event risks -> keyRisks and tradingPlan.
+- Current holdings risk check is not displayed on the current page; ignore unless it affects keyRisks.
 
 Template shape with example values. Use this for structure only; do not copy old market values unless independently verified:
 ${JSON.stringify(shape, null, 2)}

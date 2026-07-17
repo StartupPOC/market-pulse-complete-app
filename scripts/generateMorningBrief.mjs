@@ -25,6 +25,17 @@ IMPORTANT RULES:
 11. Include Market Drivers mandatorily.
 12. Sector Rotation must be a table, not prose.
 
+SOURCE PRIORITY AND AVAILABILITY RULES:
+- For Indian index close/previous close, India VIX, market breadth and exchange data, search NSE, BSE, Moneycontrol, TradingView, Economic Times Markets, Business Standard, Reuters, CNBC TV18, Mint, or other reputable market pages.
+- For FII/DII cash flow, search NSE/BSE/NSDL/SEBI exchange-provisional data and reputable market summaries.
+- For Gift Nifty, search NSE IX/GIFT Nifty, SGX/GIFT Nifty pages, Moneycontrol, TradingView, or reputable live market pages.
+- For global cues, search CNBC, Reuters, MarketWatch, Investing.com, TradingView, Yahoo Finance, official index/commodity pages, or reputable financial news.
+- For macro calendar, search official India/government/RBI sources, US economic calendar sources, investing/economic calendar sources, and major earnings calendars.
+- If live intraday data is unavailable but latest previous close is available, use latest previous close and mark status "verified" when the source/as-of are clear; mark "stale" only if the data is older than the latest completed trading session.
+- If exact F&O/OI/IV details are not available from a reliable source, do not invent them. Mark stock ideas "Watchlist only" and options fields unavailable where needed.
+- Derived analytical fields such as market bias, mood score, confidence score, sector rotation score, trading plan, and risk list may be generated from verified inputs. Use source "MarketPulse analysis based on verified inputs" and asOf current generation timestamp for those derived fields.
+- Do not leave analytical fields unavailable if enough verified inputs exist to form a cautious risk-first view.
+
 TRADING PROFILE:
 - Total trading capital: ₹30 lakh
 - Swing capital: ₹25 lakh
@@ -257,6 +268,23 @@ Research today's Indian market morning brief inputs for ${generatedAt} Asia/Kolk
 
 Return concise source-grounded research notes. Markdown tables are okay in this research step.
 Do not invent data. Use "Data unavailable" where sources are not verified.
+Before marking any displayed field unavailable, try the source categories listed in SOURCE PRIORITY AND AVAILABILITY RULES.
+For each required webpage field, include either:
+- verified value/change/source/as-of, or
+- "Data unavailable" plus a short reason why it could not be verified.
+
+Current webpage requires these displayed fields:
+- Nifty 50, Bank Nifty, GIFT Nifty, India VIX
+- US markets, Asian markets, Brent crude, USD index, Gold spot
+- FII net, DII net
+- Market Mood Index score and label
+- Confidence score out of 10 and label
+- 6-8 sector rotation rows with sector, status, reasons, beneficiary/watchlist stocks, risk
+- Swing watchlist and BTST/F&O watchlist; mark "Watchlist only" unless fully verified
+- Nifty resistance/support levels; use analyst estimate only if clearly marked
+- Options setup: PCR, max pain, max call OI, max put OI, fresh long build-up, fresh short build-up
+- Macro calendar
+- Key risks and scenario trading plan
 
 Raw market data supplied by caller:
 ${JSON.stringify(rawMarketData, null, 2)}
@@ -310,6 +338,9 @@ Critical rules:
   }
 - If data is missing, unverified, paywalled, conflicting, or too stale, set value: null, change: null, changePercent: null, status: "unavailable", source: "Data unavailable", asOf: current generation timestamp.
 - For watchlists, use "Watchlist only" in relevant text fields when verification is incomplete. Do not mark any idea as qualified unless price action, sector strength, volume, OI/IV, and event risk are verified.
+- Use latest previous close if live data is unavailable but the latest completed-session value is verified.
+- Derived analytical fields may be generated from verified inputs. For derived fields, set source to "MarketPulse analysis based on verified inputs" and asOf to current generation timestamp.
+- Do not mark page.summary, page.bias, moodIndex.score, moodIndex.label, confidence.score, confidence.label, keyRisks, or tradingPlan unavailable when enough verified market inputs exist to form a cautious analysis.
 - Use concise source names and ISO asOf timestamps.
 - Keep moodIndex.ranges exactly as shown.
 - Keep footer CTA/disclaimer stable.

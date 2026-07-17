@@ -1,64 +1,64 @@
 {
-  "generatedAt": "2026-07-16T10:54:56.759+05:30",
-  "lastRefreshed": "2026-07-16T10:54:56.759+05:30",
+  "generatedAt": "2026-07-17T10:56:44.666+05:30",
+  "lastRefreshed": "2026-07-17T10:56:44.666+05:30",
   "page": {
     "dateLabel": {
-      "value": "THU, 16 JUL 2026",
+      "value": "FRI, 17 JUL 2026",
       "change": null,
       "changePercent": null,
       "status": "verified",
-      "source": "Exchange Name",
-      "asOf": "2026-07-16T10:54:56.759+05:30"
+      "source": "MarketPulse desk",
+      "asOf": "2026-07-17T08:00:00+05:30"
     },
     "title": {
       "value": "Morning Market Brief",
       "change": null,
       "changePercent": null,
       "status": "verified",
-      "source": "Exchange Name",
-      "asOf": "2026-07-16T10:54:56.759+05:30"
+      "source": "MarketPulse desk",
+      "asOf": "2026-07-17T08:00:00+05:30"
     },
     "summary": {
-      "value": "Indian equities open positively supported by global cues, firm domestic flows despite DII outflows, with cautious optimism ahead of macro events.",
+      "value": "Indian markets open cautious amid global risk-off mood with sharp Asian slide and FII selling. Brent crude rise and rupee weakness reinforce risk. Focus on defensive segments; avoid aggressive longs without confirmed data.",
       "change": null,
       "changePercent": null,
       "status": "verified",
-      "source": "Exchange Name",
-      "asOf": "2026-07-16T10:54:56.759+05:30"
+      "source": "apnews.com, marketnetra.in, dowfutures.org",
+      "asOf": "2026-07-17T08:00:00+05:30"
     },
     "bias": {
-      "value": "Bullish",
+      "value": "Cautious",
       "change": null,
       "changePercent": null,
       "status": "verified",
-      "source": "Exchange Name",
-      "asOf": "2026-07-16T10:54:56.759+05:30"
+      "source": "MarketPulse desk",
+      "asOf": "2026-07-17T08:00:00+05:30"
     },
     "timestamp": {
-      "value": "Data as of 16 Jul 2026, 10:54 AM IST",
+      "value": "Data as of 17 Jul 2026, 8:00 AM IST",
       "change": null,
       "changePercent": null,
       "status": "verified",
-      "source": "Exchange Name",
-      "asOf": "2026-07-16T10:54:56.759+05:30"
+      "source": "MarketPulse desk",
+      "asOf": "2026-07-17T08:00:00+05:30"
     }
   },
   "moodIndex": {
     "score": {
-      "value": null,
+      "value": 35,
       "change": null,
       "changePercent": null,
-      "status": "unavailable",
+      "status": "verified",
       "source": "MarketPulse model",
-      "asOf": "2026-07-16T10:54:56.759+05:30"
+      "asOf": "2026-07-17T08:00:00+05:30"
     },
     "label": {
-      "value": null,
+      "value": "Fear",
       "change": null,
       "changePercent": null,
-      "status": "unavailable",
+      "status": "verified",
       "source": "MarketPulse model",
-      "asOf": "2026-07-16T10:54:56.759+05:30"
+      "asOf": "2026-07-17T08:00:00+05:30"
     },
     "ranges": [
       {
@@ -90,486 +90,718 @@
   },
   "marketSnapshot": {
     "nifty": {
-      "value": 18500,
-      "change": 92.5,
-      "changePercent": 0.5,
+      "value": 24072.8,
+      "change": -5.75,
+      "changePercent": -0.02,
       "status": "verified",
-      "source": "Exchange Name",
-      "asOf": "2026-07-16T10:54:56.759+05:30"
+      "source": "dowfutures.org",
+      "asOf": "2026-07-16T15:30:00+05:30"
     },
     "bankNifty": {
-      "value": 42000,
-      "change": 252,
-      "changePercent": 0.6,
-      "status": "verified",
-      "source": "Exchange Name",
-      "asOf": "2026-07-16T10:54:56.759+05:30"
+      "value": null,
+      "change": null,
+      "changePercent": null,
+      "status": "unavailable",
+      "source": "Data unavailable",
+      "asOf": "2026-07-17T08:00:00+05:30"
     },
     "giftNifty": {
-      "value": 18550,
-      "change": 74.2,
-      "changePercent": 0.4,
-      "status": "verified",
-      "source": "Exchange Name",
-      "asOf": "2026-07-16T10:54:56.759+05:30"
+      "value": null,
+      "change": null,
+      "changePercent": null,
+      "status": "unavailable",
+      "source": "Data unavailable",
+      "asOf": "2026-07-17T08:00:00+05:30"
     },
     "indiaVix": {
-      "value": 12.5,
-      "change": -0.25,
-      "changePercent": -2,
+      "value": null,
+      "change": null,
+      "changePercent": null,
+      "status": "unavailable",
+      "source": "Data unavailable",
+      "asOf": "2026-07-17T08:00:00+05:30"
+    },
+    "brentCrude": {
+      "value": 85.13,
+      "change": null,
+      "changePercent": 1.1,
       "status": "verified",
-      "source": "Exchange Name",
-      "asOf": "2026-07-16T10:54:56.759+05:30"
+      "source": "apnews.com",
+      "asOf": "2026-07-17T06:00:00+05:30"
+    },
+    "usdInr": {
+      "value": 96.345,
+      "change": null,
+      "changePercent": null,
+      "status": "verified",
+      "source": "dowfutures.org",
+      "asOf": "2026-07-16T15:30:00+05:30"
+    },
+    "fiiNetFlow": {
+      "value": -4205.56,
+      "change": null,
+      "changePercent": null,
+      "status": "verified",
+      "source": "marketnetra.in",
+      "asOf": "2026-07-16T18:00:00+05:30"
+    },
+    "diiNetFlow": {
+      "value": 2986.41,
+      "change": null,
+      "changePercent": null,
+      "status": "verified",
+      "source": "marketnetra.in",
+      "asOf": "2026-07-16T18:00:00+05:30"
     }
   },
   "globalCues": [
     {
       "name": "US Markets",
-      "displayValue": "Positive",
-      "changeLabel": "+0.3%",
-      "tone": "positive",
+      "displayValue": "Negative",
+      "changeLabel": "S&P 500 -0.5%, Dow -0.2%, Nasdaq -1.5%",
+      "tone": "negative",
       "metric": {
-        "value": "Positive",
-        "change": 0.3,
-        "changePercent": 0.3,
-        "status": "verified",
-        "source": "AP Global Markets",
-        "asOf": "2026-07-16T10:54:56.759+05:30"
+        "value": null,
+        "change": null,
+        "changePercent": null,
+        "status": "unavailable",
+        "source": "apnews.com",
+        "asOf": "2026-07-16T23:59:00+05:30"
       }
     },
     {
       "name": "Asian Markets",
-      "displayValue": "Positive",
-      "changeLabel": "+0.4% to +0.5%",
-      "tone": "positive",
+      "displayValue": "Negative",
+      "changeLabel": "Nikkei -5.8%, Hang Seng -2%, Shanghai -1.6%",
+      "tone": "negative",
       "metric": {
-        "value": "Positive",
+        "value": null,
         "change": null,
         "changePercent": null,
-        "status": "verified",
-        "source": "AP Global Markets",
-        "asOf": "2026-07-16T10:54:56.759+05:30"
+        "status": "unavailable",
+        "source": "apnews.com",
+        "asOf": "2026-07-17T06:00:00+05:30"
       }
     },
     {
       "name": "Brent Crude",
-      "displayValue": "$75",
-      "changeLabel": "+1%",
+      "displayValue": "$85.13",
+      "changeLabel": "+1.1%",
       "tone": "negative",
       "metric": {
-        "value": 75,
+        "value": 85.13,
         "change": null,
-        "changePercent": 1,
+        "changePercent": 1.1,
         "status": "verified",
-        "source": "Commodity reference",
-        "asOf": "2026-07-16T10:54:56.759+05:30"
-      }
-    },
-    {
-      "name": "USD Index",
-      "displayValue": "95.5",
-      "changeLabel": "-0.1%",
-      "tone": "positive",
-      "metric": {
-        "value": 95.5,
-        "change": null,
-        "changePercent": -0.1,
-        "status": "verified",
-        "source": "Currency reference",
-        "asOf": "2026-07-16T10:54:56.759+05:30"
+        "source": "apnews.com",
+        "asOf": "2026-07-17T06:00:00+05:30"
       }
     },
     {
       "name": "Gold (Spot)",
-      "displayValue": "$1800",
-      "changeLabel": "+0.2%",
-      "tone": "positive",
+      "displayValue": "Data unavailable",
+      "changeLabel": null,
+      "tone": "neutral",
       "metric": {
-        "value": 1800,
+        "value": null,
         "change": null,
-        "changePercent": 0.2,
-        "status": "verified",
-        "source": "Commodity reference",
-        "asOf": "2026-07-16T10:54:56.759+05:30"
+        "changePercent": null,
+        "status": "unavailable",
+        "source": "Data unavailable",
+        "asOf": "2026-07-17T08:00:00+05:30"
+      }
+    },
+    {
+      "name": "USD Index",
+      "displayValue": "Data unavailable",
+      "changeLabel": null,
+      "tone": "neutral",
+      "metric": {
+        "value": null,
+        "change": null,
+        "changePercent": null,
+        "status": "unavailable",
+        "source": "Data unavailable",
+        "asOf": "2026-07-17T08:00:00+05:30"
       }
     }
   ],
   "fiiDii": {
     "fiiNet": {
-      "value": 500,
+      "value": -4205.56,
       "change": null,
       "changePercent": null,
       "status": "verified",
-      "source": "Exchange Name",
-      "asOf": "2026-07-16T10:54:56.759+05:30"
+      "source": "marketnetra.in",
+      "asOf": "2026-07-16T18:00:00+05:30"
     },
     "diiNet": {
-      "value": -300,
+      "value": 2986.41,
       "change": null,
       "changePercent": null,
       "status": "verified",
-      "source": "Exchange Name",
-      "asOf": "2026-07-16T10:54:56.759+05:30"
+      "source": "marketnetra.in",
+      "asOf": "2026-07-16T18:00:00+05:30"
     },
     "interpretation": {
-      "value": "FIIs show inflows while DIIs are net sellers, indicating mixed domestic participation.",
+      "value": "FII net selling weighs on sentiment; DIIs provide partial support.",
       "change": null,
       "changePercent": null,
       "status": "verified",
-      "source": "Exchange Name",
-      "asOf": "2026-07-16T10:54:56.759+05:30"
+      "source": "MarketPulse desk",
+      "asOf": "2026-07-17T08:00:00+05:30"
     }
   },
   "confidence": {
     "score": {
-      "value": null,
+      "value": 4.5,
       "change": null,
       "changePercent": null,
-      "status": "unavailable",
+      "status": "verified",
       "source": "MarketPulse model",
-      "asOf": "2026-07-16T10:54:56.759+05:30"
+      "asOf": "2026-07-17T08:00:00+05:30"
     },
     "label": {
-      "value": null,
+      "value": "Cautious",
       "change": null,
       "changePercent": null,
-      "status": "unavailable",
+      "status": "verified",
       "source": "MarketPulse model",
-      "asOf": "2026-07-16T10:54:56.759+05:30"
+      "asOf": "2026-07-17T08:00:00+05:30"
     }
   },
   "sectors": [
     {
       "rank": 1,
+      "sector": "Pharma",
+      "moneyFlowScore": {
+        "value": null,
+        "change": null,
+        "changePercent": null,
+        "status": "unavailable",
+        "source": "Data unavailable",
+        "asOf": "2026-07-17T08:00:00+05:30"
+      },
+      "statusVsPrevious": {
+        "value": "Strongest",
+        "change": null,
+        "changePercent": null,
+        "status": "unavailable",
+        "source": "Data unavailable",
+        "asOf": "2026-07-17T08:00:00+05:30"
+      },
+      "whyMoving": {
+        "value": [
+          "Defensive sector amid market uncertainty"
+        ],
+        "change": null,
+        "changePercent": null,
+        "status": "unavailable",
+        "source": "Data unavailable",
+        "asOf": "2026-07-17T08:00:00+05:30"
+      },
+      "beneficiaries": {
+        "value": [
+          "Watchlist only"
+        ],
+        "change": null,
+        "changePercent": null,
+        "status": "unavailable",
+        "source": "Data unavailable",
+        "asOf": "2026-07-17T08:00:00+05:30"
+      },
+      "bestFnoPick": {
+        "value": "Watchlist only",
+        "change": null,
+        "changePercent": null,
+        "status": "unavailable",
+        "source": "Data unavailable",
+        "asOf": "2026-07-17T08:00:00+05:30"
+      }
+    },
+    {
+      "rank": 2,
       "sector": "IT",
       "moneyFlowScore": {
         "value": null,
         "change": null,
         "changePercent": null,
         "status": "unavailable",
-        "source": "MarketPulse model",
-        "asOf": "2026-07-16T10:54:56.759+05:30"
+        "source": "Data unavailable",
+        "asOf": "2026-07-17T08:00:00+05:30"
       },
       "statusVsPrevious": {
-        "value": null,
+        "value": "Strong",
         "change": null,
         "changePercent": null,
         "status": "unavailable",
-        "source": "MarketPulse model",
-        "asOf": "2026-07-16T10:54:56.759+05:30"
+        "source": "Data unavailable",
+        "asOf": "2026-07-17T08:00:00+05:30"
       },
       "whyMoving": {
-        "value": null,
-        "change": null,
-        "changePercent": null,
-        "status": "unavailable",
-        "source": "MarketPulse desk",
-        "asOf": "2026-07-16T10:54:56.759+05:30"
-      },
-      "beneficiaries": {
         "value": [
-          "Infosys",
-          "TCS"
+          "Benefiting from weaker rupee and global demand"
         ],
         "change": null,
         "changePercent": null,
-        "status": "verified",
-        "source": "Exchange Name",
-        "asOf": "2026-07-16T10:54:56.759+05:30"
+        "status": "unavailable",
+        "source": "Data unavailable",
+        "asOf": "2026-07-17T08:00:00+05:30"
       },
-      "bestFnoPick": {
-        "value": null,
+      "beneficiaries": {
+        "value": [
+          "Watchlist only"
+        ],
         "change": null,
         "changePercent": null,
         "status": "unavailable",
-        "source": "MarketPulse desk",
-        "asOf": "2026-07-16T10:54:56.759+05:30"
+        "source": "Data unavailable",
+        "asOf": "2026-07-17T08:00:00+05:30"
+      },
+      "bestFnoPick": {
+        "value": "Watchlist only",
+        "change": null,
+        "changePercent": null,
+        "status": "unavailable",
+        "source": "Data unavailable",
+        "asOf": "2026-07-17T08:00:00+05:30"
       }
     },
     {
-      "rank": 2,
-      "sector": "Pharmaceuticals",
+      "rank": 3,
+      "sector": "FMCG",
       "moneyFlowScore": {
         "value": null,
         "change": null,
         "changePercent": null,
         "status": "unavailable",
-        "source": "MarketPulse model",
-        "asOf": "2026-07-16T10:54:56.759+05:30"
+        "source": "Data unavailable",
+        "asOf": "2026-07-17T08:00:00+05:30"
       },
       "statusVsPrevious": {
-        "value": null,
+        "value": "Improving",
         "change": null,
         "changePercent": null,
         "status": "unavailable",
-        "source": "MarketPulse model",
-        "asOf": "2026-07-16T10:54:56.759+05:30"
+        "source": "Data unavailable",
+        "asOf": "2026-07-17T08:00:00+05:30"
       },
       "whyMoving": {
-        "value": null,
-        "change": null,
-        "changePercent": null,
-        "status": "unavailable",
-        "source": "MarketPulse desk",
-        "asOf": "2026-07-16T10:54:56.759+05:30"
-      },
-      "beneficiaries": {
         "value": [
-          "Sun Pharma"
+          "Stable demand during market volatility"
         ],
         "change": null,
         "changePercent": null,
-        "status": "verified",
-        "source": "Exchange Name",
-        "asOf": "2026-07-16T10:54:56.759+05:30"
+        "status": "unavailable",
+        "source": "Data unavailable",
+        "asOf": "2026-07-17T08:00:00+05:30"
+      },
+      "beneficiaries": {
+        "value": [
+          "Watchlist only"
+        ],
+        "change": null,
+        "changePercent": null,
+        "status": "unavailable",
+        "source": "Data unavailable",
+        "asOf": "2026-07-17T08:00:00+05:30"
       },
       "bestFnoPick": {
+        "value": "Watchlist only",
+        "change": null,
+        "changePercent": null,
+        "status": "unavailable",
+        "source": "Data unavailable",
+        "asOf": "2026-07-17T08:00:00+05:30"
+      }
+    },
+    {
+      "rank": 4,
+      "sector": "Banks",
+      "moneyFlowScore": {
         "value": null,
         "change": null,
         "changePercent": null,
         "status": "unavailable",
-        "source": "MarketPulse desk",
-        "asOf": "2026-07-16T10:54:56.759+05:30"
+        "source": "Data unavailable",
+        "asOf": "2026-07-17T08:00:00+05:30"
+      },
+      "statusVsPrevious": {
+        "value": "Neutral",
+        "change": null,
+        "changePercent": null,
+        "status": "unavailable",
+        "source": "Data unavailable",
+        "asOf": "2026-07-17T08:00:00+05:30"
+      },
+      "whyMoving": {
+        "value": [
+          "Impacted by FII selling and interest rate concerns"
+        ],
+        "change": null,
+        "changePercent": null,
+        "status": "unavailable",
+        "source": "Data unavailable",
+        "asOf": "2026-07-17T08:00:00+05:30"
+      },
+      "beneficiaries": {
+        "value": [
+          "Watchlist only"
+        ],
+        "change": null,
+        "changePercent": null,
+        "status": "unavailable",
+        "source": "Data unavailable",
+        "asOf": "2026-07-17T08:00:00+05:30"
+      },
+      "bestFnoPick": {
+        "value": "Watchlist only",
+        "change": null,
+        "changePercent": null,
+        "status": "unavailable",
+        "source": "Data unavailable",
+        "asOf": "2026-07-17T08:00:00+05:30"
+      }
+    },
+    {
+      "rank": 5,
+      "sector": "Realty",
+      "moneyFlowScore": {
+        "value": null,
+        "change": null,
+        "changePercent": null,
+        "status": "unavailable",
+        "source": "Data unavailable",
+        "asOf": "2026-07-17T08:00:00+05:30"
+      },
+      "statusVsPrevious": {
+        "value": "Weakening",
+        "change": null,
+        "changePercent": null,
+        "status": "unavailable",
+        "source": "Data unavailable",
+        "asOf": "2026-07-17T08:00:00+05:30"
+      },
+      "whyMoving": {
+        "value": [
+          "Sensitive to interest rate changes"
+        ],
+        "change": null,
+        "changePercent": null,
+        "status": "unavailable",
+        "source": "Data unavailable",
+        "asOf": "2026-07-17T08:00:00+05:30"
+      },
+      "beneficiaries": {
+        "value": [
+          "Watchlist only"
+        ],
+        "change": null,
+        "changePercent": null,
+        "status": "unavailable",
+        "source": "Data unavailable",
+        "asOf": "2026-07-17T08:00:00+05:30"
+      },
+      "bestFnoPick": {
+        "value": "Watchlist only",
+        "change": null,
+        "changePercent": null,
+        "status": "unavailable",
+        "source": "Data unavailable",
+        "asOf": "2026-07-17T08:00:00+05:30"
+      }
+    },
+    {
+      "rank": 6,
+      "sector": "Metals",
+      "moneyFlowScore": {
+        "value": null,
+        "change": null,
+        "changePercent": null,
+        "status": "unavailable",
+        "source": "Data unavailable",
+        "asOf": "2026-07-17T08:00:00+05:30"
+      },
+      "statusVsPrevious": {
+        "value": "Weakest",
+        "change": null,
+        "changePercent": null,
+        "status": "unavailable",
+        "source": "Data unavailable",
+        "asOf": "2026-07-17T08:00:00+05:30"
+      },
+      "whyMoving": {
+        "value": [
+          "Affected by global economic slowdown"
+        ],
+        "change": null,
+        "changePercent": null,
+        "status": "unavailable",
+        "source": "Data unavailable",
+        "asOf": "2026-07-17T08:00:00+05:30"
+      },
+      "beneficiaries": {
+        "value": [
+          "Watchlist only"
+        ],
+        "change": null,
+        "changePercent": null,
+        "status": "unavailable",
+        "source": "Data unavailable",
+        "asOf": "2026-07-17T08:00:00+05:30"
+      },
+      "bestFnoPick": {
+        "value": "Watchlist only",
+        "change": null,
+        "changePercent": null,
+        "status": "unavailable",
+        "source": "Data unavailable",
+        "asOf": "2026-07-17T08:00:00+05:30"
       }
     }
   ],
-  "swingOpportunities": [],
-  "btstIdeas": [],
   "indexLevels": {
     "resistance1": {
-      "value": 18600,
+      "value": null,
       "change": null,
       "changePercent": null,
-      "status": "verified",
-      "source": "Exchange Name",
-      "asOf": "2026-07-16T10:54:56.759+05:30"
+      "status": "unavailable",
+      "source": "Data unavailable",
+      "asOf": "2026-07-17T08:00:00+05:30"
     },
     "resistance2": {
-      "value": 18700,
+      "value": null,
       "change": null,
       "changePercent": null,
-      "status": "verified",
-      "source": "Exchange Name",
-      "asOf": "2026-07-16T10:54:56.759+05:30"
+      "status": "unavailable",
+      "source": "Data unavailable",
+      "asOf": "2026-07-17T08:00:00+05:30"
     },
     "support1": {
-      "value": 18400,
+      "value": null,
       "change": null,
       "changePercent": null,
-      "status": "verified",
-      "source": "Exchange Name",
-      "asOf": "2026-07-16T10:54:56.759+05:30"
+      "status": "unavailable",
+      "source": "Data unavailable",
+      "asOf": "2026-07-17T08:00:00+05:30"
     },
     "support2": {
-      "value": 18300,
+      "value": null,
       "change": null,
       "changePercent": null,
-      "status": "verified",
-      "source": "Exchange Name",
-      "asOf": "2026-07-16T10:54:56.759+05:30"
+      "status": "unavailable",
+      "source": "Data unavailable",
+      "asOf": "2026-07-17T08:00:00+05:30"
     },
     "trend": {
-      "value": "Bullish",
+      "value": "Downtrend",
       "change": null,
       "changePercent": null,
       "status": "verified",
-      "source": "Exchange Name",
-      "asOf": "2026-07-16T10:54:56.759+05:30"
+      "source": "MarketPulse desk",
+      "asOf": "2026-07-17T08:00:00+05:30"
     },
     "bias": {
-      "value": "Positive",
+      "value": "Negative",
       "change": null,
       "changePercent": null,
       "status": "verified",
-      "source": "Exchange Name",
-      "asOf": "2026-07-16T10:54:56.759+05:30"
+      "source": "MarketPulse desk",
+      "asOf": "2026-07-17T08:00:00+05:30"
     }
   },
-  "optionsSetup": {
-    "pcr": {
-      "value": 1.2,
-      "change": null,
-      "changePercent": null,
-      "status": "verified",
-      "source": "Exchange Name",
-      "asOf": "2026-07-16T10:54:56.759+05:30"
-    },
-    "maxPain": {
-      "value": 18500,
-      "change": null,
-      "changePercent": null,
-      "status": "verified",
-      "source": "Exchange Name",
-      "asOf": "2026-07-16T10:54:56.759+05:30"
-    },
-    "maxCallOi": {
-      "value": 18600,
-      "change": null,
-      "changePercent": null,
-      "status": "verified",
-      "source": "Exchange Name",
-      "asOf": "2026-07-16T10:54:56.759+05:30"
-    },
-    "maxPutOi": {
-      "value": 18400,
-      "change": null,
-      "changePercent": null,
-      "status": "verified",
-      "source": "Exchange Name",
-      "asOf": "2026-07-16T10:54:56.759+05:30"
-    },
-    "freshLongBuildUp": {
-      "value": "18,500 strike",
-      "change": null,
-      "changePercent": null,
-      "status": "verified",
-      "source": "Exchange Name",
-      "asOf": "2026-07-16T10:54:56.759+05:30"
-    },
-    "freshShortBuildUp": {
-      "value": "18,300 strike",
-      "change": null,
-      "changePercent": null,
-      "status": "verified",
-      "source": "Exchange Name",
-      "asOf": "2026-07-16T10:54:56.759+05:30"
+  "btstIdeas": [
+    {
+      "stock": {
+        "value": "Watchlist only",
+        "change": null,
+        "changePercent": null,
+        "status": "unavailable",
+        "source": "Data unavailable",
+        "asOf": "2026-07-17T08:00:00+05:30"
+      },
+      "entry": {
+        "value": "Watchlist only",
+        "change": null,
+        "changePercent": null,
+        "status": "unavailable",
+        "source": "Data unavailable",
+        "asOf": "2026-07-17T08:00:00+05:30"
+      },
+      "stopLoss": {
+        "value": "Watchlist only",
+        "change": null,
+        "changePercent": null,
+        "status": "unavailable",
+        "source": "Data unavailable",
+        "asOf": "2026-07-17T08:00:00+05:30"
+      },
+      "target": {
+        "value": "Watchlist only",
+        "change": null,
+        "changePercent": null,
+        "status": "unavailable",
+        "source": "Data unavailable",
+        "asOf": "2026-07-17T08:00:00+05:30"
+      },
+      "status": "Watchlist only"
     }
-  },
-  "macroCalendar": [
+  ],
+  "swingOpportunities": [
     {
-      "time": {
-        "value": "2026-07-20T00:00:00+05:30",
+      "stock": {
+        "value": "Watchlist only",
         "change": null,
         "changePercent": null,
-        "status": "verified",
-        "source": "Exchange Name",
-        "asOf": "2026-07-16T10:54:56.759+05:30"
+        "status": "unavailable",
+        "source": "Data unavailable",
+        "asOf": "2026-07-17T08:00:00+05:30"
       },
-      "event": {
-        "value": "RBI Monetary Policy Meeting",
+      "sector": {
+        "value": "Watchlist only",
         "change": null,
         "changePercent": null,
-        "status": "verified",
-        "source": "Exchange Name",
-        "asOf": "2026-07-16T10:54:56.759+05:30"
+        "status": "unavailable",
+        "source": "Data unavailable",
+        "asOf": "2026-07-17T08:00:00+05:30"
       },
-      "importance": {
-        "value": 4,
+      "conviction": {
+        "value": "Watchlist only",
         "change": null,
         "changePercent": null,
-        "status": "verified",
-        "source": "Exchange Name",
-        "asOf": "2026-07-16T10:54:56.759+05:30"
+        "status": "unavailable",
+        "source": "Data unavailable",
+        "asOf": "2026-07-17T08:00:00+05:30"
       },
-      "affectedSectors": {
-        "value": "All",
+      "reason": {
+        "value": "Watchlist only",
         "change": null,
         "changePercent": null,
-        "status": "verified",
-        "source": "Exchange Name",
-        "asOf": "2026-07-16T10:54:56.759+05:30"
+        "status": "unavailable",
+        "source": "Data unavailable",
+        "asOf": "2026-07-17T08:00:00+05:30"
       },
-      "expectedImpact": {
-        "value": "Market sensitive",
-        "change": null,
-        "changePercent": null,
-        "status": "verified",
-        "source": "Exchange Name",
-        "asOf": "2026-07-16T10:54:56.759+05:30"
-      }
-    },
-    {
-      "time": {
-        "value": "2026-07-25T00:00:00+05:30",
-        "change": null,
-        "changePercent": null,
-        "status": "verified",
-        "source": "Exchange Name",
-        "asOf": "2026-07-16T10:54:56.759+05:30"
-      },
-      "event": {
-        "value": "Q2 GDP Growth Data Release",
-        "change": null,
-        "changePercent": null,
-        "status": "verified",
-        "source": "Exchange Name",
-        "asOf": "2026-07-16T10:54:56.759+05:30"
-      },
-      "importance": {
-        "value": 4,
-        "change": null,
-        "changePercent": null,
-        "status": "verified",
-        "source": "Exchange Name",
-        "asOf": "2026-07-16T10:54:56.759+05:30"
-      },
-      "affectedSectors": {
-        "value": "All",
-        "change": null,
-        "changePercent": null,
-        "status": "verified",
-        "source": "Exchange Name",
-        "asOf": "2026-07-16T10:54:56.759+05:30"
-      },
-      "expectedImpact": {
-        "value": "Broad market sensitivity",
-        "change": null,
-        "changePercent": null,
-        "status": "verified",
-        "source": "Exchange Name",
-        "asOf": "2026-07-16T10:54:56.759+05:30"
-      }
+      "status": "Watchlist only"
     }
   ],
   "keyRisks": {
     "value": [
-      "Potential global economic slowdown",
-      "Domestic policy uncertainty",
-      "Crude oil price increase",
-      "DII outflows"
+      "Global market selloff with sharp Asian declines",
+      "FII heavy net selling pressuring markets",
+      "Rising Brent crude on Middle East tensions",
+      "Rupee weakness impacting currency-sensitive sectors",
+      "High volatility and missing data increase risk"
     ],
     "change": null,
     "changePercent": null,
     "status": "verified",
-    "source": "Exchange Name",
-    "asOf": "2026-07-16T10:54:56.759+05:30"
+    "source": "apnews.com, marketnetra.in",
+    "asOf": "2026-07-17T08:00:00+05:30"
   },
+  "macroCalendar": [
+    {
+      "time": {
+        "value": "Data unavailable",
+        "change": null,
+        "changePercent": null,
+        "status": "unavailable",
+        "source": "Data unavailable",
+        "asOf": "2026-07-17T08:00:00+05:30"
+      },
+      "event": {
+        "value": "Data unavailable",
+        "change": null,
+        "changePercent": null,
+        "status": "unavailable",
+        "source": "Data unavailable",
+        "asOf": "2026-07-17T08:00:00+05:30"
+      },
+      "importance": {
+        "value": null,
+        "change": null,
+        "changePercent": null,
+        "status": "unavailable",
+        "source": "Data unavailable",
+        "asOf": "2026-07-17T08:00:00+05:30"
+      },
+      "affectedSectors": {
+        "value": "Data unavailable",
+        "change": null,
+        "changePercent": null,
+        "status": "unavailable",
+        "source": "Data unavailable",
+        "asOf": "2026-07-17T08:00:00+05:30"
+      },
+      "expectedImpact": {
+        "value": "Data unavailable",
+        "change": null,
+        "changePercent": null,
+        "status": "unavailable",
+        "source": "Data unavailable",
+        "asOf": "2026-07-17T08:00:00+05:30"
+      }
+    }
+  ],
   "tradingPlan": {
     "gapUp": {
       "value": [
-        "Avoid chasing the gap up",
-        "Wait for consolidation",
-        "Buy selective strong sector names"
+        "Avoid chasing gap up moves amid global weakness",
+        "Wait for volatility to settle before entering",
+        "Focus on defensive sectors on pullbacks"
       ],
       "change": null,
       "changePercent": null,
-      "status": "unavailable",
-      "source": "Exchange Name",
-      "asOf": "2026-07-16T10:54:56.759+05:30"
+      "status": "verified",
+      "source": "MarketPulse desk",
+      "asOf": "2026-07-17T08:00:00+05:30"
     },
     "flat": {
       "value": [
-        "Focus on relative strength stocks",
-        "Watch volume breakouts",
-        "Avoid weak sectors"
+        "Monitor relative strength stocks closely",
+        "Look for confirmed volume breakouts",
+        "Avoid weak or volatile sectors"
       ],
       "change": null,
       "changePercent": null,
-      "status": "unavailable",
-      "source": "Exchange Name",
-      "asOf": "2026-07-16T10:54:56.759+05:30"
+      "status": "verified",
+      "source": "MarketPulse desk",
+      "asOf": "2026-07-17T08:00:00+05:30"
     },
     "gapDown": {
       "value": [
-        "Watch 18,400 and 18,300 support",
-        "Look for buying opportunities in strong sectors if support holds",
-        "Avoid panic selling"
+        "Watch for critical supports once available",
+        "Buy selectively in strongest sectors only",
+        "Avoid panic selling and overleveraging"
       ],
       "change": null,
       "changePercent": null,
-      "status": "unavailable",
-      "source": "Exchange Name",
-      "asOf": "2026-07-16T10:54:56.759+05:30"
+      "status": "verified",
+      "source": "MarketPulse desk",
+      "asOf": "2026-07-17T08:00:00+05:30"
+    },
+    "niftyBreakSupport": {
+      "value": [
+        "Raise caution on fresh longs",
+        "Protect capital, tighten stops",
+        "Prepare for possible short-term weakness"
+      ],
+      "change": null,
+      "changePercent": null,
+      "status": "verified",
+      "source": "MarketPulse desk",
+      "asOf": "2026-07-17T08:00:00+05:30"
+    },
+    "niftySustainResistance": {
+      "value": [
+        "Look for follow-through confirming strength",
+        "Add in strong sectors with confirmed data",
+        "Maintain risk management discipline"
+      ],
+      "change": null,
+      "changePercent": null,
+      "status": "verified",
+      "source": "MarketPulse desk",
+      "asOf": "2026-07-17T08:00:00+05:30"
     }
   },
   "footer": {
@@ -578,44 +810,46 @@
       "change": null,
       "changePercent": null,
       "status": "verified",
-      "source": "Exchange Name",
-      "asOf": "2026-07-16T10:54:56.759+05:30"
+      "source": "MarketPulse desk",
+      "asOf": "2026-07-17T08:00:00+05:30"
     },
     "ctaSubtitle": {
       "value": "One alert when the new daily edition is ready.",
       "change": null,
       "changePercent": null,
       "status": "verified",
-      "source": "Exchange Name",
-      "asOf": "2026-07-16T10:54:56.759+05:30"
+      "source": "MarketPulse desk",
+      "asOf": "2026-07-17T08:00:00+05:30"
     },
     "sources": {
       "value": [
-        "AP Global Markets",
-        "Exchange Name",
-        "FII / DII reference"
+        "apnews.com",
+        "dowfutures.org",
+        "marketnetra.in",
+        "MarketPulse model",
+        "MarketPulse desk"
       ],
       "change": null,
       "changePercent": null,
       "status": "verified",
-      "source": "Exchange Name",
-      "asOf": "2026-07-16T10:54:56.759+05:30"
+      "source": "MarketPulse desk",
+      "asOf": "2026-07-17T08:00:00+05:30"
     },
     "disclaimer": {
       "value": "Independent market intelligence for educational use only.",
       "change": null,
       "changePercent": null,
       "status": "verified",
-      "source": "Exchange Name",
-      "asOf": "2026-07-16T10:54:56.759+05:30"
+      "source": "MarketPulse desk",
+      "asOf": "2026-07-17T08:00:00+05:30"
     },
     "copyright": {
       "value": "© 2026 Market Pulse Desk",
       "change": null,
       "changePercent": null,
       "status": "verified",
-      "source": "Exchange Name",
-      "asOf": "2026-07-16T10:54:56.759+05:30"
+      "source": "MarketPulse desk",
+      "asOf": "2026-07-17T08:00:00+05:30"
     }
   }
 }

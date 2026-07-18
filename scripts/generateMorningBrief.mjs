@@ -1,4 +1,4 @@
-import { mkdir, readFile, writeFile } from "node:fs/promises";
+import { access, mkdir, readFile, writeFile } from "node:fs/promises";
 import path from "node:path";
 import vm from "node:vm";
 import ts from "typescript";
@@ -6,6 +6,7 @@ import ts from "typescript";
 const rootDir = process.cwd();
 const sourcePath = path.join(rootDir, "lib", "morningBriefData.ts");
 const outputPath = path.join(rootDir, "data", "currentMorningBriefData.json");
+const defaultPayloadPath = path.join(rootDir, "data", "morning_market_payload_v2.json");
 const openAiApiUrl = "https://api.openai.com/v1/responses";
 const analystBriefInstructions = `You are an expert Indian equity market analyst and risk-first F&O trader.
 
@@ -243,6 +244,39 @@ function extractJson(text) {
   }
 }
 
+async function fileExists(filePath) {
+  try {
+    await access(filePath);
+    return true;
+  } catch {
+    return false;
+  }
+}
+
+async function loadExistingMorningBriefData() {
+  try {
+    return JSON.parse(await readFile(outputPath, "utf8"));
+  } catch {
+    return null;
+  }
+}
+
+async function loadOpenAiPayload() {
+  if (process.env.OPENAI_PAYLOAD_JSON) {
+    return JSON.parse(process.env.OPENAI_PAYLOAD_JSON);
+  }
+
+  const configuredPath = process.env.OPENAI_PAYLOAD_FILE
+    ? path.resolve(rootDir, process.env.OPENAI_PAYLOAD_FILE)
+    : defaultPayloadPath;
+
+  if (!(await fileExists(configuredPath))) {
+    return null;
+  }
+
+  return JSON.parse(await readFile(configuredPath, "utf8"));
+}
+
 async function callOpenAI({ apiKey, body }) {
   const response = await fetch(openAiApiUrl, {
     method: "POST",
@@ -259,6 +293,323 @@ async function callOpenAI({ apiKey, body }) {
   }
 
   return JSON.parse(responseText);
+}
+
+function normalizeText(value, fallback = "Data unavailable") {
+  if (value === null || value === undefined) return fallback;
+  const text = String(value).trim();
+  return text || fallback;
+}
+
+function isUnavailable(value) {
+  if (value === null || value === undefined) return true;
+  if (Array.isArray(value) || typeof value === "object") return false;
+  return /data unavailable|unavailable|not available|n\/a|na|null|undefined/i.test(normalizeText(value, ""));
+}
+
+function normalizeStatus(value, status) {
+  if (isUnavailable(value) || status === "unavailable") return "unavailable";
+  if (status === "stale") return "stale";
+  return "verified";
+}
+
+function parseNumber(value) {
+  if (typeof value === "number" && Number.isFinite(value)) return value;
+  if (value === null || value === undefined || isUnavailable(value)) return null;
+  const text = String(value).replace(/,/g, "");
+  const match = text.match(/[-+]?\d*\.?\d+/);
+  if (!match) return null;
+  const parsed = Number(match[0]);
+  return Number.isFinite(parsed) ? parsed : null;
+}
+
+function parsePercent(value) {
+  if (typeof value === "number" && Number.isFinite(value)) return value;
+  if (value === null || value === undefined || isUnavailable(value)) return null;
+  const match = String(value).match(/[-+]?\d*\.?\d+(?=\s*%)/);
+  return match ? Number(match[0]) : null;
+}
+
+function signedNumber(value) {
+  const parsed = parseNumber(value);
+  if (parsed === null) return null;
+  return /^\s*-/.test(String(value)) ? -Math.abs(parsed) : parsed;
+}
+
+function normalizeAsOf(value, fallback) {
+  if (!value || isUnavailable(value)) return fallback;
+  const text = String(value).trim();
+  const parsed = parseIstDate(text);
+  return parsed || text;
+}
+
+function dp(value, source, asOf, extra = {}) {
+  const status = normalizeStatus(value, extra.status);
+  return {
+    value: status === "unavailable" ? null : value,
+    change: extra.change ?? null,
+    changePercent: extra.changePercent ?? null,
+    status,
+    source: status === "unavailable" ? "Data unavailable" : normalizeText(source, "MarketPulse analysis"),
+    asOf,
+    ...extra,
+    status
+  };
+}
+
+function parseIstDate(value) {
+  if (!value) return null;
+  const text = String(value).replace(/\bIST\b/i, "").trim();
+  const parsedDirect = new Date(text);
+  if (!Number.isNaN(parsedDirect.getTime())) return parsedDirect.toISOString();
+
+  const match = text.match(/(\d{4})-(\d{2})-(\d{2})(?:[ T,]+(\d{1,2}):(\d{2})(?::(\d{2}))?)?/);
+  if (!match) return null;
+  const [, year, month, day, hour = "08", minute = "00", second = "00"] = match;
+  return `${year}-${month}-${day}T${hour.padStart(2, "0")}:${minute}:${second}+05:30`;
+}
+
+function sourceTimestamp(metadata, fallback) {
+  return parseIstDate(metadata?.preparedTimeIST) || parseIstDate(metadata?.dataCutoffTimeIST) || parseIstDate(metadata?.date) || fallback;
+}
+
+function findByName(rows, names) {
+  const patterns = names.map((name) => new RegExp(name, "i"));
+  return rows.find((row) => patterns.some((pattern) => pattern.test(normalizeText(row.name || row.asset || row.index || row.market, ""))));
+}
+
+function splitList(value) {
+  if (Array.isArray(value)) {
+    return value.map((item) => {
+      if (!item || typeof item !== "object") return normalizeText(item, "");
+      const fields = [item.stock, item.name, item.sector, item.reason, item.status]
+        .map((part) => normalizeText(part, ""))
+        .filter((part) => part && !isUnavailable(part));
+      return fields.join(" - ");
+    }).filter(Boolean);
+  }
+  if (value && typeof value === "object") {
+    return splitList([value]);
+  }
+  if (!value || isUnavailable(value)) return [];
+  return String(value).split(/[,\n;|]+| · /).map((item) => item.trim()).filter(Boolean);
+}
+
+function toneFrom(change, text = "") {
+  const parsed = signedNumber(change);
+  if (parsed !== null) return parsed < 0 ? "negative" : parsed > 0 ? "positive" : "neutral";
+  if (/negative|weak|fall|down|red|pressure/i.test(text)) return "negative";
+  if (/positive|strong|rise|up|green|support/i.test(text)) return "positive";
+  return "neutral";
+}
+
+function importanceScore(value) {
+  const text = normalizeText(value, "").toLowerCase();
+  if (text.includes("high")) return 5;
+  if (text.includes("medium")) return 3;
+  if (text.includes("low")) return 1;
+  return parseNumber(value) ?? 3;
+}
+
+function parseBias(label, score) {
+  const text = normalizeText(label, "");
+  if (/bear|fear|weak/i.test(text)) return "Bearish";
+  if (/bull|greed|strong/i.test(text)) return "Bullish";
+  const numericScore = parseNumber(score);
+  if (numericScore !== null) {
+    if (numericScore >= 56) return "Bullish";
+    if (numericScore <= 45) return "Bearish";
+  }
+  return "Neutral";
+}
+
+function moodZoneLabel(score) {
+  const value = parseNumber(score);
+  if (value === null) return "Neutral";
+  if (value <= 25) return "Extreme Fear";
+  if (value <= 45) return "Fear";
+  if (value <= 55) return "Neutral";
+  if (value <= 75) return "Greed";
+  return "Extreme Greed";
+}
+
+function firstLevel(levels, pattern, index = 0) {
+  const matches = (levels || []).filter((item) => pattern.test(normalizeText(item.levelType || item.type || item.name, "")));
+  return matches[index] || null;
+}
+
+function levelValue(level) {
+  return parseNumber(level?.level ?? level?.value ?? level?.price);
+}
+
+function convertOpenAiPayloadResult(result, template, fallbackGeneratedAt) {
+  const cards = result.webpage_cards || result.webpageCards || {};
+  const metadata = result.metadata || {};
+  const generatedAt = sourceTimestamp(metadata, fallbackGeneratedAt);
+  const asOf = generatedAt;
+  const analysisSource = "MarketPulse analysis based on verified inputs";
+  const snapshot = cards.marketSnapshot || [];
+  const keyAssets = cards.keyAssets || [];
+  const flows = (cards.institutionalFlows || [])[0] || {};
+  const mood = cards.marketMood || {};
+  const globalConclusion = cards.globalConclusion || {};
+  const niftyLevels = cards.indexLevels?.nifty || [];
+  const optionsNifty = cards.optionsSetup?.nifty || {};
+
+  const snapshotPoint = (names, sourceFallback = "Market data") => {
+    const row = findByName(snapshot, names);
+    const value = parseNumber(row?.value);
+    return dp(value, row?.source || sourceFallback, normalizeAsOf(row?.asOf, asOf), {
+      change: signedNumber(row?.change),
+      changePercent: parsePercent(row?.changePercent),
+      status: row?.status
+    });
+  };
+
+  const giftValue = parseNumber(cards.giftNifty?.currentValue);
+  const moodScore = parseNumber(mood.score) ?? null;
+  const moodLabel = normalizeText(mood.label, "Neutral");
+  const moodZone = moodZoneLabel(moodScore);
+  const pageSummary = normalizeText(globalConclusion.conclusion, normalizeText((globalConclusion.points || [])[0], "Market data is being prepared."));
+
+  const cueFromAsset = (name, labels) => {
+    const asset = findByName(keyAssets, labels);
+    const value = parseNumber(asset?.latestReading);
+    const changePercent = parsePercent(asset?.change);
+    const displayValue = value === null ? "Unavailable" : normalizeText(asset.latestReading);
+    const changeLabel = changePercent === null ? normalizeText(asset?.change, "Unavailable") : `${changePercent > 0 ? "+" : ""}${changePercent}%`;
+    return {
+      name,
+      displayValue,
+      changeLabel,
+      tone: toneFrom(asset?.change, `${asset?.signalForIndia || ""} ${asset?.change || ""}`),
+      metric: dp(value ?? displayValue, asset?.source, normalizeAsOf(asset?.asOf, asOf), {
+        change: signedNumber(asset?.change),
+        changePercent
+      })
+    };
+  };
+
+  const usText = (cards.usMarkets || []).map((item) => `${item.index}: ${item.change || item.close || "Unavailable"}`).join("; ");
+  const asiaText = (cards.asianMarkets || []).map((item) => `${item.market}: ${item.latestLevelChange || item.status || "Unavailable"}`).join("; ");
+  const usTone = toneFrom(null, `${usText} ${cards.usMarkets?.[0]?.indiaImpact || ""}`);
+  const asiaTone = toneFrom(null, `${asiaText} ${cards.asianMarkets?.[0]?.indiaImplication || ""}`);
+
+  const fiiValue = signedNumber(flows.fiiFpiNetActivity);
+  const diiValue = signedNumber(flows.diiNetActivity);
+
+  return {
+    ...template,
+    generatedAt,
+    lastRefreshed: fallbackGeneratedAt,
+    page: {
+      dateLabel: dp(normalizeText(`${metadata.day || ""}${metadata.day ? ", " : ""}${metadata.date || ""}`, template.page.dateLabel.value), analysisSource, asOf),
+      title: dp("Morning Market Brief", analysisSource, asOf),
+      summary: dp(pageSummary, analysisSource, asOf),
+      bias: dp(parseBias(moodLabel, moodScore), analysisSource, asOf),
+      timestamp: dp(normalizeText(metadata.dataCutoffTimeIST || metadata.preparedTimeIST, `Data cut: ${asOf}`), analysisSource, asOf)
+    },
+    moodIndex: {
+      score: dp(moodScore, analysisSource, asOf),
+      label: dp(moodZone, analysisSource, asOf),
+      ranges: template.moodIndex.ranges
+    },
+    marketSnapshot: {
+      nifty: snapshotPoint(["nifty previous close", "nifty 50", "^nifty$"], "NSE"),
+      bankNifty: snapshotPoint(["bank nifty"], "NSE"),
+      giftNifty: dp(giftValue, cards.giftNifty?.source || "GIFT Nifty", normalizeAsOf(cards.giftNifty?.timestamp, asOf), {
+        change: signedNumber(cards.giftNifty?.impliedGap),
+        changePercent: parsePercent(cards.giftNifty?.impliedGap)
+      }),
+      indiaVix: snapshotPoint(["india vix", "vix"], "NSE")
+    },
+    globalCues: [
+      {
+        name: "US Markets",
+        displayValue: usTone === "negative" ? "Negative" : usTone === "positive" ? "Positive" : "Neutral",
+        changeLabel: normalizeText(cards.usMarkets?.[0]?.indiaImpact, usTone === "neutral" ? "Neutral" : usTone === "positive" ? "Positive" : "Negative"),
+        tone: usTone,
+        metric: dp(usText || null, cards.usMarkets?.[0]?.source, asOf)
+      },
+      {
+        name: "Asian Markets",
+        displayValue: asiaTone === "negative" ? "Negative" : asiaTone === "positive" ? "Positive" : "Neutral",
+        changeLabel: normalizeText(cards.asianMarkets?.[0]?.indiaImplication, asiaTone === "neutral" ? "Neutral" : asiaTone === "positive" ? "Positive" : "Negative"),
+        tone: asiaTone,
+        metric: dp(asiaText || null, cards.asianMarkets?.[0]?.source, asOf)
+      },
+      cueFromAsset("Brent Crude", ["brent", "crude"]),
+      cueFromAsset("USD Index", ["dxy", "dollar index", "usd index"]),
+      cueFromAsset("Gold (Spot)", ["gold"])
+    ],
+    fiiDii: {
+      fiiNet: dp(fiiValue, flows.source, normalizeAsOf(flows.date, asOf), { change: fiiValue }),
+      diiNet: dp(diiValue, flows.source, normalizeAsOf(flows.date, asOf), { change: diiValue }),
+      interpretation: dp(normalizeText(flows.combinedInterpretation, "Institutional flow data unavailable."), flows.source || analysisSource, normalizeAsOf(flows.date, asOf))
+    },
+    confidence: {
+      score: dp(moodScore === null ? null : Math.round((moodScore / 10) * 10) / 10, analysisSource, asOf),
+      label: dp(moodLabel, analysisSource, asOf)
+    },
+    sectors: (cards.sectorRotation || []).slice(0, 8).map((sector, index) => ({
+      rank: index + 1,
+      sector: normalizeText(sector.sector, "Sector"),
+      moneyFlowScore: dp(parseNumber(sector.moneyFlowScore), analysisSource, asOf),
+      statusVsPrevious: dp(normalizeText(sector.rotationStatus, "Neutral"), analysisSource, asOf),
+      whyMoving: dp([
+        normalizeText(sector.priceRelativeStrengthEvidence, ""),
+        normalizeText(sector.whyStrongOrWeak, ""),
+        normalizeText(sector.tradingView, "")
+      ].filter(Boolean), sector.source || analysisSource, asOf),
+      beneficiaries: dp(splitList(sector.beneficiaryOrAffectedStocks), sector.source || analysisSource, asOf),
+      bestFnoPick: dp(splitList(sector.beneficiaryOrAffectedStocks)[0] || "Watchlist only", sector.source || analysisSource, asOf)
+    })),
+    swingOpportunities: (cards.highPotentialWatchlist || []).slice(0, 5).map((item) => ({
+      stock: dp(normalizeText(item.stock, "Watchlist only"), analysisSource, asOf),
+      sector: dp(normalizeText(item.tradeType, "Watchlist"), analysisSource, asOf),
+      conviction: dp(item.scoreOutOf10 ? `${item.scoreOutOf10}/10` : "Watchlist only", analysisSource, asOf),
+      reason: dp(normalizeText(item.reason, "Await verified setup."), analysisSource, asOf)
+    })),
+    btstIdeas: (cards.topBTSTIdeas || []).slice(0, 3).map((item) => ({
+      stock: dp(normalizeText(item.stock, "Watchlist only"), analysisSource, asOf),
+      entry: dp(normalizeText(item.entryTrigger, "Watchlist only"), analysisSource, asOf),
+      stopLoss: dp(normalizeText(item.stopLoss, "Watchlist only"), analysisSource, asOf),
+      target: dp([item.target1, item.target2].filter(Boolean).join(" / ") || "Watchlist only", analysisSource, asOf)
+    })),
+    indexLevels: {
+      resistance1: dp(levelValue(firstLevel(niftyLevels, /resistance/i, 0)), cards.indexLevels?.source || analysisSource, asOf),
+      resistance2: dp(levelValue(firstLevel(niftyLevels, /resistance/i, 1)), cards.indexLevels?.source || analysisSource, asOf),
+      support1: dp(levelValue(firstLevel(niftyLevels, /support/i, 0)), cards.indexLevels?.source || analysisSource, asOf),
+      support2: dp(levelValue(firstLevel(niftyLevels, /support/i, 1)), cards.indexLevels?.source || analysisSource, asOf),
+      trend: dp(normalizeText(globalConclusion.mostImportantGlobalFactorForIndia, "Watch levels closely"), analysisSource, asOf),
+      bias: dp(parseBias(moodLabel, moodScore) === "Bullish" ? "Mild Positive" : parseBias(moodLabel, moodScore), analysisSource, asOf)
+    },
+    optionsSetup: {
+      pcr: dp(parseNumber(optionsNifty.pcr), optionsNifty.source || "NSE option chain", asOf),
+      maxPain: dp(parseNumber(optionsNifty.maxPain), optionsNifty.source || "NSE option chain", asOf),
+      maxCallOi: dp(parseNumber(optionsNifty.maxCallOi), optionsNifty.source || "NSE option chain", asOf),
+      maxPutOi: dp(parseNumber(optionsNifty.maxPutOi), optionsNifty.source || "NSE option chain", asOf),
+      freshLongBuildUp: dp(splitList(cards.optionsSetup?.stockFuturesBuildUp?.freshLongBuildUp).join(", ") || null, "F&O buildup", asOf),
+      freshShortBuildUp: dp(splitList(cards.optionsSetup?.stockFuturesBuildUp?.freshShortBuildUp).join(", ") || null, "F&O buildup", asOf)
+    },
+    macroCalendar: (cards.macroCalendar || []).slice(0, 5).map((event) => ({
+      time: dp(normalizeText(event.dateTimeIST, "Data unavailable"), event.source, asOf),
+      event: dp(normalizeText(event.event, "Data unavailable"), event.source, asOf),
+      importance: dp(importanceScore(event.importance), event.source, asOf),
+      affectedSectors: dp(normalizeText(event.affectedSectors, "All"), event.source, asOf),
+      expectedImpact: dp(normalizeText(event.likelyImpact, "Watch for volatility."), event.source, asOf)
+    })),
+    keyRisks: dp([
+      ...(cards.dataGaps || []).map((gap) => `${gap.field}: ${gap.requiredAction || gap.reason}`),
+      ...(cards.newsAndStockImpact || []).slice(0, 3).map((news) => `${news.newsEvent}: ${news.expectedImpact || news.impact}`)
+    ].filter(Boolean).slice(0, 5), analysisSource, asOf),
+    tradingPlan: {
+      gapUp: dp([normalizeText(mood.bullishCondition, "Avoid chasing the gap."), normalizeText(cards.indexLevels?.indexOptionsPlan?.ceEntryCondition, "Wait for confirmation.")], analysisSource, asOf),
+      flat: dp([normalizeText(mood.neutralCondition, "Trade selectively."), normalizeText(cards.indexLevels?.indexOptionsPlan?.noTradeZone, "Avoid low-conviction trades.")], analysisSource, asOf),
+      gapDown: dp([normalizeText(mood.bearishCondition, "Protect capital first."), normalizeText(cards.indexLevels?.indexOptionsPlan?.peEntryCondition, "Wait for breakdown confirmation.")], analysisSource, asOf)
+    },
+    footer: template.footer
+  };
 }
 
 function researchPrompt({ rawMarketData, generatedAt }) {
@@ -371,10 +722,30 @@ ${JSON.stringify(rawMarketData, null, 2)}
 }
 
 async function generateWithOpenAI({ rawMarketData, template, generatedAt }) {
+  if (process.env.OPENAI_RESPONSE_FILE) {
+    const responsePath = path.resolve(rootDir, process.env.OPENAI_RESPONSE_FILE);
+    console.log(`Converting saved OpenAI response from ${responsePath}...`);
+    const savedResponse = JSON.parse(await readFile(responsePath, "utf8"));
+    return convertOpenAiPayloadResult(savedResponse, template, generatedAt);
+  }
+
   const apiKey = process.env.OPENAI_API_KEY;
   if (!apiKey) {
-    console.warn("OPENAI_API_KEY is not set. Falling back to mock data.");
+    console.warn("OPENAI_API_KEY is not set. Keeping existing data or falling back to mock data.");
     return null;
+  }
+
+  const payload = await loadOpenAiPayload();
+  if (payload) {
+    const requestBody = {
+      ...payload,
+      model: process.env.OPENAI_MODEL || payload.model
+    };
+
+    console.log("Generating morning brief with configured OpenAI payload...");
+    const parsedResponse = await callOpenAI({ apiKey, body: requestBody });
+    const payloadResult = extractJson(extractOutputText(parsedResponse));
+    return convertOpenAiPayloadResult(payloadResult, template, generatedAt);
   }
 
   const model = process.env.OPENAI_MODEL || "gpt-4.1-mini";
@@ -439,11 +810,20 @@ async function main() {
   const generatedAt = toIstIso();
   const template = await loadMockMorningBriefData();
   const rawMarketData = await loadRawMarketData();
-  const generated = await generateWithOpenAI({ rawMarketData, template, generatedAt });
-  const data = generated ?? template;
+  const existing = await loadExistingMorningBriefData();
+  let generated = null;
+
+  try {
+    generated = await generateWithOpenAI({ rawMarketData, template, generatedAt });
+  } catch (error) {
+    console.error("Morning brief data download failed. Keeping previous data if available.");
+    console.error(error);
+  }
+
+  const data = generated ?? existing ?? template;
   const nextData = {
     ...data,
-    generatedAt,
+    generatedAt: data.generatedAt || generatedAt,
     lastRefreshed: generatedAt
   };
 

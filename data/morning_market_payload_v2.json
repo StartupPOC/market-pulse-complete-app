@@ -1,0 +1,519 @@
+{
+  "model": "gpt-5",
+  "tools": [
+    {
+      "type": "web_search",
+      "search_context_size": "high"
+    }
+  ],
+  "tool_choice": "required",
+  "max_output_tokens": 20000,
+  "text": {
+    "format": {
+      "type": "json_schema",
+      "name": "morning_market_brief_v2",
+      "strict": true,
+      "schema": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "metadata",
+          "readable_markdown",
+          "webpage_cards"
+        ],
+        "properties": {
+          "metadata": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "date",
+              "day",
+              "preparedTimeIST",
+              "dataCutoffTimeIST",
+              "marketStatus",
+              "dataQualityNote"
+            ],
+            "properties": {
+              "date": { "type": "string" },
+              "day": { "type": "string" },
+              "preparedTimeIST": { "type": "string" },
+              "dataCutoffTimeIST": { "type": "string" },
+              "marketStatus": { "type": "string" },
+              "dataQualityNote": { "type": "string" }
+            }
+          },
+          "readable_markdown": {
+            "type": "string",
+            "description": "Readable Morning Market Brief in exact 12-section format."
+          },
+          "webpage_cards": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "marketSnapshot",
+              "marketMood",
+              "giftNifty",
+              "globalConclusion",
+              "usMarkets",
+              "asianMarkets",
+              "keyAssets",
+              "newsAndStockImpact",
+              "indexLevels",
+              "institutionalFlows",
+              "sectorRotation",
+              "optionsSetup",
+              "macroCalendar",
+              "topBTSTIdeas",
+              "highPotentialWatchlist",
+              "dataGaps"
+            ],
+            "properties": {
+              "marketSnapshot": {
+                "type": "array",
+                "description": "Must include Nifty, Sensex, Bank Nifty previous close, India VIX, Midcap/Smallcap if available.",
+                "items": {
+                  "type": "object",
+                  "additionalProperties": false,
+                  "required": [
+                    "name",
+                    "value",
+                    "change",
+                    "changePercent",
+                    "asOf",
+                    "source",
+                    "status"
+                  ],
+                  "properties": {
+                    "name": { "type": "string" },
+                    "value": { "type": "string" },
+                    "change": { "type": "string" },
+                    "changePercent": { "type": "string" },
+                    "asOf": { "type": "string" },
+                    "source": { "type": "string" },
+                    "status": { "type": "string" }
+                  }
+                }
+              },
+              "marketMood": {
+                "type": "object",
+                "additionalProperties": false,
+                "required": [
+                  "score",
+                  "label",
+                  "bar20",
+                  "reasons",
+                  "bullishCondition",
+                  "neutralCondition",
+                  "bearishCondition"
+                ],
+                "properties": {
+                  "score": { "type": "number" },
+                  "label": { "type": "string" },
+                  "bar20": { "type": "string" },
+                  "reasons": {
+                    "type": "array",
+                    "items": {
+                      "type": "object",
+                      "additionalProperties": false,
+                      "required": ["factor", "impact", "reason"],
+                      "properties": {
+                        "factor": { "type": "string" },
+                        "impact": { "type": "string" },
+                        "reason": { "type": "string" }
+                      }
+                    }
+                  },
+                  "bullishCondition": { "type": "string" },
+                  "neutralCondition": { "type": "string" },
+                  "bearishCondition": { "type": "string" }
+                }
+              },
+              "giftNifty": {
+                "type": "object",
+                "additionalProperties": false,
+                "required": [
+                  "currentValue",
+                  "previousReference",
+                  "impliedGap",
+                  "timestamp",
+                  "interpretation",
+                  "source"
+                ],
+                "properties": {
+                  "currentValue": { "type": "string" },
+                  "previousReference": { "type": "string" },
+                  "impliedGap": { "type": "string" },
+                  "timestamp": { "type": "string" },
+                  "interpretation": { "type": "string" },
+                  "source": { "type": "string" }
+                }
+              },
+              "globalConclusion": {
+                "type": "object",
+                "additionalProperties": false,
+                "required": ["conclusion", "points", "mostImportantGlobalFactorForIndia"],
+                "properties": {
+                  "conclusion": { "type": "string" },
+                  "points": {
+                    "type": "array",
+                    "items": { "type": "string" }
+                  },
+                  "mostImportantGlobalFactorForIndia": { "type": "string" }
+                }
+              },
+              "usMarkets": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "additionalProperties": false,
+                  "required": ["index", "close", "change", "mainDriver", "indiaImpact", "source"],
+                  "properties": {
+                    "index": { "type": "string" },
+                    "close": { "type": "string" },
+                    "change": { "type": "string" },
+                    "mainDriver": { "type": "string" },
+                    "indiaImpact": { "type": "string" },
+                    "source": { "type": "string" }
+                  }
+                }
+              },
+              "asianMarkets": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "additionalProperties": false,
+                  "required": ["market", "latestLevelChange", "status", "mainReason", "indiaImplication", "source"],
+                  "properties": {
+                    "market": { "type": "string" },
+                    "latestLevelChange": { "type": "string" },
+                    "status": { "type": "string" },
+                    "mainReason": { "type": "string" },
+                    "indiaImplication": { "type": "string" },
+                    "source": { "type": "string" }
+                  }
+                }
+              },
+              "keyAssets": {
+                "type": "array",
+                "description": "Must include Brent, WTI, Dollar Index/DXY, USDINR, Gold Spot, US 10Y, Indian 10Y. If unavailable, do not omit; set value as Data unavailable.",
+                "items": {
+                  "type": "object",
+                  "additionalProperties": false,
+                  "required": ["asset", "latestReading", "change", "signalForIndia", "affectedSectors", "asOf", "source"],
+                  "properties": {
+                    "asset": { "type": "string" },
+                    "latestReading": { "type": "string" },
+                    "change": { "type": "string" },
+                    "signalForIndia": { "type": "string" },
+                    "affectedSectors": { "type": "string" },
+                    "asOf": { "type": "string" },
+                    "source": { "type": "string" }
+                  }
+                }
+              },
+              "newsAndStockImpact": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "additionalProperties": false,
+                  "required": ["newsEvent", "affectedStockOrSector", "impact", "expectedImpact", "tradeRelevance", "source"],
+                  "properties": {
+                    "newsEvent": { "type": "string" },
+                    "affectedStockOrSector": { "type": "string" },
+                    "impact": { "type": "string" },
+                    "expectedImpact": { "type": "string" },
+                    "tradeRelevance": { "type": "string" },
+                    "source": { "type": "string" }
+                  }
+                }
+              },
+              "indexLevels": {
+                "type": "object",
+                "additionalProperties": false,
+                "required": ["nifty", "bankNifty", "indexOptionsPlan"],
+                "properties": {
+                  "nifty": {
+                    "type": "array",
+                    "items": {
+                      "type": "object",
+                      "additionalProperties": false,
+                      "required": ["level", "type", "interpretation", "tradingAction"],
+                      "properties": {
+                        "level": { "type": "string" },
+                        "type": { "type": "string" },
+                        "interpretation": { "type": "string" },
+                        "tradingAction": { "type": "string" }
+                      }
+                    }
+                  },
+                  "bankNifty": {
+                    "type": "array",
+                    "items": {
+                      "type": "object",
+                      "additionalProperties": false,
+                      "required": ["level", "type", "interpretation", "tradingAction"],
+                      "properties": {
+                        "level": { "type": "string" },
+                        "type": { "type": "string" },
+                        "interpretation": { "type": "string" },
+                        "tradingAction": { "type": "string" }
+                      }
+                    }
+                  },
+                  "indexOptionsPlan": {
+                    "type": "object",
+                    "additionalProperties": false,
+                    "required": ["ceEntryCondition", "peEntryCondition", "noTradeZone", "spotInvalidation", "premiumRiskRule"],
+                    "properties": {
+                      "ceEntryCondition": { "type": "string" },
+                      "peEntryCondition": { "type": "string" },
+                      "noTradeZone": { "type": "string" },
+                      "spotInvalidation": { "type": "string" },
+                      "premiumRiskRule": { "type": "string" }
+                    }
+                  }
+                }
+              },
+              "institutionalFlows": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "additionalProperties": false,
+                  "required": ["date", "fiiFpiNetActivity", "diiNetActivity", "dataType", "combinedInterpretation", "source"],
+                  "properties": {
+                    "date": { "type": "string" },
+                    "fiiFpiNetActivity": { "type": "string" },
+                    "diiNetActivity": { "type": "string" },
+                    "dataType": { "type": "string" },
+                    "combinedInterpretation": { "type": "string" },
+                    "source": { "type": "string" }
+                  }
+                }
+              },
+              "sectorRotation": {
+                "type": "array",
+                "description": "Each sector must have numeric moneyFlowScore from 0 to 100.",
+                "items": {
+                  "type": "object",
+                  "additionalProperties": false,
+                  "required": [
+                    "sector",
+                    "rotationStatus",
+                    "moneyFlowScore",
+                    "priceRelativeStrengthEvidence",
+                    "whyStrongOrWeak",
+                    "beneficiaryOrAffectedStocks",
+                    "tradingView",
+                    "confidence"
+                  ],
+                  "properties": {
+                    "sector": { "type": "string" },
+                    "rotationStatus": { "type": "string" },
+                    "moneyFlowScore": { "type": "number" },
+                    "priceRelativeStrengthEvidence": { "type": "string" },
+                    "whyStrongOrWeak": { "type": "string" },
+                    "beneficiaryOrAffectedStocks": { "type": "string" },
+                    "tradingView": { "type": "string" },
+                    "confidence": { "type": "string" }
+                  }
+                }
+              },
+              "optionsSetup": {
+                "type": "object",
+                "additionalProperties": false,
+                "required": ["nifty", "bankNifty", "stockFuturesBuildUp", "dataNote"],
+                "properties": {
+                  "nifty": {
+                    "type": "object",
+                    "additionalProperties": false,
+                    "required": ["pcr", "maxPain", "maxCallOI", "maxPutOI", "interpretation", "source"],
+                    "properties": {
+                      "pcr": { "type": "string" },
+                      "maxPain": { "type": "string" },
+                      "maxCallOI": { "type": "string" },
+                      "maxPutOI": { "type": "string" },
+                      "interpretation": { "type": "string" },
+                      "source": { "type": "string" }
+                    }
+                  },
+                  "bankNifty": {
+                    "type": "object",
+                    "additionalProperties": false,
+                    "required": ["pcr", "maxPain", "maxCallOI", "maxPutOI", "interpretation", "source"],
+                    "properties": {
+                      "pcr": { "type": "string" },
+                      "maxPain": { "type": "string" },
+                      "maxCallOI": { "type": "string" },
+                      "maxPutOI": { "type": "string" },
+                      "interpretation": { "type": "string" },
+                      "source": { "type": "string" }
+                    }
+                  },
+                  "stockFuturesBuildUp": {
+                    "type": "object",
+                    "additionalProperties": false,
+                    "required": ["freshLongBuildUp", "freshShortBuildUp"],
+                    "properties": {
+                      "freshLongBuildUp": {
+                        "type": "array",
+                        "items": {
+                          "type": "object",
+                          "additionalProperties": false,
+                          "required": ["stock", "priceChange", "oiChange", "reason", "status"],
+                          "properties": {
+                            "stock": { "type": "string" },
+                            "priceChange": { "type": "string" },
+                            "oiChange": { "type": "string" },
+                            "reason": { "type": "string" },
+                            "status": { "type": "string" }
+                          }
+                        }
+                      },
+                      "freshShortBuildUp": {
+                        "type": "array",
+                        "items": {
+                          "type": "object",
+                          "additionalProperties": false,
+                          "required": ["stock", "priceChange", "oiChange", "reason", "status"],
+                          "properties": {
+                            "stock": { "type": "string" },
+                            "priceChange": { "type": "string" },
+                            "oiChange": { "type": "string" },
+                            "reason": { "type": "string" },
+                            "status": { "type": "string" }
+                          }
+                        }
+                      }
+                    }
+                  },
+                  "dataNote": { "type": "string" }
+                }
+              },
+              "macroCalendar": {
+                "type": "array",
+                "description": "Mandatory macro calendar table for today and next 3-5 sessions.",
+                "items": {
+                  "type": "object",
+                  "additionalProperties": false,
+                  "required": ["event", "dateTimeIST", "importance", "likelyImpact", "affectedSectors", "source"],
+                  "properties": {
+                    "event": { "type": "string" },
+                    "dateTimeIST": { "type": "string" },
+                    "importance": { "type": "string" },
+                    "likelyImpact": { "type": "string" },
+                    "affectedSectors": { "type": "string" },
+                    "source": { "type": "string" }
+                  }
+                }
+              },
+              "topBTSTIdeas": {
+                "type": "array",
+                "description": "Exactly 3 BTST ideas. If not qualified, mark Watchlist only but still provide entry/SL/target as conditional levels.",
+                "minItems": 3,
+                "maxItems": 3,
+                "items": {
+                  "type": "object",
+                  "additionalProperties": false,
+                  "required": [
+                    "stock",
+                    "nseFnoStatus",
+                    "btstStatus",
+                    "entryTrigger",
+                    "stopLoss",
+                    "target1",
+                    "target2",
+                    "optionNote",
+                    "risk",
+                    "reason",
+                    "invalidation"
+                  ],
+                  "properties": {
+                    "stock": { "type": "string" },
+                    "nseFnoStatus": { "type": "string" },
+                    "btstStatus": { "type": "string" },
+                    "entryTrigger": { "type": "string" },
+                    "stopLoss": { "type": "string" },
+                    "target1": { "type": "string" },
+                    "target2": { "type": "string" },
+                    "optionNote": { "type": "string" },
+                    "risk": { "type": "string" },
+                    "reason": { "type": "string" },
+                    "invalidation": { "type": "string" }
+                  }
+                }
+              },
+              "highPotentialWatchlist": {
+                "type": "array",
+                "maxItems": 5,
+                "items": {
+                  "type": "object",
+                  "additionalProperties": false,
+                  "required": [
+                    "stock",
+                    "nseFnoStatus",
+                    "tradeType",
+                    "entryTrigger",
+                    "stopLoss",
+                    "target1",
+                    "target2",
+                    "timeHorizon",
+                    "scoreOutOf10",
+                    "reason",
+                    "invalidation"
+                  ],
+                  "properties": {
+                    "stock": { "type": "string" },
+                    "nseFnoStatus": { "type": "string" },
+                    "tradeType": { "type": "string" },
+                    "entryTrigger": { "type": "string" },
+                    "stopLoss": { "type": "string" },
+                    "target1": { "type": "string" },
+                    "target2": { "type": "string" },
+                    "timeHorizon": { "type": "string" },
+                    "scoreOutOf10": { "type": "number" },
+                    "reason": { "type": "string" },
+                    "invalidation": { "type": "string" }
+                  }
+                }
+              },
+              "dataGaps": {
+                "type": "array",
+                "description": "List every unavailable or unverified field.",
+                "items": {
+                  "type": "object",
+                  "additionalProperties": false,
+                  "required": ["field", "reason", "requiredAction"],
+                  "properties": {
+                    "field": { "type": "string" },
+                    "reason": { "type": "string" },
+                    "requiredAction": { "type": "string" }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "input": [
+    {
+      "role": "system",
+      "content": [
+        {
+          "type": "input_text",
+          "text": "You are an institutional-grade Indian equity-market analyst, derivatives analyst, options analyst and risk manager. Generate a DAILY MORNING MARKET BRIEF using fresh verified market data. Keep the exact 12-section Morning Market Brief format in readable_markdown. Also return structured webpage_cards for UI rendering. Do not invent data. If a value is not verified, write exactly Data unavailable. Do not omit mandatory fields. For every unavailable field, add a dataGaps entry. Do not recommend an F&O option contract unless F&O eligibility, expiry, strike, volume, OI, IV and bid-ask spread are verified. If contract-level liquidity is not verified, write: Option contract selection requires live liquidity verification. Do not recommend averaging a losing option. Apply maximum 10% loss rule on purchased option premium. Keep output concise and readable."
+        }
+      ]
+    },
+    {
+      "role": "user",
+      "content": [
+        {
+          "type": "input_text",
+          "text": "Generate today's MORNING MARKET BRIEF for Indian markets.\n\nReturn BOTH:\n1. readable_markdown in the exact 12-section Morning Market Brief format.\n2. webpage_cards JSON for UI cards.\n\nUse exactly these 12 Markdown sections and this exact order inside readable_markdown:\n1. Timestamp\n2. Market Mood\n3. GIFT Nifty\n4. Global Conclusion\n5. US Markets\n6. Asian Markets\n7. Key Assets\n8. News and Stock Impact\n9. Nifty and Bank Nifty Levels\n10. FII/DII Flows\n11. Sector Rotation\n12. High-Potential Watchlist\n\nREADABILITY RULES:\n- Keep it readable and decision-friendly.\n- Use compact tables.\n- Avoid long paragraphs.\n- Use short interpretation lines.\n- Maximum 5 stocks in High-Potential Watchlist.\n- Include only useful market-moving data.\n\nMANDATORY UI DATA REQUIREMENTS:\nA. Market Snapshot card must include clean rows for:\n- Nifty previous close, value and change\n- Sensex previous close, value and change\n- Bank Nifty previous close, value and change\n- India VIX value and change\n- Midcap index if available\n- Smallcap index if available\nIf unavailable, keep the row and write Data unavailable.\n\nB. Key Assets card must include:\n- Brent crude\n- WTI crude\n- Dollar Index / DXY\n- USDINR\n- Gold Spot / XAUUSD\n- US 10Y yield\n- Indian 10Y yield\nDo not omit DXY or Gold Spot. If not verified, write Data unavailable and add to dataGaps.\n\nC. Options Setup card is mandatory and must include for both Nifty and Bank Nifty:\n- PCR\n- Max Pain\n- Max Call OI strike and OI\n- Max Put OI strike and OI\n- Interpretation\nAlso include stock futures build-up:\n- Fresh Long Build-up\n- Fresh Short Build-up\nUse only verified derivatives/option-chain data. If unavailable, write Data unavailable.\n\nD. Macro Calendar is mandatory:\nInclude India and global events for today and next 3-5 sessions.\nExamples: RBI events, CPI/WPI, US CPI, Fed speeches, US jobs data, crude inventory, major earnings, result dates, geopolitical risk events.\nTable fields: Event, Date/Time IST, Importance, Likely Impact, Affected Sectors.\n\nE. Top 3 BTST Ideas card is mandatory:\nReturn exactly 3 ideas.\nEach must include:\n- Stock\n- NSE F&O status\n- BTST status: Qualified / Watchlist only / Avoid\n- Entry trigger\n- Stop-loss\n- Target 1\n- Target 2\n- Option note\n- Risk\n- Reason\n- Invalidation\nIf no idea is truly qualified, still give top 3 conditional Watchlist only ideas with proper entry/SL/targets. Do not mark Qualified unless data is verified.\n\nF. Sector Rotation must include numeric moneyFlowScore:\nFor every sector, include:\n- Sector\n- Rotation status\n- moneyFlowScore from 0 to 100\n- Price/relative-strength evidence\n- Why strong or weak\n- Key beneficiary or affected stocks\n- Trading view\nDerive moneyFlowScore from sector price performance, relative strength vs Nifty, breadth, volume, institutional/news flow and macro fit. Clearly treat it as an analyst-derived score, not official exchange data.\n\nTRADING PROFILE:\n- Total trading capital: ₹30 lakh\n- Swing allocation: ₹25 lakh\n- Options allocation: ₹5 lakh\n- Styles: Swing, BTST, F&O, selective intraday momentum\n- Target: 5%–10% per successful swing trade\n- Capital protection is more important than forcing a trade\n- Prefer high-liquidity NSE F&O stocks for derivatives\n- Avoid penny stocks, operator-driven stocks, illiquid options, low-volume smallcaps, wide bid-ask spreads, overextended names and unverified news\n\nOPTIONS RULES:\n- Maximum 10% loss on purchased option premium\n- Do not recommend averaging losing options\n- Prefer ATM or one-step ITM options over far OTM options\n- Confirm spot trigger first\n- Do not suggest CE/PE merely because a stock is moving\n- If contract liquidity is not verified, write: Option contract selection requires live liquidity verification.\n\nCURRENT HOLDINGS TO ASSESS IF RELEVANT:\n- ICICI Bank options\n- PNB options\n- DLF options\n- LTIM cash\n\nLIVE DATA RULES:\n- Search latest available data for current date.\n- Prioritise NSE, BSE, RBI, SEBI, official company filings, exchange option-chain data, official IR releases and reputable financial news.\n- Cross-check GIFT Nifty, index values, crude, USDINR, FII/DII, result dates, F&O eligibility and option data wherever possible.\n- Never mix dates silently.\n- Never present yesterday’s data as today’s data.\n- If current data cannot be verified, write exactly Data unavailable.\n- Cite factual market data/news/results in readable_markdown.\n\nNow fetch fresh verified data and generate the JSON response."
+        }
+      ]
+    }
+  ]
+}

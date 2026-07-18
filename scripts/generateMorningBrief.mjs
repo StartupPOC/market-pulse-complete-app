@@ -551,7 +551,11 @@ function convertOpenAiPayloadResult(result, template, fallbackGeneratedAt) {
       score: dp(moodScore === null ? null : Math.round((moodScore / 10) * 10) / 10, analysisSource, asOf),
       label: dp(moodLabel, analysisSource, asOf)
     },
-    sectors: (cards.sectorRotation || []).slice(0, 8).map((sector, index) => ({
+    sectors: (cards.sectorRotation || [])
+      .slice()
+      .sort((left, right) => (parseNumber(right.moneyFlowScore) ?? -1) - (parseNumber(left.moneyFlowScore) ?? -1))
+      .slice(0, 8)
+      .map((sector, index) => ({
       rank: index + 1,
       sector: normalizeText(sector.sector, "Sector"),
       moneyFlowScore: dp(parseNumber(sector.moneyFlowScore), analysisSource, asOf),

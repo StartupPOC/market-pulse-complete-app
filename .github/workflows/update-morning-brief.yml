@@ -20,7 +20,7 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: 20
+          node-version: 24
           cache: npm
 
       - name: Install dependencies
@@ -30,7 +30,7 @@ jobs:
         env:
           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
           OPENAI_MODEL: ${{ vars.OPENAI_MODEL }}
-          OPENAI_ENABLE_WEB_SEARCH: "true"
+          OPENAI_PAYLOAD_FILE: data/morning_market_payload_v2.json
         run: npm run generate:brief
 
       - name: Commit updated data

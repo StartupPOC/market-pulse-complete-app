@@ -1,9 +1,9 @@
 {
   "generatedAt": "2026-07-18T03:45:00.000Z",
-  "lastRefreshed": "2026-07-20T18:28:23.587+05:30",
+  "lastRefreshed": "2026-07-20T18:18:12.584+05:30",
   "page": {
     "dateLabel": {
-      "value": "SAT, 18 JULY 2026",
+      "value": "Saturday, 2026-07-18",
       "change": null,
       "changePercent": null,
       "status": "verified",
@@ -293,107 +293,6 @@
     },
     {
       "rank": 2,
-      "sector": "Auto",
-      "moneyFlowScore": {
-        "value": 58,
-        "change": null,
-        "changePercent": null,
-        "status": "verified",
-        "source": "MarketPulse analysis based on verified inputs",
-        "asOf": "2026-07-18T03:45:00.000Z"
-      },
-      "statusVsPrevious": {
-        "value": "Stable uptrend",
-        "change": null,
-        "changePercent": null,
-        "status": "verified",
-        "source": "MarketPulse analysis based on verified inputs",
-        "asOf": "2026-07-18T03:45:00.000Z"
-      },
-      "whyMoving": {
-        "value": [
-          "Higher highs vs Nifty",
-          "Demand traction; INR risk manageable",
-          "Buy on pullbacks"
-        ],
-        "change": null,
-        "changePercent": null,
-        "status": "verified",
-        "source": "MarketPulse analysis based on verified inputs",
-        "asOf": "2026-07-18T03:45:00.000Z"
-      },
-      "beneficiaries": {
-        "value": [
-          "TATAMOTORS",
-          "M&M"
-        ],
-        "change": null,
-        "changePercent": null,
-        "status": "verified",
-        "source": "MarketPulse analysis based on verified inputs",
-        "asOf": "2026-07-18T03:45:00.000Z"
-      },
-      "bestFnoPick": {
-        "value": "TATAMOTORS",
-        "change": null,
-        "changePercent": null,
-        "status": "verified",
-        "source": "MarketPulse analysis based on verified inputs",
-        "asOf": "2026-07-18T03:45:00.000Z"
-      }
-    },
-    {
-      "rank": 3,
-      "sector": "Capital Goods",
-      "moneyFlowScore": {
-        "value": 57,
-        "change": null,
-        "changePercent": null,
-        "status": "verified",
-        "source": "MarketPulse analysis based on verified inputs",
-        "asOf": "2026-07-18T03:45:00.000Z"
-      },
-      "statusVsPrevious": {
-        "value": "Steady",
-        "change": null,
-        "changePercent": null,
-        "status": "verified",
-        "source": "MarketPulse analysis based on verified inputs",
-        "asOf": "2026-07-18T03:45:00.000Z"
-      },
-      "whyMoving": {
-        "value": [
-          "Persistent RS",
-          "Order wins; rates benign",
-          "Hold/add on dips"
-        ],
-        "change": null,
-        "changePercent": null,
-        "status": "verified",
-        "source": "MarketPulse analysis based on verified inputs",
-        "asOf": "2026-07-18T03:45:00.000Z"
-      },
-      "beneficiaries": {
-        "value": [
-          "LT"
-        ],
-        "change": null,
-        "changePercent": null,
-        "status": "verified",
-        "source": "MarketPulse analysis based on verified inputs",
-        "asOf": "2026-07-18T03:45:00.000Z"
-      },
-      "bestFnoPick": {
-        "value": "LT",
-        "change": null,
-        "changePercent": null,
-        "status": "verified",
-        "source": "MarketPulse analysis based on verified inputs",
-        "asOf": "2026-07-18T03:45:00.000Z"
-      }
-    },
-    {
-      "rank": 4,
       "sector": "Oil & Gas",
       "moneyFlowScore": {
         "value": 55,
@@ -445,109 +344,7 @@
       }
     },
     {
-      "rank": 5,
-      "sector": "Realty",
-      "moneyFlowScore": {
-        "value": 52,
-        "change": null,
-        "changePercent": null,
-        "status": "verified",
-        "source": "MarketPulse analysis based on verified inputs",
-        "asOf": "2026-07-18T03:45:00.000Z"
-      },
-      "statusVsPrevious": {
-        "value": "Selective strength",
-        "change": null,
-        "changePercent": null,
-        "status": "verified",
-        "source": "MarketPulse analysis based on verified inputs",
-        "asOf": "2026-07-18T03:45:00.000Z"
-      },
-      "whyMoving": {
-        "value": [
-          "Resilient vs Nifty",
-          "Demand + rate backdrop",
-          "Breakout buys only"
-        ],
-        "change": null,
-        "changePercent": null,
-        "status": "verified",
-        "source": "MarketPulse analysis based on verified inputs",
-        "asOf": "2026-07-18T03:45:00.000Z"
-      },
-      "beneficiaries": {
-        "value": [
-          "DLF",
-          "LODHA"
-        ],
-        "change": null,
-        "changePercent": null,
-        "status": "verified",
-        "source": "MarketPulse analysis based on verified inputs",
-        "asOf": "2026-07-18T03:45:00.000Z"
-      },
-      "bestFnoPick": {
-        "value": "DLF",
-        "change": null,
-        "changePercent": null,
-        "status": "verified",
-        "source": "MarketPulse analysis based on verified inputs",
-        "asOf": "2026-07-18T03:45:00.000Z"
-      }
-    },
-    {
-      "rank": 6,
-      "sector": "PSU Banks",
-      "moneyFlowScore": {
-        "value": 50,
-        "change": null,
-        "changePercent": null,
-        "status": "verified",
-        "source": "MarketPulse analysis based on verified inputs",
-        "asOf": "2026-07-18T03:45:00.000Z"
-      },
-      "statusVsPrevious": {
-        "value": "Neutral",
-        "change": null,
-        "changePercent": null,
-        "status": "verified",
-        "source": "MarketPulse analysis based on verified inputs",
-        "asOf": "2026-07-18T03:45:00.000Z"
-      },
-      "whyMoving": {
-        "value": [
-          "Inline RS",
-          "Await private bank prints",
-          "Reactive only"
-        ],
-        "change": null,
-        "changePercent": null,
-        "status": "verified",
-        "source": "MarketPulse analysis based on verified inputs",
-        "asOf": "2026-07-18T03:45:00.000Z"
-      },
-      "beneficiaries": {
-        "value": [
-          "PNB",
-          "SBI"
-        ],
-        "change": null,
-        "changePercent": null,
-        "status": "verified",
-        "source": "MarketPulse analysis based on verified inputs",
-        "asOf": "2026-07-18T03:45:00.000Z"
-      },
-      "bestFnoPick": {
-        "value": "PNB",
-        "change": null,
-        "changePercent": null,
-        "status": "verified",
-        "source": "MarketPulse analysis based on verified inputs",
-        "asOf": "2026-07-18T03:45:00.000Z"
-      }
-    },
-    {
-      "rank": 7,
+      "rank": 3,
       "sector": "IT Services",
       "moneyFlowScore": {
         "value": 48,
@@ -599,7 +396,108 @@
       }
     },
     {
-      "rank": 8,
+      "rank": 4,
+      "sector": "Auto",
+      "moneyFlowScore": {
+        "value": 58,
+        "change": null,
+        "changePercent": null,
+        "status": "verified",
+        "source": "MarketPulse analysis based on verified inputs",
+        "asOf": "2026-07-18T03:45:00.000Z"
+      },
+      "statusVsPrevious": {
+        "value": "Stable uptrend",
+        "change": null,
+        "changePercent": null,
+        "status": "verified",
+        "source": "MarketPulse analysis based on verified inputs",
+        "asOf": "2026-07-18T03:45:00.000Z"
+      },
+      "whyMoving": {
+        "value": [
+          "Higher highs vs Nifty",
+          "Demand traction; INR risk manageable",
+          "Buy on pullbacks"
+        ],
+        "change": null,
+        "changePercent": null,
+        "status": "verified",
+        "source": "MarketPulse analysis based on verified inputs",
+        "asOf": "2026-07-18T03:45:00.000Z"
+      },
+      "beneficiaries": {
+        "value": [
+          "TATAMOTORS",
+          "M&M"
+        ],
+        "change": null,
+        "changePercent": null,
+        "status": "verified",
+        "source": "MarketPulse analysis based on verified inputs",
+        "asOf": "2026-07-18T03:45:00.000Z"
+      },
+      "bestFnoPick": {
+        "value": "TATAMOTORS",
+        "change": null,
+        "changePercent": null,
+        "status": "verified",
+        "source": "MarketPulse analysis based on verified inputs",
+        "asOf": "2026-07-18T03:45:00.000Z"
+      }
+    },
+    {
+      "rank": 5,
+      "sector": "Capital Goods",
+      "moneyFlowScore": {
+        "value": 57,
+        "change": null,
+        "changePercent": null,
+        "status": "verified",
+        "source": "MarketPulse analysis based on verified inputs",
+        "asOf": "2026-07-18T03:45:00.000Z"
+      },
+      "statusVsPrevious": {
+        "value": "Steady",
+        "change": null,
+        "changePercent": null,
+        "status": "verified",
+        "source": "MarketPulse analysis based on verified inputs",
+        "asOf": "2026-07-18T03:45:00.000Z"
+      },
+      "whyMoving": {
+        "value": [
+          "Persistent RS",
+          "Order wins; rates benign",
+          "Hold/add on dips"
+        ],
+        "change": null,
+        "changePercent": null,
+        "status": "verified",
+        "source": "MarketPulse analysis based on verified inputs",
+        "asOf": "2026-07-18T03:45:00.000Z"
+      },
+      "beneficiaries": {
+        "value": [
+          "LT"
+        ],
+        "change": null,
+        "changePercent": null,
+        "status": "verified",
+        "source": "MarketPulse analysis based on verified inputs",
+        "asOf": "2026-07-18T03:45:00.000Z"
+      },
+      "bestFnoPick": {
+        "value": "LT",
+        "change": null,
+        "changePercent": null,
+        "status": "verified",
+        "source": "MarketPulse analysis based on verified inputs",
+        "asOf": "2026-07-18T03:45:00.000Z"
+      }
+    },
+    {
+      "rank": 6,
       "sector": "FMCG",
       "moneyFlowScore": {
         "value": 45,
@@ -642,6 +540,108 @@
       },
       "bestFnoPick": {
         "value": "HUL",
+        "change": null,
+        "changePercent": null,
+        "status": "verified",
+        "source": "MarketPulse analysis based on verified inputs",
+        "asOf": "2026-07-18T03:45:00.000Z"
+      }
+    },
+    {
+      "rank": 7,
+      "sector": "Realty",
+      "moneyFlowScore": {
+        "value": 52,
+        "change": null,
+        "changePercent": null,
+        "status": "verified",
+        "source": "MarketPulse analysis based on verified inputs",
+        "asOf": "2026-07-18T03:45:00.000Z"
+      },
+      "statusVsPrevious": {
+        "value": "Selective strength",
+        "change": null,
+        "changePercent": null,
+        "status": "verified",
+        "source": "MarketPulse analysis based on verified inputs",
+        "asOf": "2026-07-18T03:45:00.000Z"
+      },
+      "whyMoving": {
+        "value": [
+          "Resilient vs Nifty",
+          "Demand + rate backdrop",
+          "Breakout buys only"
+        ],
+        "change": null,
+        "changePercent": null,
+        "status": "verified",
+        "source": "MarketPulse analysis based on verified inputs",
+        "asOf": "2026-07-18T03:45:00.000Z"
+      },
+      "beneficiaries": {
+        "value": [
+          "DLF",
+          "LODHA"
+        ],
+        "change": null,
+        "changePercent": null,
+        "status": "verified",
+        "source": "MarketPulse analysis based on verified inputs",
+        "asOf": "2026-07-18T03:45:00.000Z"
+      },
+      "bestFnoPick": {
+        "value": "DLF",
+        "change": null,
+        "changePercent": null,
+        "status": "verified",
+        "source": "MarketPulse analysis based on verified inputs",
+        "asOf": "2026-07-18T03:45:00.000Z"
+      }
+    },
+    {
+      "rank": 8,
+      "sector": "PSU Banks",
+      "moneyFlowScore": {
+        "value": 50,
+        "change": null,
+        "changePercent": null,
+        "status": "verified",
+        "source": "MarketPulse analysis based on verified inputs",
+        "asOf": "2026-07-18T03:45:00.000Z"
+      },
+      "statusVsPrevious": {
+        "value": "Neutral",
+        "change": null,
+        "changePercent": null,
+        "status": "verified",
+        "source": "MarketPulse analysis based on verified inputs",
+        "asOf": "2026-07-18T03:45:00.000Z"
+      },
+      "whyMoving": {
+        "value": [
+          "Inline RS",
+          "Await private bank prints",
+          "Reactive only"
+        ],
+        "change": null,
+        "changePercent": null,
+        "status": "verified",
+        "source": "MarketPulse analysis based on verified inputs",
+        "asOf": "2026-07-18T03:45:00.000Z"
+      },
+      "beneficiaries": {
+        "value": [
+          "PNB",
+          "SBI"
+        ],
+        "change": null,
+        "changePercent": null,
+        "status": "verified",
+        "source": "MarketPulse analysis based on verified inputs",
+        "asOf": "2026-07-18T03:45:00.000Z"
+      },
+      "bestFnoPick": {
+        "value": "PNB",
         "change": null,
         "changePercent": null,
         "status": "verified",

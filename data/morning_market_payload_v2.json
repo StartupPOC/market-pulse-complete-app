@@ -34,24 +34,12 @@
               "dataQualityNote"
             ],
             "properties": {
-              "date": {
-                "type": "string"
-              },
-              "day": {
-                "type": "string"
-              },
-              "preparedTimeIST": {
-                "type": "string"
-              },
-              "dataCutoffTimeIST": {
-                "type": "string"
-              },
-              "marketStatus": {
-                "type": "string"
-              },
-              "dataQualityNote": {
-                "type": "string"
-              }
+              "date": { "type": "string" },
+              "day": { "type": "string" },
+              "preparedTimeIST": { "type": "string" },
+              "dataCutoffTimeIST": { "type": "string" },
+              "marketStatus": { "type": "string" },
+              "dataQualityNote": { "type": "string" }
             }
           },
           "readable_markdown": {
@@ -96,27 +84,13 @@
                     "status"
                   ],
                   "properties": {
-                    "name": {
-                      "type": "string"
-                    },
-                    "value": {
-                      "type": "string"
-                    },
-                    "change": {
-                      "type": "string"
-                    },
-                    "changePercent": {
-                      "type": "string"
-                    },
-                    "asOf": {
-                      "type": "string"
-                    },
-                    "source": {
-                      "type": "string"
-                    },
-                    "status": {
-                      "type": "string"
-                    }
+                    "name": { "type": "string" },
+                    "value": { "type": "string" },
+                    "change": { "type": "string" },
+                    "changePercent": { "type": "string" },
+                    "asOf": { "type": "string" },
+                    "source": { "type": "string" },
+                    "status": { "type": "string" }
                   }
                 }
               },
@@ -133,47 +107,25 @@
                   "bearishCondition"
                 ],
                 "properties": {
-                  "score": {
-                    "type": "number"
-                  },
-                  "label": {
-                    "type": "string"
-                  },
-                  "bar20": {
-                    "type": "string"
-                  },
+                  "score": { "type": "number" },
+                  "label": { "type": "string" },
+                  "bar20": { "type": "string" },
                   "reasons": {
                     "type": "array",
                     "items": {
                       "type": "object",
                       "additionalProperties": false,
-                      "required": [
-                        "factor",
-                        "impact",
-                        "reason"
-                      ],
+                      "required": ["factor", "impact", "reason"],
                       "properties": {
-                        "factor": {
-                          "type": "string"
-                        },
-                        "impact": {
-                          "type": "string"
-                        },
-                        "reason": {
-                          "type": "string"
-                        }
+                        "factor": { "type": "string" },
+                        "impact": { "type": "string" },
+                        "reason": { "type": "string" }
                       }
                     }
                   },
-                  "bullishCondition": {
-                    "type": "string"
-                  },
-                  "neutralCondition": {
-                    "type": "string"
-                  },
-                  "bearishCondition": {
-                    "type": "string"
-                  }
+                  "bullishCondition": { "type": "string" },
+                  "neutralCondition": { "type": "string" },
+                  "bearishCondition": { "type": "string" }
                 }
               },
               "giftNifty": {
@@ -188,47 +140,25 @@
                   "source"
                 ],
                 "properties": {
-                  "currentValue": {
-                    "type": "string"
-                  },
-                  "previousReference": {
-                    "type": "string"
-                  },
-                  "impliedGap": {
-                    "type": "string"
-                  },
-                  "timestamp": {
-                    "type": "string"
-                  },
-                  "interpretation": {
-                    "type": "string"
-                  },
-                  "source": {
-                    "type": "string"
-                  }
+                  "currentValue": { "type": "string" },
+                  "previousReference": { "type": "string" },
+                  "impliedGap": { "type": "string" },
+                  "timestamp": { "type": "string" },
+                  "interpretation": { "type": "string" },
+                  "source": { "type": "string" }
                 }
               },
               "globalConclusion": {
                 "type": "object",
                 "additionalProperties": false,
-                "required": [
-                  "conclusion",
-                  "points",
-                  "mostImportantGlobalFactorForIndia"
-                ],
+                "required": ["conclusion", "points", "mostImportantGlobalFactorForIndia"],
                 "properties": {
-                  "conclusion": {
-                    "type": "string"
-                  },
+                  "conclusion": { "type": "string" },
                   "points": {
                     "type": "array",
-                    "items": {
-                      "type": "string"
-                    }
+                    "items": { "type": "string" }
                   },
-                  "mostImportantGlobalFactorForIndia": {
-                    "type": "string"
-                  }
+                  "mostImportantGlobalFactorForIndia": { "type": "string" }
                 }
               },
               "usMarkets": {
@@ -236,33 +166,14 @@
                 "items": {
                   "type": "object",
                   "additionalProperties": false,
-                  "required": [
-                    "index",
-                    "close",
-                    "change",
-                    "mainDriver",
-                    "indiaImpact",
-                    "source"
-                  ],
+                  "required": ["index", "close", "change", "mainDriver", "indiaImpact", "source"],
                   "properties": {
-                    "index": {
-                      "type": "string"
-                    },
-                    "close": {
-                      "type": "string"
-                    },
-                    "change": {
-                      "type": "string"
-                    },
-                    "mainDriver": {
-                      "type": "string"
-                    },
-                    "indiaImpact": {
-                      "type": "string"
-                    },
-                    "source": {
-                      "type": "string"
-                    }
+                    "index": { "type": "string" },
+                    "close": { "type": "string" },
+                    "change": { "type": "string" },
+                    "mainDriver": { "type": "string" },
+                    "indiaImpact": { "type": "string" },
+                    "source": { "type": "string" }
                   }
                 }
               },
@@ -271,33 +182,14 @@
                 "items": {
                   "type": "object",
                   "additionalProperties": false,
-                  "required": [
-                    "market",
-                    "latestLevelChange",
-                    "status",
-                    "mainReason",
-                    "indiaImplication",
-                    "source"
-                  ],
+                  "required": ["market", "latestLevelChange", "status", "mainReason", "indiaImplication", "source"],
                   "properties": {
-                    "market": {
-                      "type": "string"
-                    },
-                    "latestLevelChange": {
-                      "type": "string"
-                    },
-                    "status": {
-                      "type": "string"
-                    },
-                    "mainReason": {
-                      "type": "string"
-                    },
-                    "indiaImplication": {
-                      "type": "string"
-                    },
-                    "source": {
-                      "type": "string"
-                    }
+                    "market": { "type": "string" },
+                    "latestLevelChange": { "type": "string" },
+                    "status": { "type": "string" },
+                    "mainReason": { "type": "string" },
+                    "indiaImplication": { "type": "string" },
+                    "source": { "type": "string" }
                   }
                 }
               },
@@ -307,37 +199,15 @@
                 "items": {
                   "type": "object",
                   "additionalProperties": false,
-                  "required": [
-                    "asset",
-                    "latestReading",
-                    "change",
-                    "signalForIndia",
-                    "affectedSectors",
-                    "asOf",
-                    "source"
-                  ],
+                  "required": ["asset", "latestReading", "change", "signalForIndia", "affectedSectors", "asOf", "source"],
                   "properties": {
-                    "asset": {
-                      "type": "string"
-                    },
-                    "latestReading": {
-                      "type": "string"
-                    },
-                    "change": {
-                      "type": "string"
-                    },
-                    "signalForIndia": {
-                      "type": "string"
-                    },
-                    "affectedSectors": {
-                      "type": "string"
-                    },
-                    "asOf": {
-                      "type": "string"
-                    },
-                    "source": {
-                      "type": "string"
-                    }
+                    "asset": { "type": "string" },
+                    "latestReading": { "type": "string" },
+                    "change": { "type": "string" },
+                    "signalForIndia": { "type": "string" },
+                    "affectedSectors": { "type": "string" },
+                    "asOf": { "type": "string" },
+                    "source": { "type": "string" }
                   }
                 }
               },
@@ -346,69 +216,33 @@
                 "items": {
                   "type": "object",
                   "additionalProperties": false,
-                  "required": [
-                    "newsEvent",
-                    "affectedStockOrSector",
-                    "impact",
-                    "expectedImpact",
-                    "tradeRelevance",
-                    "source"
-                  ],
+                  "required": ["newsEvent", "affectedStockOrSector", "impact", "expectedImpact", "tradeRelevance", "source"],
                   "properties": {
-                    "newsEvent": {
-                      "type": "string"
-                    },
-                    "affectedStockOrSector": {
-                      "type": "string"
-                    },
-                    "impact": {
-                      "type": "string"
-                    },
-                    "expectedImpact": {
-                      "type": "string"
-                    },
-                    "tradeRelevance": {
-                      "type": "string"
-                    },
-                    "source": {
-                      "type": "string"
-                    }
+                    "newsEvent": { "type": "string" },
+                    "affectedStockOrSector": { "type": "string" },
+                    "impact": { "type": "string" },
+                    "expectedImpact": { "type": "string" },
+                    "tradeRelevance": { "type": "string" },
+                    "source": { "type": "string" }
                   }
                 }
               },
               "indexLevels": {
                 "type": "object",
                 "additionalProperties": false,
-                "required": [
-                  "nifty",
-                  "bankNifty",
-                  "indexOptionsPlan"
-                ],
+                "required": ["nifty", "bankNifty", "indexOptionsPlan"],
                 "properties": {
                   "nifty": {
                     "type": "array",
                     "items": {
                       "type": "object",
                       "additionalProperties": false,
-                      "required": [
-                        "level",
-                        "type",
-                        "interpretation",
-                        "tradingAction"
-                      ],
+                      "required": ["level", "type", "interpretation", "tradingAction"],
                       "properties": {
-                        "level": {
-                          "type": "string"
-                        },
-                        "type": {
-                          "type": "string"
-                        },
-                        "interpretation": {
-                          "type": "string"
-                        },
-                        "tradingAction": {
-                          "type": "string"
-                        }
+                        "level": { "type": "string" },
+                        "type": { "type": "string" },
+                        "interpretation": { "type": "string" },
+                        "tradingAction": { "type": "string" }
                       }
                     }
                   },
@@ -417,54 +251,25 @@
                     "items": {
                       "type": "object",
                       "additionalProperties": false,
-                      "required": [
-                        "level",
-                        "type",
-                        "interpretation",
-                        "tradingAction"
-                      ],
+                      "required": ["level", "type", "interpretation", "tradingAction"],
                       "properties": {
-                        "level": {
-                          "type": "string"
-                        },
-                        "type": {
-                          "type": "string"
-                        },
-                        "interpretation": {
-                          "type": "string"
-                        },
-                        "tradingAction": {
-                          "type": "string"
-                        }
+                        "level": { "type": "string" },
+                        "type": { "type": "string" },
+                        "interpretation": { "type": "string" },
+                        "tradingAction": { "type": "string" }
                       }
                     }
                   },
                   "indexOptionsPlan": {
                     "type": "object",
                     "additionalProperties": false,
-                    "required": [
-                      "ceEntryCondition",
-                      "peEntryCondition",
-                      "noTradeZone",
-                      "spotInvalidation",
-                      "premiumRiskRule"
-                    ],
+                    "required": ["ceEntryCondition", "peEntryCondition", "noTradeZone", "spotInvalidation", "premiumRiskRule"],
                     "properties": {
-                      "ceEntryCondition": {
-                        "type": "string"
-                      },
-                      "peEntryCondition": {
-                        "type": "string"
-                      },
-                      "noTradeZone": {
-                        "type": "string"
-                      },
-                      "spotInvalidation": {
-                        "type": "string"
-                      },
-                      "premiumRiskRule": {
-                        "type": "string"
-                      }
+                      "ceEntryCondition": { "type": "string" },
+                      "peEntryCondition": { "type": "string" },
+                      "noTradeZone": { "type": "string" },
+                      "spotInvalidation": { "type": "string" },
+                      "premiumRiskRule": { "type": "string" }
                     }
                   }
                 }
@@ -474,33 +279,14 @@
                 "items": {
                   "type": "object",
                   "additionalProperties": false,
-                  "required": [
-                    "date",
-                    "fiiFpiNetActivity",
-                    "diiNetActivity",
-                    "dataType",
-                    "combinedInterpretation",
-                    "source"
-                  ],
+                  "required": ["date", "fiiFpiNetActivity", "diiNetActivity", "dataType", "combinedInterpretation", "source"],
                   "properties": {
-                    "date": {
-                      "type": "string"
-                    },
-                    "fiiFpiNetActivity": {
-                      "type": "string"
-                    },
-                    "diiNetActivity": {
-                      "type": "string"
-                    },
-                    "dataType": {
-                      "type": "string"
-                    },
-                    "combinedInterpretation": {
-                      "type": "string"
-                    },
-                    "source": {
-                      "type": "string"
-                    }
+                    "date": { "type": "string" },
+                    "fiiFpiNetActivity": { "type": "string" },
+                    "diiNetActivity": { "type": "string" },
+                    "dataType": { "type": "string" },
+                    "combinedInterpretation": { "type": "string" },
+                    "source": { "type": "string" }
                   }
                 }
               },
@@ -521,143 +307,65 @@
                     "confidence"
                   ],
                   "properties": {
-                    "sector": {
-                      "type": "string"
-                    },
-                    "rotationStatus": {
-                      "type": "string"
-                    },
-                    "moneyFlowScore": {
-                      "type": "number"
-                    },
-                    "priceRelativeStrengthEvidence": {
-                      "type": "string"
-                    },
-                    "whyStrongOrWeak": {
-                      "type": "string"
-                    },
-                    "beneficiaryOrAffectedStocks": {
-                      "type": "string"
-                    },
-                    "tradingView": {
-                      "type": "string"
-                    },
-                    "confidence": {
-                      "type": "string"
-                    }
+                    "sector": { "type": "string" },
+                    "rotationStatus": { "type": "string" },
+                    "moneyFlowScore": { "type": "number" },
+                    "priceRelativeStrengthEvidence": { "type": "string" },
+                    "whyStrongOrWeak": { "type": "string" },
+                    "beneficiaryOrAffectedStocks": { "type": "string" },
+                    "tradingView": { "type": "string" },
+                    "confidence": { "type": "string" }
                   }
                 }
               },
               "optionsSetup": {
                 "type": "object",
                 "additionalProperties": false,
-                "required": [
-                  "nifty",
-                  "bankNifty",
-                  "stockFuturesBuildUp",
-                  "dataNote"
-                ],
+                "required": ["nifty", "bankNifty", "stockFuturesBuildUp", "dataNote"],
                 "properties": {
                   "nifty": {
                     "type": "object",
                     "additionalProperties": false,
-                    "required": [
-                      "pcr",
-                      "maxPain",
-                      "maxCallOI",
-                      "maxPutOI",
-                      "interpretation",
-                      "source"
-                    ],
+                    "required": ["pcr", "maxPain", "maxCallOI", "maxPutOI", "interpretation", "source"],
                     "properties": {
-                      "pcr": {
-                        "type": "string"
-                      },
-                      "maxPain": {
-                        "type": "string"
-                      },
-                      "maxCallOI": {
-                        "type": "string"
-                      },
-                      "maxPutOI": {
-                        "type": "string"
-                      },
-                      "interpretation": {
-                        "type": "string"
-                      },
-                      "source": {
-                        "type": "string"
-                      }
+                      "pcr": { "type": "string" },
+                      "maxPain": { "type": "string" },
+                      "maxCallOI": { "type": "string" },
+                      "maxPutOI": { "type": "string" },
+                      "interpretation": { "type": "string" },
+                      "source": { "type": "string" }
                     }
                   },
                   "bankNifty": {
                     "type": "object",
                     "additionalProperties": false,
-                    "required": [
-                      "pcr",
-                      "maxPain",
-                      "maxCallOI",
-                      "maxPutOI",
-                      "interpretation",
-                      "source"
-                    ],
+                    "required": ["pcr", "maxPain", "maxCallOI", "maxPutOI", "interpretation", "source"],
                     "properties": {
-                      "pcr": {
-                        "type": "string"
-                      },
-                      "maxPain": {
-                        "type": "string"
-                      },
-                      "maxCallOI": {
-                        "type": "string"
-                      },
-                      "maxPutOI": {
-                        "type": "string"
-                      },
-                      "interpretation": {
-                        "type": "string"
-                      },
-                      "source": {
-                        "type": "string"
-                      }
+                      "pcr": { "type": "string" },
+                      "maxPain": { "type": "string" },
+                      "maxCallOI": { "type": "string" },
+                      "maxPutOI": { "type": "string" },
+                      "interpretation": { "type": "string" },
+                      "source": { "type": "string" }
                     }
                   },
                   "stockFuturesBuildUp": {
                     "type": "object",
                     "additionalProperties": false,
-                    "required": [
-                      "freshLongBuildUp",
-                      "freshShortBuildUp"
-                    ],
+                    "required": ["freshLongBuildUp", "freshShortBuildUp"],
                     "properties": {
                       "freshLongBuildUp": {
                         "type": "array",
                         "items": {
                           "type": "object",
                           "additionalProperties": false,
-                          "required": [
-                            "stock",
-                            "priceChange",
-                            "oiChange",
-                            "reason",
-                            "status"
-                          ],
+                          "required": ["stock", "priceChange", "oiChange", "reason", "status"],
                           "properties": {
-                            "stock": {
-                              "type": "string"
-                            },
-                            "priceChange": {
-                              "type": "string"
-                            },
-                            "oiChange": {
-                              "type": "string"
-                            },
-                            "reason": {
-                              "type": "string"
-                            },
-                            "status": {
-                              "type": "string"
-                            }
+                            "stock": { "type": "string" },
+                            "priceChange": { "type": "string" },
+                            "oiChange": { "type": "string" },
+                            "reason": { "type": "string" },
+                            "status": { "type": "string" }
                           }
                         }
                       },
@@ -666,37 +374,19 @@
                         "items": {
                           "type": "object",
                           "additionalProperties": false,
-                          "required": [
-                            "stock",
-                            "priceChange",
-                            "oiChange",
-                            "reason",
-                            "status"
-                          ],
+                          "required": ["stock", "priceChange", "oiChange", "reason", "status"],
                           "properties": {
-                            "stock": {
-                              "type": "string"
-                            },
-                            "priceChange": {
-                              "type": "string"
-                            },
-                            "oiChange": {
-                              "type": "string"
-                            },
-                            "reason": {
-                              "type": "string"
-                            },
-                            "status": {
-                              "type": "string"
-                            }
+                            "stock": { "type": "string" },
+                            "priceChange": { "type": "string" },
+                            "oiChange": { "type": "string" },
+                            "reason": { "type": "string" },
+                            "status": { "type": "string" }
                           }
                         }
                       }
                     }
                   },
-                  "dataNote": {
-                    "type": "string"
-                  }
+                  "dataNote": { "type": "string" }
                 }
               },
               "macroCalendar": {
@@ -705,33 +395,14 @@
                 "items": {
                   "type": "object",
                   "additionalProperties": false,
-                  "required": [
-                    "event",
-                    "dateTimeIST",
-                    "importance",
-                    "likelyImpact",
-                    "affectedSectors",
-                    "source"
-                  ],
+                  "required": ["event", "dateTimeIST", "importance", "likelyImpact", "affectedSectors", "source"],
                   "properties": {
-                    "event": {
-                      "type": "string"
-                    },
-                    "dateTimeIST": {
-                      "type": "string"
-                    },
-                    "importance": {
-                      "type": "string"
-                    },
-                    "likelyImpact": {
-                      "type": "string"
-                    },
-                    "affectedSectors": {
-                      "type": "string"
-                    },
-                    "source": {
-                      "type": "string"
-                    }
+                    "event": { "type": "string" },
+                    "dateTimeIST": { "type": "string" },
+                    "importance": { "type": "string" },
+                    "likelyImpact": { "type": "string" },
+                    "affectedSectors": { "type": "string" },
+                    "source": { "type": "string" }
                   }
                 }
               },
@@ -757,39 +428,17 @@
                     "invalidation"
                   ],
                   "properties": {
-                    "stock": {
-                      "type": "string"
-                    },
-                    "nseFnoStatus": {
-                      "type": "string"
-                    },
-                    "btstStatus": {
-                      "type": "string"
-                    },
-                    "entryTrigger": {
-                      "type": "string"
-                    },
-                    "stopLoss": {
-                      "type": "string"
-                    },
-                    "target1": {
-                      "type": "string"
-                    },
-                    "target2": {
-                      "type": "string"
-                    },
-                    "optionNote": {
-                      "type": "string"
-                    },
-                    "risk": {
-                      "type": "string"
-                    },
-                    "reason": {
-                      "type": "string"
-                    },
-                    "invalidation": {
-                      "type": "string"
-                    }
+                    "stock": { "type": "string" },
+                    "nseFnoStatus": { "type": "string" },
+                    "btstStatus": { "type": "string" },
+                    "entryTrigger": { "type": "string" },
+                    "stopLoss": { "type": "string" },
+                    "target1": { "type": "string" },
+                    "target2": { "type": "string" },
+                    "optionNote": { "type": "string" },
+                    "risk": { "type": "string" },
+                    "reason": { "type": "string" },
+                    "invalidation": { "type": "string" }
                   }
                 }
               },
@@ -813,39 +462,17 @@
                     "invalidation"
                   ],
                   "properties": {
-                    "stock": {
-                      "type": "string"
-                    },
-                    "nseFnoStatus": {
-                      "type": "string"
-                    },
-                    "tradeType": {
-                      "type": "string"
-                    },
-                    "entryTrigger": {
-                      "type": "string"
-                    },
-                    "stopLoss": {
-                      "type": "string"
-                    },
-                    "target1": {
-                      "type": "string"
-                    },
-                    "target2": {
-                      "type": "string"
-                    },
-                    "timeHorizon": {
-                      "type": "string"
-                    },
-                    "scoreOutOf10": {
-                      "type": "number"
-                    },
-                    "reason": {
-                      "type": "string"
-                    },
-                    "invalidation": {
-                      "type": "string"
-                    }
+                    "stock": { "type": "string" },
+                    "nseFnoStatus": { "type": "string" },
+                    "tradeType": { "type": "string" },
+                    "entryTrigger": { "type": "string" },
+                    "stopLoss": { "type": "string" },
+                    "target1": { "type": "string" },
+                    "target2": { "type": "string" },
+                    "timeHorizon": { "type": "string" },
+                    "scoreOutOf10": { "type": "number" },
+                    "reason": { "type": "string" },
+                    "invalidation": { "type": "string" }
                   }
                 }
               },
@@ -855,21 +482,11 @@
                 "items": {
                   "type": "object",
                   "additionalProperties": false,
-                  "required": [
-                    "field",
-                    "reason",
-                    "requiredAction"
-                  ],
+                  "required": ["field", "reason", "requiredAction"],
                   "properties": {
-                    "field": {
-                      "type": "string"
-                    },
-                    "reason": {
-                      "type": "string"
-                    },
-                    "requiredAction": {
-                      "type": "string"
-                    }
+                    "field": { "type": "string" },
+                    "reason": { "type": "string" },
+                    "requiredAction": { "type": "string" }
                   }
                 }
               }

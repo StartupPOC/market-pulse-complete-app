@@ -8,6 +8,8 @@ const sourcePath = path.join(rootDir, "lib", "morningBriefData.ts");
 const outputPath = path.join(rootDir, "data", "currentMorningBriefData.json");
 const defaultPayloadPath = path.join(rootDir, "data", "morning_market_payload_v2.json");
 const openAiApiUrl = "https://api.openai.com/v1/responses";
+const openAiMaxAttempts = Number(process.env.OPENAI_MAX_ATTEMPTS || 3);
+const openAiRetryDelayMs = Number(process.env.OPENAI_RETRY_DELAY_MS || 15000);
 const analystBriefInstructions = `You are an expert Indian equity market analyst and risk-first F&O trader.
 
 Generate a MORNING MARKET BRIEF for Indian markets for today.
@@ -278,21 +280,56 @@ async function loadOpenAiPayload() {
 }
 
 async function callOpenAI({ apiKey, body }) {
-  const response = await fetch(openAiApiUrl, {
-    method: "POST",
-    headers: {
-      Authorization: `Bearer ${apiKey}`,
-      "Content-Type": "application/json"
-    },
-    body: JSON.stringify(body)
-  });
+  let lastError;
 
-  const responseText = await response.text();
-  if (!response.ok) {
-    throw new Error(`OpenAI API failed: ${response.status} ${responseText}`);
+  for (let attempt = 1; attempt <= openAiMaxAttempts; attempt += 1) {
+    try {
+      const response = await fetch(openAiApiUrl, {
+        method: "POST",
+        headers: {
+          Authorization: `Bearer ${apiKey}`,
+          "Content-Type": "application/json"
+        },
+        body: JSON.stringify(body)
+      });
+
+      const responseText = await response.text();
+      if (!response.ok) {
+        throw new Error(`OpenAI API failed: ${response.status} ${responseText}`);
+      }
+
+      return JSON.parse(responseText);
+    } catch (error) {
+      lastError = error;
+      if (attempt === openAiMaxAttempts) break;
+      console.warn(`OpenAI request failed on attempt ${attempt}/${openAiMaxAttempts}. Retrying in ${Math.round(openAiRetryDelayMs / 1000)}s...`);
+      await new Promise((resolve) => setTimeout(resolve, openAiRetryDelayMs));
+    }
   }
 
-  return JSON.parse(responseText);
+  throw lastError;
+}
+
+function applyPayloadRuntimeOverrides(payload) {
+  const nextPayload = structuredClone(payload);
+
+  if (process.env.OPENAI_MODEL) {
+    nextPayload.model = process.env.OPENAI_MODEL;
+  }
+
+  if (process.env.OPENAI_MAX_OUTPUT_TOKENS) {
+    nextPayload.max_output_tokens = Number(process.env.OPENAI_MAX_OUTPUT_TOKENS);
+  }
+
+  if (process.env.OPENAI_SEARCH_CONTEXT_SIZE && Array.isArray(nextPayload.tools)) {
+    nextPayload.tools = nextPayload.tools.map((tool) => (
+      tool?.type === "web_search" || tool?.type === "web_search_preview"
+        ? { ...tool, search_context_size: process.env.OPENAI_SEARCH_CONTEXT_SIZE }
+        : tool
+    ));
+  }
+
+  return nextPayload;
 }
 
 function normalizeText(value, fallback = "Data unavailable") {
@@ -371,6 +408,22 @@ function parseIstDate(value) {
 
 function sourceTimestamp(metadata, fallback) {
   return parseIstDate(metadata?.preparedTimeIST) || parseIstDate(metadata?.dataCutoffTimeIST) || parseIstDate(metadata?.date) || fallback;
+}
+
+function formatDateLabel(metadata, fallbackTimestamp) {
+  const source = parseIstDate(metadata?.date) || fallbackTimestamp;
+  const date = new Date(source);
+  if (Number.isNaN(date.getTime())) {
+    return normalizeText(metadata?.date, "Date unavailable").toUpperCase();
+  }
+
+  return new Intl.DateTimeFormat("en-IN", {
+    weekday: "short",
+    day: "2-digit",
+    month: "long",
+    year: "numeric",
+    timeZone: "Asia/Kolkata"
+  }).format(date).replace(",", ",").toUpperCase();
 }
 
 function findByName(rows, names) {
@@ -503,7 +556,7 @@ function convertOpenAiPayloadResult(result, template, fallbackGeneratedAt) {
     generatedAt,
     lastRefreshed: fallbackGeneratedAt,
     page: {
-      dateLabel: dp(normalizeText(`${metadata.day || ""}${metadata.day ? ", " : ""}${metadata.date || ""}`, template.page.dateLabel.value), analysisSource, asOf),
+      dateLabel: dp(formatDateLabel(metadata, asOf), analysisSource, asOf),
       title: dp("Morning Market Brief", analysisSource, asOf),
       summary: dp(pageSummary, analysisSource, asOf),
       bias: dp(parseBias(moodLabel, moodScore), analysisSource, asOf),
@@ -741,10 +794,7 @@ async function generateWithOpenAI({ rawMarketData, template, generatedAt }) {
 
   const payload = await loadOpenAiPayload();
   if (payload) {
-    const requestBody = {
-      ...payload,
-      model: process.env.OPENAI_MODEL || payload.model
-    };
+    const requestBody = applyPayloadRuntimeOverrides(payload);
 
     console.log("Generating morning brief with configured OpenAI payload...");
     const parsedResponse = await callOpenAI({ apiKey, body: requestBody });

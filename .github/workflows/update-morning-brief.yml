@@ -29,8 +29,12 @@ jobs:
       - name: Generate morning brief data
         env:
           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
-          OPENAI_MODEL: ${{ vars.OPENAI_MODEL }}
+          OPENAI_MODEL: ${{ vars.OPENAI_MODEL || 'gpt-4.1' }}
           OPENAI_PAYLOAD_FILE: data/morning_market_payload_v2.json
+          OPENAI_MAX_OUTPUT_TOKENS: "12000"
+          OPENAI_SEARCH_CONTEXT_SIZE: medium
+          OPENAI_MAX_ATTEMPTS: "3"
+          OPENAI_RETRY_DELAY_MS: "20000"
         run: npm run generate:brief
 
       - name: Commit updated data

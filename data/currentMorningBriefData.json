@@ -1,14 +1,14 @@
 {
-  "generatedAt": "2026-07-18T03:45:00.000Z",
-  "lastRefreshed": "2026-07-20T18:28:23.587+05:30",
+  "generatedAt": "2026-07-20T00:00:00.000Z",
+  "lastRefreshed": "2026-07-20T18:35:35.352+05:30",
   "page": {
     "dateLabel": {
-      "value": "SAT, 18 JULY 2026",
+      "value": "MON, 20 JULY 2026",
       "change": null,
       "changePercent": null,
       "status": "verified",
       "source": "MarketPulse analysis based on verified inputs",
-      "asOf": "2026-07-18T03:45:00.000Z"
+      "asOf": "2026-07-20T00:00:00.000Z"
     },
     "title": {
       "value": "Morning Market Brief",
@@ -16,15 +16,15 @@
       "changePercent": null,
       "status": "verified",
       "source": "MarketPulse analysis based on verified inputs",
-      "asOf": "2026-07-18T03:45:00.000Z"
+      "asOf": "2026-07-20T00:00:00.000Z"
     },
     "summary": {
-      "value": "Global risk-off into the weekend; India carries domestic earnings support but faces gap risk at Monday open.",
+      "value": "Global cues cautious; oil and geopolitical risks cap upside",
       "change": null,
       "changePercent": null,
       "status": "verified",
       "source": "MarketPulse analysis based on verified inputs",
-      "asOf": "2026-07-18T03:45:00.000Z"
+      "asOf": "2026-07-20T00:00:00.000Z"
     },
     "bias": {
       "value": "Neutral",
@@ -32,25 +32,25 @@
       "changePercent": null,
       "status": "verified",
       "source": "MarketPulse analysis based on verified inputs",
-      "asOf": "2026-07-18T03:45:00.000Z"
+      "asOf": "2026-07-20T00:00:00.000Z"
     },
     "timestamp": {
-      "value": "2026-07-18 08:50 IST",
+      "value": "08:15",
       "change": null,
       "changePercent": null,
       "status": "verified",
       "source": "MarketPulse analysis based on verified inputs",
-      "asOf": "2026-07-18T03:45:00.000Z"
+      "asOf": "2026-07-20T00:00:00.000Z"
     }
   },
   "moodIndex": {
     "score": {
-      "value": 48,
+      "value": 50,
       "change": null,
       "changePercent": null,
       "status": "verified",
       "source": "MarketPulse analysis based on verified inputs",
-      "asOf": "2026-07-18T03:45:00.000Z"
+      "asOf": "2026-07-20T00:00:00.000Z"
     },
     "label": {
       "value": "Neutral",
@@ -58,7 +58,7 @@
       "changePercent": null,
       "status": "verified",
       "source": "MarketPulse analysis based on verified inputs",
-      "asOf": "2026-07-18T03:45:00.000Z"
+      "asOf": "2026-07-20T00:00:00.000Z"
     },
     "ranges": [
       {
@@ -91,42 +91,42 @@
   "marketSnapshot": {
     "nifty": {
       "value": 24334.3,
-      "change": 261.55,
+      "change": 1.09,
       "changePercent": 1.09,
       "status": "verified",
-      "source": "Moneycontrol ‘Taking Stock’",
-      "asOf": "2026-07-17T08:00:00+05:30"
+      "source": "Business Standard",
+      "asOf": "2026-07-17T00:00:00.000Z"
     },
     "bankNifty": {
       "value": 58521.4,
-      "change": 1,
+      "change": 1.63,
       "changePercent": 1.63,
       "status": "verified",
-      "source": "Upstox index page",
-      "asOf": "2026-07-17T08:00:00+05:30"
+      "source": "Investing.com",
+      "asOf": "2026-07-17T00:00:00.000Z"
     },
     "giftNifty": {
+      "value": 24275.5,
+      "change": 7.5,
+      "changePercent": null,
+      "status": "verified",
+      "source": "HDFC Sky",
+      "asOf": "20 Jul 2026, pre‑open"
+    },
+    "indiaVix": {
       "value": null,
       "change": null,
       "changePercent": null,
       "status": "unavailable",
       "source": "Data unavailable",
-      "asOf": "2026-07-17T18:30:00.000Z"
-    },
-    "indiaVix": {
-      "value": 13,
-      "change": 2.1,
-      "changePercent": null,
-      "status": "verified",
-      "source": "5paisa India VIX",
-      "asOf": "2026-07-17T00:00:00.000Z"
+      "asOf": "2026-07-20T00:00:00.000Z"
     }
   },
   "globalCues": [
     {
       "name": "US Markets",
       "displayValue": "Neutral",
-      "changeLabel": "Could weigh on IT at open.",
+      "changeLabel": "Data unavailable",
       "tone": "neutral",
       "metric": {
         "value": null,
@@ -134,25 +134,39 @@
         "changePercent": null,
         "status": "unavailable",
         "source": "Data unavailable",
-        "asOf": "2026-07-18T03:45:00.000Z"
+        "asOf": "2026-07-20T00:00:00.000Z"
       }
     },
     {
       "name": "Asian Markets",
       "displayValue": "Neutral",
-      "changeLabel": "Risk cue for IT/tech beta Monday.",
+      "changeLabel": "Data unavailable",
       "tone": "neutral",
       "metric": {
-        "value": "Nikkei 225: 64,141.12 (-4.03%); Hang Seng: 24,514 (-2.0%); Shanghai Composite: 3,764.15 (-3.05%)",
+        "value": null,
         "change": null,
         "changePercent": null,
-        "status": "verified",
-        "source": "Reuters/MarketScreener (Jul 17)",
-        "asOf": "2026-07-18T03:45:00.000Z"
+        "status": "unavailable",
+        "source": "Data unavailable",
+        "asOf": "2026-07-20T00:00:00.000Z"
       }
     },
     {
       "name": "Brent Crude",
+      "displayValue": "Unavailable",
+      "changeLabel": "Data unavailable",
+      "tone": "negative",
+      "metric": {
+        "value": null,
+        "change": null,
+        "changePercent": null,
+        "status": "unavailable",
+        "source": "Data unavailable",
+        "asOf": "2026-07-20T00:00:00.000Z"
+      }
+    },
+    {
+      "name": "USD Index",
       "displayValue": "Unavailable",
       "changeLabel": "Data unavailable",
       "tone": "neutral",
@@ -162,349 +176,233 @@
         "changePercent": null,
         "status": "unavailable",
         "source": "Data unavailable",
-        "asOf": "2026-07-18T03:45:00.000Z"
-      }
-    },
-    {
-      "name": "USD Index",
-      "displayValue": "100.76 (close)",
-      "changeLabel": "Data unavailable",
-      "tone": "negative",
-      "metric": {
-        "value": 100.76,
-        "change": null,
-        "changePercent": null,
-        "status": "verified",
-        "source": "Investing.com historical DXY",
-        "asOf": "2026-07-17T00:00:00.000Z"
+        "asOf": "2026-07-20T00:00:00.000Z"
       }
     },
     {
       "name": "Gold (Spot)",
-      "displayValue": "$3,991.85",
+      "displayValue": "Unavailable",
       "changeLabel": "Data unavailable",
       "tone": "neutral",
       "metric": {
-        "value": 3991.85,
+        "value": null,
         "change": null,
         "changePercent": null,
-        "status": "verified",
-        "source": "Goldprice.org",
-        "asOf": "2026-07-17T00:00:00.000Z"
+        "status": "unavailable",
+        "source": "Data unavailable",
+        "asOf": "2026-07-20T00:00:00.000Z"
       }
     }
   ],
   "fiiDii": {
     "fiiNet": {
-      "value": -376.41,
-      "change": -376.41,
+      "value": 376,
+      "change": 376,
       "changePercent": null,
       "status": "verified",
-      "source": "Moneycontrol FII/DII article",
-      "asOf": "2026-07-18T03:45:00.000Z"
+      "source": "FII/DII data",
+      "asOf": "2026-07-17T00:00:00.000Z"
     },
     "diiNet": {
-      "value": 1017.89,
-      "change": 1017.89,
+      "value": 1018,
+      "change": 1018,
       "changePercent": null,
       "status": "verified",
-      "source": "Moneycontrol FII/DII article",
-      "asOf": "2026-07-18T03:45:00.000Z"
+      "source": "FII/DII data",
+      "asOf": "2026-07-17T00:00:00.000Z"
     },
     "interpretation": {
-      "value": "Domestic support offset FII selling on the rally day.",
+      "value": "DII support amid FII selling",
       "change": null,
       "changePercent": null,
       "status": "verified",
-      "source": "Moneycontrol FII/DII article",
-      "asOf": "2026-07-18T03:45:00.000Z"
+      "source": "FII/DII data",
+      "asOf": "2026-07-17T00:00:00.000Z"
     }
   },
   "confidence": {
     "score": {
-      "value": 4.8,
+      "value": 5,
       "change": null,
       "changePercent": null,
       "status": "verified",
       "source": "MarketPulse analysis based on verified inputs",
-      "asOf": "2026-07-18T03:45:00.000Z"
+      "asOf": "2026-07-20T00:00:00.000Z"
     },
     "label": {
-      "value": "Neutral to cautious",
+      "value": "Neutral‑Cautious",
       "change": null,
       "changePercent": null,
       "status": "verified",
       "source": "MarketPulse analysis based on verified inputs",
-      "asOf": "2026-07-18T03:45:00.000Z"
+      "asOf": "2026-07-20T00:00:00.000Z"
     }
   },
   "sectors": [
     {
       "rank": 1,
-      "sector": "Banks - Private",
+      "sector": "Private Banks",
       "moneyFlowScore": {
-        "value": 63,
+        "value": 75,
         "change": null,
         "changePercent": null,
         "status": "verified",
         "source": "MarketPulse analysis based on verified inputs",
-        "asOf": "2026-07-18T03:45:00.000Z"
+        "asOf": "2026-07-20T00:00:00.000Z"
       },
       "statusVsPrevious": {
-        "value": "Improving leadership",
+        "value": "Leading",
         "change": null,
         "changePercent": null,
         "status": "verified",
         "source": "MarketPulse analysis based on verified inputs",
-        "asOf": "2026-07-18T03:45:00.000Z"
+        "asOf": "2026-07-20T00:00:00.000Z"
       },
       "whyMoving": {
         "value": [
-          "Outperformed Nifty; strong Friday breadth",
-          "Earnings catalysts; stable yields",
-          "Buy strength on results reaction"
+          "Strong gains",
+          "Led Friday rally",
+          "Attractive"
         ],
         "change": null,
         "changePercent": null,
         "status": "verified",
         "source": "MarketPulse analysis based on verified inputs",
-        "asOf": "2026-07-18T03:45:00.000Z"
+        "asOf": "2026-07-20T00:00:00.000Z"
       },
       "beneficiaries": {
         "value": [
-          "HDFCB",
-          "ICICIB",
-          "KOTAK"
+          "HDFC",
+          "ICICI",
+          "Axis"
         ],
         "change": null,
         "changePercent": null,
         "status": "verified",
         "source": "MarketPulse analysis based on verified inputs",
-        "asOf": "2026-07-18T03:45:00.000Z"
+        "asOf": "2026-07-20T00:00:00.000Z"
       },
       "bestFnoPick": {
-        "value": "HDFCB",
+        "value": "HDFC",
         "change": null,
         "changePercent": null,
         "status": "verified",
         "source": "MarketPulse analysis based on verified inputs",
-        "asOf": "2026-07-18T03:45:00.000Z"
+        "asOf": "2026-07-20T00:00:00.000Z"
       }
     },
     {
       "rank": 2,
-      "sector": "Auto",
+      "sector": "IT",
       "moneyFlowScore": {
-        "value": 58,
+        "value": 65,
         "change": null,
         "changePercent": null,
         "status": "verified",
         "source": "MarketPulse analysis based on verified inputs",
-        "asOf": "2026-07-18T03:45:00.000Z"
+        "asOf": "2026-07-20T00:00:00.000Z"
       },
       "statusVsPrevious": {
-        "value": "Stable uptrend",
+        "value": "Supporting",
         "change": null,
         "changePercent": null,
         "status": "verified",
         "source": "MarketPulse analysis based on verified inputs",
-        "asOf": "2026-07-18T03:45:00.000Z"
+        "asOf": "2026-07-20T00:00:00.000Z"
       },
       "whyMoving": {
         "value": [
-          "Higher highs vs Nifty",
-          "Demand traction; INR risk manageable",
-          "Buy on pullbacks"
+          "Positive momentum",
+          "Earnings optimism",
+          "Watch"
         ],
         "change": null,
         "changePercent": null,
         "status": "verified",
         "source": "MarketPulse analysis based on verified inputs",
-        "asOf": "2026-07-18T03:45:00.000Z"
+        "asOf": "2026-07-20T00:00:00.000Z"
       },
       "beneficiaries": {
         "value": [
-          "TATAMOTORS",
-          "M&M"
+          "Infosys",
+          "TCS"
         ],
         "change": null,
         "changePercent": null,
         "status": "verified",
         "source": "MarketPulse analysis based on verified inputs",
-        "asOf": "2026-07-18T03:45:00.000Z"
+        "asOf": "2026-07-20T00:00:00.000Z"
       },
       "bestFnoPick": {
-        "value": "TATAMOTORS",
+        "value": "Infosys",
         "change": null,
         "changePercent": null,
         "status": "verified",
         "source": "MarketPulse analysis based on verified inputs",
-        "asOf": "2026-07-18T03:45:00.000Z"
+        "asOf": "2026-07-20T00:00:00.000Z"
       }
     },
     {
       "rank": 3,
-      "sector": "Capital Goods",
+      "sector": "Autos",
       "moneyFlowScore": {
-        "value": 57,
+        "value": 60,
         "change": null,
         "changePercent": null,
         "status": "verified",
         "source": "MarketPulse analysis based on verified inputs",
-        "asOf": "2026-07-18T03:45:00.000Z"
+        "asOf": "2026-07-20T00:00:00.000Z"
       },
       "statusVsPrevious": {
-        "value": "Steady",
+        "value": "Supporting",
         "change": null,
         "changePercent": null,
         "status": "verified",
         "source": "MarketPulse analysis based on verified inputs",
-        "asOf": "2026-07-18T03:45:00.000Z"
+        "asOf": "2026-07-20T00:00:00.000Z"
       },
       "whyMoving": {
         "value": [
-          "Persistent RS",
-          "Order wins; rates benign",
-          "Hold/add on dips"
+          "Buying interest",
+          "Demand expectations",
+          "Watch"
         ],
         "change": null,
         "changePercent": null,
         "status": "verified",
         "source": "MarketPulse analysis based on verified inputs",
-        "asOf": "2026-07-18T03:45:00.000Z"
+        "asOf": "2026-07-20T00:00:00.000Z"
       },
       "beneficiaries": {
         "value": [
-          "LT"
+          "Maruti",
+          "Tata Motors"
         ],
         "change": null,
         "changePercent": null,
         "status": "verified",
         "source": "MarketPulse analysis based on verified inputs",
-        "asOf": "2026-07-18T03:45:00.000Z"
+        "asOf": "2026-07-20T00:00:00.000Z"
       },
       "bestFnoPick": {
-        "value": "LT",
+        "value": "Maruti",
         "change": null,
         "changePercent": null,
         "status": "verified",
         "source": "MarketPulse analysis based on verified inputs",
-        "asOf": "2026-07-18T03:45:00.000Z"
+        "asOf": "2026-07-20T00:00:00.000Z"
       }
     },
     {
       "rank": 4,
-      "sector": "Oil & Gas",
-      "moneyFlowScore": {
-        "value": 55,
-        "change": null,
-        "changePercent": null,
-        "status": "verified",
-        "source": "MarketPulse analysis based on verified inputs",
-        "asOf": "2026-07-18T03:45:00.000Z"
-      },
-      "statusVsPrevious": {
-        "value": "Event-driven",
-        "change": null,
-        "changePercent": null,
-        "status": "verified",
-        "source": "MarketPulse analysis based on verified inputs",
-        "asOf": "2026-07-18T03:45:00.000Z"
-      },
-      "whyMoving": {
-        "value": [
-          "RIL-led rebound; OMCs sensitive to crude",
-          "RIL print; crude swings",
-          "Trade post-crude and result clarity"
-        ],
-        "change": null,
-        "changePercent": null,
-        "status": "verified",
-        "source": "MarketPulse analysis based on verified inputs",
-        "asOf": "2026-07-18T03:45:00.000Z"
-      },
-      "beneficiaries": {
-        "value": [
-          "RIL",
-          "BPCL",
-          "IOCL"
-        ],
-        "change": null,
-        "changePercent": null,
-        "status": "verified",
-        "source": "MarketPulse analysis based on verified inputs",
-        "asOf": "2026-07-18T03:45:00.000Z"
-      },
-      "bestFnoPick": {
-        "value": "RIL",
-        "change": null,
-        "changePercent": null,
-        "status": "verified",
-        "source": "MarketPulse analysis based on verified inputs",
-        "asOf": "2026-07-18T03:45:00.000Z"
-      }
-    },
-    {
-      "rank": 5,
-      "sector": "Realty",
-      "moneyFlowScore": {
-        "value": 52,
-        "change": null,
-        "changePercent": null,
-        "status": "verified",
-        "source": "MarketPulse analysis based on verified inputs",
-        "asOf": "2026-07-18T03:45:00.000Z"
-      },
-      "statusVsPrevious": {
-        "value": "Selective strength",
-        "change": null,
-        "changePercent": null,
-        "status": "verified",
-        "source": "MarketPulse analysis based on verified inputs",
-        "asOf": "2026-07-18T03:45:00.000Z"
-      },
-      "whyMoving": {
-        "value": [
-          "Resilient vs Nifty",
-          "Demand + rate backdrop",
-          "Breakout buys only"
-        ],
-        "change": null,
-        "changePercent": null,
-        "status": "verified",
-        "source": "MarketPulse analysis based on verified inputs",
-        "asOf": "2026-07-18T03:45:00.000Z"
-      },
-      "beneficiaries": {
-        "value": [
-          "DLF",
-          "LODHA"
-        ],
-        "change": null,
-        "changePercent": null,
-        "status": "verified",
-        "source": "MarketPulse analysis based on verified inputs",
-        "asOf": "2026-07-18T03:45:00.000Z"
-      },
-      "bestFnoPick": {
-        "value": "DLF",
-        "change": null,
-        "changePercent": null,
-        "status": "verified",
-        "source": "MarketPulse analysis based on verified inputs",
-        "asOf": "2026-07-18T03:45:00.000Z"
-      }
-    },
-    {
-      "rank": 6,
-      "sector": "PSU Banks",
+      "sector": "FMCG",
       "moneyFlowScore": {
         "value": 50,
         "change": null,
         "changePercent": null,
         "status": "verified",
         "source": "MarketPulse analysis based on verified inputs",
-        "asOf": "2026-07-18T03:45:00.000Z"
+        "asOf": "2026-07-20T00:00:00.000Z"
       },
       "statusVsPrevious": {
         "value": "Neutral",
@@ -512,133 +410,30 @@
         "changePercent": null,
         "status": "verified",
         "source": "MarketPulse analysis based on verified inputs",
-        "asOf": "2026-07-18T03:45:00.000Z"
+        "asOf": "2026-07-20T00:00:00.000Z"
       },
       "whyMoving": {
         "value": [
-          "Inline RS",
-          "Await private bank prints",
-          "Reactive only"
-        ],
-        "change": null,
-        "changePercent": null,
-        "status": "verified",
-        "source": "MarketPulse analysis based on verified inputs",
-        "asOf": "2026-07-18T03:45:00.000Z"
-      },
-      "beneficiaries": {
-        "value": [
-          "PNB",
-          "SBI"
-        ],
-        "change": null,
-        "changePercent": null,
-        "status": "verified",
-        "source": "MarketPulse analysis based on verified inputs",
-        "asOf": "2026-07-18T03:45:00.000Z"
-      },
-      "bestFnoPick": {
-        "value": "PNB",
-        "change": null,
-        "changePercent": null,
-        "status": "verified",
-        "source": "MarketPulse analysis based on verified inputs",
-        "asOf": "2026-07-18T03:45:00.000Z"
-      }
-    },
-    {
-      "rank": 7,
-      "sector": "IT Services",
-      "moneyFlowScore": {
-        "value": 48,
-        "change": null,
-        "changePercent": null,
-        "status": "verified",
-        "source": "MarketPulse analysis based on verified inputs",
-        "asOf": "2026-07-18T03:45:00.000Z"
-      },
-      "statusVsPrevious": {
-        "value": "Cooling",
-        "change": null,
-        "changePercent": null,
-        "status": "verified",
-        "source": "MarketPulse analysis based on verified inputs",
-        "asOf": "2026-07-18T03:45:00.000Z"
-      },
-      "whyMoving": {
-        "value": [
-          "Underperformed vs US tech selloff",
-          "US risk-off; Infosys results Thu",
-          "Prefer RS names; buy dips only above levels"
-        ],
-        "change": null,
-        "changePercent": null,
-        "status": "verified",
-        "source": "MarketPulse analysis based on verified inputs",
-        "asOf": "2026-07-18T03:45:00.000Z"
-      },
-      "beneficiaries": {
-        "value": [
-          "INFY",
-          "LTIM",
-          "TCS"
-        ],
-        "change": null,
-        "changePercent": null,
-        "status": "verified",
-        "source": "MarketPulse analysis based on verified inputs",
-        "asOf": "2026-07-18T03:45:00.000Z"
-      },
-      "bestFnoPick": {
-        "value": "INFY",
-        "change": null,
-        "changePercent": null,
-        "status": "verified",
-        "source": "MarketPulse analysis based on verified inputs",
-        "asOf": "2026-07-18T03:45:00.000Z"
-      }
-    },
-    {
-      "rank": 8,
-      "sector": "FMCG",
-      "moneyFlowScore": {
-        "value": 45,
-        "change": null,
-        "changePercent": null,
-        "status": "verified",
-        "source": "MarketPulse analysis based on verified inputs",
-        "asOf": "2026-07-18T03:45:00.000Z"
-      },
-      "statusVsPrevious": {
-        "value": "Defensive hold",
-        "change": null,
-        "changePercent": null,
-        "status": "verified",
-        "source": "MarketPulse analysis based on verified inputs",
-        "asOf": "2026-07-18T03:45:00.000Z"
-      },
-      "whyMoving": {
-        "value": [
-          "Lagging RS",
-          "Input cost/watch INR",
+          "Stable",
+          "Defensive stability",
           "Range trade"
         ],
         "change": null,
         "changePercent": null,
         "status": "verified",
         "source": "MarketPulse analysis based on verified inputs",
-        "asOf": "2026-07-18T03:45:00.000Z"
+        "asOf": "2026-07-20T00:00:00.000Z"
       },
       "beneficiaries": {
         "value": [
           "HUL",
-          "ITC"
+          "Britannia"
         ],
         "change": null,
         "changePercent": null,
         "status": "verified",
         "source": "MarketPulse analysis based on verified inputs",
-        "asOf": "2026-07-18T03:45:00.000Z"
+        "asOf": "2026-07-20T00:00:00.000Z"
       },
       "bestFnoPick": {
         "value": "HUL",
@@ -646,326 +441,241 @@
         "changePercent": null,
         "status": "verified",
         "source": "MarketPulse analysis based on verified inputs",
-        "asOf": "2026-07-18T03:45:00.000Z"
+        "asOf": "2026-07-20T00:00:00.000Z"
+      }
+    },
+    {
+      "rank": 5,
+      "sector": "Oil & Gas",
+      "moneyFlowScore": {
+        "value": 40,
+        "change": null,
+        "changePercent": null,
+        "status": "verified",
+        "source": "MarketPulse analysis based on verified inputs",
+        "asOf": "2026-07-20T00:00:00.000Z"
+      },
+      "statusVsPrevious": {
+        "value": "Weak",
+        "change": null,
+        "changePercent": null,
+        "status": "verified",
+        "source": "MarketPulse analysis based on verified inputs",
+        "asOf": "2026-07-20T00:00:00.000Z"
+      },
+      "whyMoving": {
+        "value": [
+          "Lagging",
+          "Vulnerable to crude risk",
+          "Cautious"
+        ],
+        "change": null,
+        "changePercent": null,
+        "status": "verified",
+        "source": "MarketPulse analysis based on verified inputs",
+        "asOf": "2026-07-20T00:00:00.000Z"
+      },
+      "beneficiaries": {
+        "value": [
+          "Reliance",
+          "ONGC"
+        ],
+        "change": null,
+        "changePercent": null,
+        "status": "verified",
+        "source": "MarketPulse analysis based on verified inputs",
+        "asOf": "2026-07-20T00:00:00.000Z"
+      },
+      "bestFnoPick": {
+        "value": "Reliance",
+        "change": null,
+        "changePercent": null,
+        "status": "verified",
+        "source": "MarketPulse analysis based on verified inputs",
+        "asOf": "2026-07-20T00:00:00.000Z"
       }
     }
   ],
   "swingOpportunities": [
     {
       "stock": {
-        "value": "ICICI Bank",
+        "value": null,
         "change": null,
         "changePercent": null,
-        "status": "verified",
-        "source": "MarketPulse analysis based on verified inputs",
-        "asOf": "2026-07-18T03:45:00.000Z"
+        "status": "unavailable",
+        "source": "Data unavailable",
+        "asOf": "2026-07-20T00:00:00.000Z"
       },
       "sector": {
-        "value": "Swing buy on strength",
+        "value": "Watchlist",
         "change": null,
         "changePercent": null,
         "status": "verified",
         "source": "MarketPulse analysis based on verified inputs",
-        "asOf": "2026-07-18T03:45:00.000Z"
+        "asOf": "2026-07-20T00:00:00.000Z"
       },
       "conviction": {
-        "value": "7.5/10",
+        "value": "Watchlist only",
         "change": null,
         "changePercent": null,
         "status": "verified",
         "source": "MarketPulse analysis based on verified inputs",
-        "asOf": "2026-07-18T03:45:00.000Z"
+        "asOf": "2026-07-20T00:00:00.000Z"
       },
       "reason": {
-        "value": "Leadership; earnings tailwind",
+        "value": "Awaiting technical levels",
         "change": null,
         "changePercent": null,
         "status": "verified",
         "source": "MarketPulse analysis based on verified inputs",
-        "asOf": "2026-07-18T03:45:00.000Z"
-      }
-    },
-    {
-      "stock": {
-        "value": "HDFC Bank",
-        "change": null,
-        "changePercent": null,
-        "status": "verified",
-        "source": "MarketPulse analysis based on verified inputs",
-        "asOf": "2026-07-18T03:45:00.000Z"
-      },
-      "sector": {
-        "value": "Reaction buy post-results",
-        "change": null,
-        "changePercent": null,
-        "status": "verified",
-        "source": "MarketPulse analysis based on verified inputs",
-        "asOf": "2026-07-18T03:45:00.000Z"
-      },
-      "conviction": {
-        "value": "7/10",
-        "change": null,
-        "changePercent": null,
-        "status": "verified",
-        "source": "MarketPulse analysis based on verified inputs",
-        "asOf": "2026-07-18T03:45:00.000Z"
-      },
-      "reason": {
-        "value": "Event-driven; large weight",
-        "change": null,
-        "changePercent": null,
-        "status": "verified",
-        "source": "MarketPulse analysis based on verified inputs",
-        "asOf": "2026-07-18T03:45:00.000Z"
-      }
-    },
-    {
-      "stock": {
-        "value": "Reliance",
-        "change": null,
-        "changePercent": null,
-        "status": "verified",
-        "source": "MarketPulse analysis based on verified inputs",
-        "asOf": "2026-07-18T03:45:00.000Z"
-      },
-      "sector": {
-        "value": "Post-result continuation",
-        "change": null,
-        "changePercent": null,
-        "status": "verified",
-        "source": "MarketPulse analysis based on verified inputs",
-        "asOf": "2026-07-18T03:45:00.000Z"
-      },
-      "conviction": {
-        "value": "6.5/10",
-        "change": null,
-        "changePercent": null,
-        "status": "verified",
-        "source": "MarketPulse analysis based on verified inputs",
-        "asOf": "2026-07-18T03:45:00.000Z"
-      },
-      "reason": {
-        "value": "Index driver; O2C/retail",
-        "change": null,
-        "changePercent": null,
-        "status": "verified",
-        "source": "MarketPulse analysis based on verified inputs",
-        "asOf": "2026-07-18T03:45:00.000Z"
-      }
-    },
-    {
-      "stock": {
-        "value": "LTIMindtree",
-        "change": null,
-        "changePercent": null,
-        "status": "verified",
-        "source": "MarketPulse analysis based on verified inputs",
-        "asOf": "2026-07-18T03:45:00.000Z"
-      },
-      "sector": {
-        "value": "RS buy",
-        "change": null,
-        "changePercent": null,
-        "status": "verified",
-        "source": "MarketPulse analysis based on verified inputs",
-        "asOf": "2026-07-18T03:45:00.000Z"
-      },
-      "conviction": {
-        "value": "6.5/10",
-        "change": null,
-        "changePercent": null,
-        "status": "verified",
-        "source": "MarketPulse analysis based on verified inputs",
-        "asOf": "2026-07-18T03:45:00.000Z"
-      },
-      "reason": {
-        "value": "Rel. strength vs IT",
-        "change": null,
-        "changePercent": null,
-        "status": "verified",
-        "source": "MarketPulse analysis based on verified inputs",
-        "asOf": "2026-07-18T03:45:00.000Z"
-      }
-    },
-    {
-      "stock": {
-        "value": "DLF",
-        "change": null,
-        "changePercent": null,
-        "status": "verified",
-        "source": "MarketPulse analysis based on verified inputs",
-        "asOf": "2026-07-18T03:45:00.000Z"
-      },
-      "sector": {
-        "value": "Breakout buy",
-        "change": null,
-        "changePercent": null,
-        "status": "verified",
-        "source": "MarketPulse analysis based on verified inputs",
-        "asOf": "2026-07-18T03:45:00.000Z"
-      },
-      "conviction": {
-        "value": "6/10",
-        "change": null,
-        "changePercent": null,
-        "status": "verified",
-        "source": "MarketPulse analysis based on verified inputs",
-        "asOf": "2026-07-18T03:45:00.000Z"
-      },
-      "reason": {
-        "value": "Realty momentum",
-        "change": null,
-        "changePercent": null,
-        "status": "verified",
-        "source": "MarketPulse analysis based on verified inputs",
-        "asOf": "2026-07-18T03:45:00.000Z"
+        "asOf": "2026-07-20T00:00:00.000Z"
       }
     }
   ],
   "btstIdeas": [
     {
       "stock": {
-        "value": "ICICI Bank",
+        "value": null,
         "change": null,
         "changePercent": null,
-        "status": "verified",
-        "source": "MarketPulse analysis based on verified inputs",
-        "asOf": "2026-07-18T03:45:00.000Z"
+        "status": "unavailable",
+        "source": "Data unavailable",
+        "asOf": "2026-07-20T00:00:00.000Z"
       },
       "entry": {
-        "value": "Buy above 1,220",
+        "value": null,
         "change": null,
         "changePercent": null,
-        "status": "verified",
-        "source": "MarketPulse analysis based on verified inputs",
-        "asOf": "2026-07-18T03:45:00.000Z"
+        "status": "unavailable",
+        "source": "Data unavailable",
+        "asOf": "2026-07-20T00:00:00.000Z"
       },
       "stopLoss": {
-        "value": "1,188",
+        "value": null,
         "change": null,
         "changePercent": null,
-        "status": "verified",
-        "source": "MarketPulse analysis based on verified inputs",
-        "asOf": "2026-07-18T03:45:00.000Z"
+        "status": "unavailable",
+        "source": "Data unavailable",
+        "asOf": "2026-07-20T00:00:00.000Z"
       },
       "target": {
-        "value": "1,260 / 1,285",
+        "value": null,
         "change": null,
         "changePercent": null,
-        "status": "verified",
-        "source": "MarketPulse analysis based on verified inputs",
-        "asOf": "2026-07-18T03:45:00.000Z"
+        "status": "unavailable",
+        "source": "Data unavailable",
+        "asOf": "2026-07-20T00:00:00.000Z"
       }
     },
     {
       "stock": {
-        "value": "HDFC Bank",
+        "value": null,
         "change": null,
         "changePercent": null,
-        "status": "verified",
-        "source": "MarketPulse analysis based on verified inputs",
-        "asOf": "2026-07-18T03:45:00.000Z"
+        "status": "unavailable",
+        "source": "Data unavailable",
+        "asOf": "2026-07-20T00:00:00.000Z"
       },
       "entry": {
-        "value": "Buy above 1,690",
+        "value": null,
         "change": null,
         "changePercent": null,
-        "status": "verified",
-        "source": "MarketPulse analysis based on verified inputs",
-        "asOf": "2026-07-18T03:45:00.000Z"
+        "status": "unavailable",
+        "source": "Data unavailable",
+        "asOf": "2026-07-20T00:00:00.000Z"
       },
       "stopLoss": {
-        "value": "1,650",
+        "value": null,
         "change": null,
         "changePercent": null,
-        "status": "verified",
-        "source": "MarketPulse analysis based on verified inputs",
-        "asOf": "2026-07-18T03:45:00.000Z"
+        "status": "unavailable",
+        "source": "Data unavailable",
+        "asOf": "2026-07-20T00:00:00.000Z"
       },
       "target": {
-        "value": "1,740 / 1,770",
+        "value": null,
         "change": null,
         "changePercent": null,
-        "status": "verified",
-        "source": "MarketPulse analysis based on verified inputs",
-        "asOf": "2026-07-18T03:45:00.000Z"
+        "status": "unavailable",
+        "source": "Data unavailable",
+        "asOf": "2026-07-20T00:00:00.000Z"
       }
     },
     {
       "stock": {
-        "value": "Reliance Industries",
+        "value": null,
         "change": null,
         "changePercent": null,
-        "status": "verified",
-        "source": "MarketPulse analysis based on verified inputs",
-        "asOf": "2026-07-18T03:45:00.000Z"
+        "status": "unavailable",
+        "source": "Data unavailable",
+        "asOf": "2026-07-20T00:00:00.000Z"
       },
       "entry": {
-        "value": "Buy above 3,040",
+        "value": null,
         "change": null,
         "changePercent": null,
-        "status": "verified",
-        "source": "MarketPulse analysis based on verified inputs",
-        "asOf": "2026-07-18T03:45:00.000Z"
+        "status": "unavailable",
+        "source": "Data unavailable",
+        "asOf": "2026-07-20T00:00:00.000Z"
       },
       "stopLoss": {
-        "value": "2,965",
+        "value": null,
         "change": null,
         "changePercent": null,
-        "status": "verified",
-        "source": "MarketPulse analysis based on verified inputs",
-        "asOf": "2026-07-18T03:45:00.000Z"
+        "status": "unavailable",
+        "source": "Data unavailable",
+        "asOf": "2026-07-20T00:00:00.000Z"
       },
       "target": {
-        "value": "3,120 / 3,180",
+        "value": null,
         "change": null,
         "changePercent": null,
-        "status": "verified",
-        "source": "MarketPulse analysis based on verified inputs",
-        "asOf": "2026-07-18T03:45:00.000Z"
+        "status": "unavailable",
+        "source": "Data unavailable",
+        "asOf": "2026-07-20T00:00:00.000Z"
       }
     }
   ],
   "indexLevels": {
     "resistance1": {
-      "value": 24420,
+      "value": null,
       "change": null,
       "changePercent": null,
-      "status": "verified",
-      "source": "MarketPulse analysis based on verified inputs",
-      "asOf": "2026-07-18T03:45:00.000Z"
+      "status": "unavailable",
+      "source": "Data unavailable",
+      "asOf": "2026-07-20T00:00:00.000Z"
     },
     "resistance2": {
-      "value": 24550,
+      "value": null,
       "change": null,
       "changePercent": null,
-      "status": "verified",
-      "source": "MarketPulse analysis based on verified inputs",
-      "asOf": "2026-07-18T03:45:00.000Z"
+      "status": "unavailable",
+      "source": "Data unavailable",
+      "asOf": "2026-07-20T00:00:00.000Z"
     },
     "support1": {
-      "value": 24180,
+      "value": 24200,
       "change": null,
       "changePercent": null,
       "status": "verified",
       "source": "MarketPulse analysis based on verified inputs",
-      "asOf": "2026-07-18T03:45:00.000Z"
+      "asOf": "2026-07-20T00:00:00.000Z"
     },
     "support2": {
-      "value": 24050,
+      "value": null,
       "change": null,
       "changePercent": null,
-      "status": "verified",
-      "source": "MarketPulse analysis based on verified inputs",
-      "asOf": "2026-07-18T03:45:00.000Z"
+      "status": "unavailable",
+      "source": "Data unavailable",
+      "asOf": "2026-07-20T00:00:00.000Z"
     },
     "trend": {
-      "value": "US tech-led risk-off affecting Indian IT sentiment.",
+      "value": "Oil price volatility",
       "change": null,
       "changePercent": null,
       "status": "verified",
       "source": "MarketPulse analysis based on verified inputs",
-      "asOf": "2026-07-18T03:45:00.000Z"
+      "asOf": "2026-07-20T00:00:00.000Z"
     },
     "bias": {
       "value": "Neutral",
@@ -973,7 +683,7 @@
       "changePercent": null,
       "status": "verified",
       "source": "MarketPulse analysis based on verified inputs",
-      "asOf": "2026-07-18T03:45:00.000Z"
+      "asOf": "2026-07-20T00:00:00.000Z"
     }
   },
   "optionsSetup": {
@@ -983,7 +693,7 @@
       "changePercent": null,
       "status": "unavailable",
       "source": "Data unavailable",
-      "asOf": "2026-07-18T03:45:00.000Z"
+      "asOf": "2026-07-20T00:00:00.000Z"
     },
     "maxPain": {
       "value": null,
@@ -991,7 +701,7 @@
       "changePercent": null,
       "status": "unavailable",
       "source": "Data unavailable",
-      "asOf": "2026-07-18T03:45:00.000Z"
+      "asOf": "2026-07-20T00:00:00.000Z"
     },
     "maxCallOi": {
       "value": null,
@@ -999,7 +709,7 @@
       "changePercent": null,
       "status": "unavailable",
       "source": "Data unavailable",
-      "asOf": "2026-07-18T03:45:00.000Z"
+      "asOf": "2026-07-20T00:00:00.000Z"
     },
     "maxPutOi": {
       "value": null,
@@ -1007,7 +717,7 @@
       "changePercent": null,
       "status": "unavailable",
       "source": "Data unavailable",
-      "asOf": "2026-07-18T03:45:00.000Z"
+      "asOf": "2026-07-20T00:00:00.000Z"
     },
     "freshLongBuildUp": {
       "value": null,
@@ -1015,7 +725,7 @@
       "changePercent": null,
       "status": "unavailable",
       "source": "Data unavailable",
-      "asOf": "2026-07-18T03:45:00.000Z"
+      "asOf": "2026-07-20T00:00:00.000Z"
     },
     "freshShortBuildUp": {
       "value": null,
@@ -1023,34 +733,34 @@
       "changePercent": null,
       "status": "unavailable",
       "source": "Data unavailable",
-      "asOf": "2026-07-18T03:45:00.000Z"
+      "asOf": "2026-07-20T00:00:00.000Z"
     }
   },
   "macroCalendar": [
     {
       "time": {
-        "value": "Sat, 18 Jul 2026 (post-announcements)",
+        "value": "Jun 5, 2026 (past)",
         "change": null,
         "changePercent": null,
         "status": "verified",
-        "source": "Business Standard results calendar",
-        "asOf": "2026-07-18T03:45:00.000Z"
+        "source": "RBI",
+        "asOf": "2026-07-20T00:00:00.000Z"
       },
       "event": {
-        "value": "HDFC Bank, ICICI Bank, Axis Bank — Q1 FY27 results",
+        "value": "RBI Monetary Policy Statement",
         "change": null,
         "changePercent": null,
         "status": "verified",
-        "source": "Business Standard results calendar",
-        "asOf": "2026-07-18T03:45:00.000Z"
+        "source": "RBI",
+        "asOf": "2026-07-20T00:00:00.000Z"
       },
       "importance": {
         "value": 5,
         "change": null,
         "changePercent": null,
         "status": "verified",
-        "source": "Business Standard results calendar",
-        "asOf": "2026-07-18T03:45:00.000Z"
+        "source": "RBI",
+        "asOf": "2026-07-20T00:00:00.000Z"
       },
       "affectedSectors": {
         "value": null,
@@ -1058,233 +768,191 @@
         "changePercent": null,
         "status": "unavailable",
         "source": "Data unavailable",
-        "asOf": "2026-07-18T03:45:00.000Z"
+        "asOf": "2026-07-20T00:00:00.000Z"
       },
       "expectedImpact": {
-        "value": "Gap risk for Bank Nifty/private banks",
+        "value": "Rate expectations",
         "change": null,
         "changePercent": null,
         "status": "verified",
-        "source": "Business Standard results calendar",
-        "asOf": "2026-07-18T03:45:00.000Z"
+        "source": "RBI",
+        "asOf": "2026-07-20T00:00:00.000Z"
       }
     },
     {
       "time": {
-        "value": "Mon, 20 Jul 2026",
+        "value": "Jul 22, 2026 20:00",
         "change": null,
         "changePercent": null,
         "status": "verified",
-        "source": "Business Standard results calendar",
-        "asOf": "2026-07-18T03:45:00.000Z"
+        "source": "Fed schedule",
+        "asOf": "2026-07-20T00:00:00.000Z"
       },
       "event": {
-        "value": "UltraTech Cement — Q1 FY27 results",
+        "value": "US FOMC Minutes",
         "change": null,
         "changePercent": null,
         "status": "verified",
-        "source": "Business Standard results calendar",
-        "asOf": "2026-07-18T03:45:00.000Z"
-      },
-      "importance": {
-        "value": 3,
-        "change": null,
-        "changePercent": null,
-        "status": "verified",
-        "source": "Business Standard results calendar",
-        "asOf": "2026-07-18T03:45:00.000Z"
-      },
-      "affectedSectors": {
-        "value": "Cement/Infra",
-        "change": null,
-        "changePercent": null,
-        "status": "verified",
-        "source": "Business Standard results calendar",
-        "asOf": "2026-07-18T03:45:00.000Z"
-      },
-      "expectedImpact": {
-        "value": "Cement sentiment; infra demand read",
-        "change": null,
-        "changePercent": null,
-        "status": "verified",
-        "source": "Business Standard results calendar",
-        "asOf": "2026-07-18T03:45:00.000Z"
-      }
-    },
-    {
-      "time": {
-        "value": "Tue, 21 Jul 2026, 19:30 IST (10:00 ET)",
-        "change": null,
-        "changePercent": null,
-        "status": "verified",
-        "source": "BLS July schedule",
-        "asOf": "2026-07-18T03:45:00.000Z"
-      },
-      "event": {
-        "value": "BLS: State Employment & Unemployment (US)",
-        "change": null,
-        "changePercent": null,
-        "status": "verified",
-        "source": "BLS July schedule",
-        "asOf": "2026-07-18T03:45:00.000Z"
-      },
-      "importance": {
-        "value": 3,
-        "change": null,
-        "changePercent": null,
-        "status": "verified",
-        "source": "BLS July schedule",
-        "asOf": "2026-07-18T03:45:00.000Z"
-      },
-      "affectedSectors": {
-        "value": "IT/global risk",
-        "change": null,
-        "changePercent": null,
-        "status": "verified",
-        "source": "BLS July schedule",
-        "asOf": "2026-07-18T03:45:00.000Z"
-      },
-      "expectedImpact": {
-        "value": "Risk tone via US labor",
-        "change": null,
-        "changePercent": null,
-        "status": "verified",
-        "source": "BLS July schedule",
-        "asOf": "2026-07-18T03:45:00.000Z"
-      }
-    },
-    {
-      "time": {
-        "value": "Wed, 22 Jul 2026, 20:00 IST (10:30 ET)",
-        "change": null,
-        "changePercent": null,
-        "status": "verified",
-        "source": "EIA schedule",
-        "asOf": "2026-07-18T03:45:00.000Z"
-      },
-      "event": {
-        "value": "EIA Weekly Petroleum Status Report",
-        "change": null,
-        "changePercent": null,
-        "status": "verified",
-        "source": "EIA schedule",
-        "asOf": "2026-07-18T03:45:00.000Z"
+        "source": "Fed schedule",
+        "asOf": "2026-07-20T00:00:00.000Z"
       },
       "importance": {
         "value": 5,
         "change": null,
         "changePercent": null,
         "status": "verified",
-        "source": "EIA schedule",
-        "asOf": "2026-07-18T03:45:00.000Z"
+        "source": "Fed schedule",
+        "asOf": "2026-07-20T00:00:00.000Z"
       },
       "affectedSectors": {
-        "value": "Energy users",
+        "value": "All",
         "change": null,
         "changePercent": null,
         "status": "verified",
-        "source": "EIA schedule",
-        "asOf": "2026-07-18T03:45:00.000Z"
+        "source": "Fed schedule",
+        "asOf": "2026-07-20T00:00:00.000Z"
       },
       "expectedImpact": {
-        "value": "Oil moves; OMCs/paints/airlines",
+        "value": "Global rates",
         "change": null,
         "changePercent": null,
         "status": "verified",
-        "source": "EIA schedule",
-        "asOf": "2026-07-18T03:45:00.000Z"
+        "source": "Fed schedule",
+        "asOf": "2026-07-20T00:00:00.000Z"
       }
     },
     {
       "time": {
-        "value": "Thu, 23 Jul 2026",
+        "value": "Jul 30, 2026 10:30",
         "change": null,
         "changePercent": null,
         "status": "verified",
-        "source": "Business Standard results calendar",
-        "asOf": "2026-07-18T03:45:00.000Z"
+        "source": "Ministry of Commerce",
+        "asOf": "2026-07-20T00:00:00.000Z"
       },
       "event": {
-        "value": "Infosys — Q1 FY27 results",
+        "value": "India WPI (June)",
         "change": null,
         "changePercent": null,
         "status": "verified",
-        "source": "Business Standard results calendar",
-        "asOf": "2026-07-18T03:45:00.000Z"
+        "source": "Ministry of Commerce",
+        "asOf": "2026-07-20T00:00:00.000Z"
       },
       "importance": {
-        "value": 5,
+        "value": 3,
         "change": null,
         "changePercent": null,
         "status": "verified",
-        "source": "Business Standard results calendar",
-        "asOf": "2026-07-18T03:45:00.000Z"
+        "source": "Ministry of Commerce",
+        "asOf": "2026-07-20T00:00:00.000Z"
       },
       "affectedSectors": {
-        "value": "IT services",
+        "value": "Auto, Consumer",
         "change": null,
         "changePercent": null,
         "status": "verified",
-        "source": "Business Standard results calendar",
-        "asOf": "2026-07-18T03:45:00.000Z"
+        "source": "Ministry of Commerce",
+        "asOf": "2026-07-20T00:00:00.000Z"
       },
       "expectedImpact": {
-        "value": "IT sector sentiment swing",
+        "value": "Inflation view",
         "change": null,
         "changePercent": null,
         "status": "verified",
-        "source": "Business Standard results calendar",
-        "asOf": "2026-07-18T03:45:00.000Z"
+        "source": "Ministry of Commerce",
+        "asOf": "2026-07-20T00:00:00.000Z"
+      }
+    },
+    {
+      "time": {
+        "value": "Jul 22, 2026 18:30",
+        "change": null,
+        "changePercent": null,
+        "status": "verified",
+        "source": "EIA",
+        "asOf": "2026-07-20T00:00:00.000Z"
+      },
+      "event": {
+        "value": "Crude Oil Inventory (US weekly)",
+        "change": null,
+        "changePercent": null,
+        "status": "verified",
+        "source": "EIA",
+        "asOf": "2026-07-20T00:00:00.000Z"
+      },
+      "importance": {
+        "value": 3,
+        "change": null,
+        "changePercent": null,
+        "status": "verified",
+        "source": "EIA",
+        "asOf": "2026-07-20T00:00:00.000Z"
+      },
+      "affectedSectors": {
+        "value": "Oil & Gas",
+        "change": null,
+        "changePercent": null,
+        "status": "verified",
+        "source": "EIA",
+        "asOf": "2026-07-20T00:00:00.000Z"
+      },
+      "expectedImpact": {
+        "value": "Oil markets",
+        "change": null,
+        "changePercent": null,
+        "status": "verified",
+        "source": "EIA",
+        "asOf": "2026-07-20T00:00:00.000Z"
       }
     }
   ],
   "keyRisks": {
     "value": [
-      "GIFT Nifty currentValue / impliedGap: Recheck pre-open Monday.",
-      "Nifty Midcap index close and change: Pull from NSE official EOD.",
-      "Nifty Smallcap index close and change: Pull from NSE official EOD.",
-      "Brent crude latestReading/change: Use ICE settlement post-publication or credible terminal.",
-      "WTI crude latestReading/change: Use NYMEX settlement or EIA-linked source."
+      "India VIX: Retrieve at open",
+      "Midcap/Smallcap indices: Add from NSE at open",
+      "Key assets (Brent, WTI, DXY, USDINR, Gold, yields): Fetch from Reuters/Bloomberg",
+      "Asian/US markets: Update once markets open",
+      "Options Setup: Fetch NSE option‑chain data"
     ],
     "change": null,
     "changePercent": null,
     "status": "verified",
     "source": "MarketPulse analysis based on verified inputs",
-    "asOf": "2026-07-18T03:45:00.000Z"
+    "asOf": "2026-07-20T00:00:00.000Z"
   },
   "tradingPlan": {
     "gapUp": {
       "value": [
-        "Sustained reclaim of Nifty 24,420 with breadth >60% advancers.",
-        "Only after spot breaks and holds above first resistance (Nifty 24,420 / Bank Nifty 58,900) for 15-min with positive breadth."
+        "GIFT Nifty > 24,350",
+        "Data unavailable"
       ],
       "change": null,
       "changePercent": null,
       "status": "verified",
       "source": "MarketPulse analysis based on verified inputs",
-      "asOf": "2026-07-18T03:45:00.000Z"
+      "asOf": "2026-07-20T00:00:00.000Z"
     },
     "flat": {
       "value": [
-        "Inside 24,180–24,420; wait for opening-range break.",
-        "Within 24,180–24,420 on Nifty or into event headlines; prefer patience."
+        "24,250–24,350",
+        "Data unavailable"
       ],
       "change": null,
       "changePercent": null,
       "status": "verified",
       "source": "MarketPulse analysis based on verified inputs",
-      "asOf": "2026-07-18T03:45:00.000Z"
+      "asOf": "2026-07-20T00:00:00.000Z"
     },
     "gapDown": {
       "value": [
-        "Clean break below 24,050 with futures/US cues weak.",
-        "Only after spot breaks below first support (Nifty 24,180 / Bank Nifty 58,050) with weak breadth and futures confirmation."
+        "< 24,250",
+        "Data unavailable"
       ],
       "change": null,
       "changePercent": null,
       "status": "verified",
       "source": "MarketPulse analysis based on verified inputs",
-      "asOf": "2026-07-18T03:45:00.000Z"
+      "asOf": "2026-07-20T00:00:00.000Z"
     }
   },
   "footer": {

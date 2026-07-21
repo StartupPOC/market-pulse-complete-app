@@ -218,10 +218,10 @@ export function SectorRotationTable({ sectors }: { sectors: SectorRow[] }) {
                 </td>
                 <td className="px-4 py-8">
                   <ul className="list-disc space-y-1 pl-5 text-sm leading-[1.65]">
-                    {(sector.whyMoving.value ?? []).map((item) => <li key={item}>{item}</li>)}
+                    {(sector.whyMoving.value ?? []).map((item, itemIndex) => <li key={`${readableText(item)}-${itemIndex}`}>{readableText(item)}</li>)}
                   </ul>
                 </td>
-                <td className="px-4 py-8 text-sm leading-[1.65]">{(sector.beneficiaries.value ?? []).join(" · ")}</td>
+                <td className="px-4 py-8 text-sm leading-[1.65]">{(sector.beneficiaries.value ?? []).map(readableText).filter(Boolean).join(" · ")}</td>
                 <td className="px-4 py-8">
                   <strong className={`block text-sm font-black ${meta.textColor}`}>{displayValue(sector.bestFnoPick)}</strong>
                   <span className="mt-2 inline-block rounded-md px-3 py-1.5 text-xs font-black text-white" style={{ backgroundColor: meta.color }}>
@@ -290,7 +290,37 @@ export function MacroCalendarCard({ events }: { events: MacroEvent[] }) {
 }
 
 export function KeyRisksCard({ risks }: { risks: DataPoint<string[]> }) {
-  return <SectionCard title="Key Risks Today"><div className="space-y-4">{(risks.value ?? []).map((risk) => <div className="grid grid-cols-[30px_1fr] gap-3" key={risk}><span className="grid h-7 w-7 place-items-center rounded-full bg-red-50 font-black text-pulse-red">!</span><p className="text-sm leading-6">{risk}</p></div>)}</div></SectionCard>;
+  return <SectionCard title="Key Risks Today"><div className="space-y-4">{(risks.value ?? []).map((risk, riskIndex) => {
+    const text = readableText(risk);
+    return <div className="grid grid-cols-[30px_1fr] gap-3" key={`${text}-${riskIndex}`}><span className="grid h-7 w-7 place-items-center rounded-full bg-red-50 font-black text-pulse-red">!</span><p className="text-sm leading-6">{text || "Unavailable"}</p></div>;
+  })}</div></SectionCard>;
+}
+
+function readableText(value: unknown) {
+  if (typeof value === "string") return value;
+  if (typeof value === "number" || typeof value === "boolean") return String(value);
+  if (!value || typeof value !== "object") return "";
+
+  const record = value as Record<string, unknown>;
+  const preferred = [record.text, record.message, record.reason, record.value, record.title, record.label]
+    .find((item) => typeof item === "string" || typeof item === "number");
+
+  if (preferred !== undefined) return String(preferred);
+
+  return Object.values(record)
+    .filter((item) => typeof item === "string" || typeof item === "number")
+    .map(String)
+    .join(" ");
+}
+
+function emphasizeNumbers(value: unknown) {
+  const text = readableText(value);
+  const parts = text.split(/((?:[<>]=?)?₹?\d[\d,]*(?:\.\d+)?%?(?:-\w+)?)/g);
+  return parts.map((part, index) => (
+    /^(?:[<>]=?)?₹?\d[\d,]*(?:\.\d+)?%?(?:-\w+)?$/.test(part)
+      ? <strong className="font-black text-pulse-ink" key={`${part}-${index}`}>{part}</strong>
+      : part
+  ));
 }
 
 export function TradingPlanCard({ plan }: { plan: MorningBriefData["tradingPlan"] }) {
@@ -298,11 +328,14 @@ export function TradingPlanCard({ plan }: { plan: MorningBriefData["tradingPlan"
   return (
     <section id="risk" className="rounded-[7px] border border-pulse-border bg-white p-7">
       <h2 className="text-lg font-black uppercase text-pulse-green">Trading Plan For Today</h2>
-      <div className="mt-6 grid grid-cols-3 gap-8 max-lg:grid-cols-1">
-        {rows.map(([type, title, point]) => (
-          <div className="grid grid-cols-[48px_1fr] gap-4" key={title}>
+      <div className="mt-7 grid grid-cols-3 border-t border-[#d9dfdc] pt-7 max-lg:grid-cols-1">
+        {rows.map(([type, title, point], index) => (
+          <div className={`grid grid-cols-[54px_1fr] gap-5 ${index === 0 ? "pr-8 max-lg:pr-0" : index === 1 ? "border-l border-[#d9dfdc] px-8 max-lg:border-l-0 max-lg:border-t max-lg:px-0 max-lg:py-7" : "border-l border-[#d9dfdc] pl-8 max-lg:border-l-0 max-lg:border-t max-lg:pl-0 max-lg:pt-7"}`} key={title}>
             <span className={`grid h-12 w-12 place-items-center rounded-full text-2xl text-white ${type === "up" ? "bg-pulse-green" : type === "flat" ? "bg-pulse-yellow" : "bg-pulse-red"}`}>{type === "up" ? "↑" : type === "flat" ? "−" : "↓"}</span>
-            <div><strong className="text-xs uppercase">{title}</strong><ul className="mt-2 list-disc space-y-1 pl-5 text-sm">{(point.value ?? []).map((item) => <li key={item}>{item}</li>)}</ul></div>
+            <div>
+              <strong className="block text-sm font-black uppercase tracking-normal">{title}</strong>
+              <ul className="mt-4 list-disc space-y-2 pl-5 text-sm leading-6 text-[#293234]">{(point.value ?? []).map((item, itemIndex) => <li key={`${readableText(item)}-${itemIndex}`}>{emphasizeNumbers(item)}</li>)}</ul>
+            </div>
           </div>
         ))}
       </div>

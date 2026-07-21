@@ -1,6 +1,6 @@
 "use client";
 
-import { useMemo, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import type { MorningBriefData } from "@/lib/types";
 import {
   BtstIdeasCard,
@@ -30,13 +30,57 @@ function formatRefreshedTime(value: string) {
   }).format(new Date(value));
 }
 
+function istDateKey(value: Date) {
+  const parts = new Intl.DateTimeFormat("en-IN", {
+    day: "2-digit",
+    month: "2-digit",
+    year: "numeric",
+    timeZone: "Asia/Kolkata"
+  }).formatToParts(value);
+  const map = Object.fromEntries(parts.map((part) => [part.type, part.value]));
+  return `${map.year}-${map.month}-${map.day}`;
+}
+
+function istHour(value: Date) {
+  const hour = new Intl.DateTimeFormat("en-IN", {
+    hour: "2-digit",
+    hour12: false,
+    timeZone: "Asia/Kolkata"
+  }).format(value);
+  return Number(hour);
+}
+
+function safeText(value: unknown) {
+  if (typeof value === "string") return value;
+  if (typeof value === "number" || typeof value === "boolean") return String(value);
+  if (!value || typeof value !== "object") return "";
+  const record = value as Record<string, unknown>;
+  const preferred = [record.title, record.name, record.label, record.source, record.value]
+    .find((item) => typeof item === "string" || typeof item === "number");
+  return preferred === undefined ? "" : String(preferred);
+}
+
 export function MorningBriefClient({ initialData }: { initialData: MorningBriefData }) {
   const [alertsOpen, setAlertsOpen] = useState(false);
+  const [dataWarningOpen, setDataWarningOpen] = useState(false);
   const [mobile, setMobile] = useState("");
   const [alertStatus, setAlertStatus] = useState("");
   const data = initialData;
 
   const refreshedLabel = useMemo(() => formatRefreshedTime(data.lastRefreshed), [data.lastRefreshed]);
+
+  useEffect(() => {
+    const now = new Date();
+    const todayKey = istDateKey(now);
+    const dataDate = new Date(data.generatedAt);
+    const dataDateKey = Number.isNaN(dataDate.getTime()) ? "" : istDateKey(dataDate);
+    const warningKey = `marketPulseDataWarning:${todayKey}`;
+
+    if (istHour(now) >= 8 && dataDateKey && dataDateKey !== todayKey && localStorage.getItem(warningKey) !== "shown") {
+      setDataWarningOpen(true);
+      localStorage.setItem(warningKey, "shown");
+    }
+  }, [data.generatedAt]);
 
   const saveMobileAlert = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
@@ -70,10 +114,12 @@ export function MorningBriefClient({ initialData }: { initialData: MorningBriefD
           <IndexLevelsCard levels={data.indexLevels} />
         </section>
 
-        <section className="mt-7 grid grid-cols-[.9fr_1.15fr_.85fr] gap-5 max-xl:grid-cols-1">
-          <OptionsSetupCard options={data.optionsSetup} />
+        <section className="mt-7">
           <MacroCalendarCard events={data.macroCalendar} />
-          <KeyRisksCard risks={data.keyRisks} />
+          <div className="mt-5 grid grid-cols-2 gap-5 max-lg:grid-cols-1">
+            <OptionsSetupCard options={data.optionsSetup} />
+            <KeyRisksCard risks={data.keyRisks} />
+          </div>
         </section>
 
         <div className="mt-7">
@@ -93,7 +139,10 @@ export function MorningBriefClient({ initialData }: { initialData: MorningBriefD
         <section className="mx-auto flex max-w-[1180px] items-center gap-8 border-t border-pulse-border py-9 max-md:flex-col max-md:items-start" aria-label="Sources">
           <strong className="text-sm font-black uppercase">Sources</strong>
           <div className="flex flex-wrap gap-8">
-            {(data.footer.sources.value ?? []).map((item) => <a className="text-sm font-bold text-pulse-deep no-underline" href="#" key={item}>{item}</a>)}
+            {(data.footer.sources.value ?? []).map((item, index) => {
+              const text = safeText(item);
+              return <a className="text-sm font-bold text-pulse-deep no-underline" href="#" key={`${text}-${index}`}>{text || "Source"}</a>;
+            })}
           </div>
         </section>
       </main>
@@ -119,6 +168,19 @@ export function MorningBriefClient({ initialData }: { initialData: MorningBriefD
               <button className="mt-4 w-full rounded bg-pulse-green px-5 py-4 font-black text-white" type="submit">Save alert</button>
             </form>
             <p className="mt-3 min-h-6 font-bold text-pulse-green" role="status">{alertStatus}</p>
+          </div>
+        </div>
+      ) : null}
+
+      {dataWarningOpen ? (
+        <div className="fixed inset-0 z-50 grid place-items-center bg-black/35 p-5" onMouseDown={(event) => event.target === event.currentTarget && setDataWarningOpen(false)}>
+          <div className="relative w-full max-w-[460px] rounded-[7px] bg-white p-7 shadow-2xl">
+            <button className="absolute right-4 top-3 text-3xl leading-none" type="button" aria-label="Close data warning" onClick={() => setDataWarningOpen(false)}>&times;</button>
+            <h2 className="font-serif text-3xl font-black">Data update failed</h2>
+            <p className="mt-3 leading-7 text-pulse-muted">
+              Today&apos;s market brief could not be downloaded after 8:00 AM IST, so this page is showing the previous available data.
+            </p>
+            <button className="mt-5 rounded bg-pulse-green px-5 py-3 font-black text-white" type="button" onClick={() => setDataWarningOpen(false)}>OK</button>
           </div>
         </div>
       ) : null}

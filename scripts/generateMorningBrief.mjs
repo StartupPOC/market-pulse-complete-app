@@ -310,7 +310,11 @@ async function callOpenAI({ apiKey, body }) {
   throw lastError;
 }
 
-function applyPayloadRuntimeOverrides(payload) {
+function runtimeInstruction(generatedAt) {
+  return `\n\nRUNTIME CONTEXT:\n- Current run timestamp: ${generatedAt}\n- Timezone: Asia/Kolkata\n- Generate the brief for the current Indian market date implied by this timestamp.\n- metadata.date, metadata.day, preparedTimeIST, dataCutoffTimeIST, and every displayed date must reflect the latest verified market data found for this run.\n- Do not reuse old dates from examples or previous stored JSON.\n- If latest available market data is from an earlier trading session, state that exact data date in metadata.dataQualityNote and dataGaps.`;
+}
+
+function applyPayloadRuntimeOverrides(payload, generatedAt) {
   const nextPayload = structuredClone(payload);
 
   if (process.env.OPENAI_MODEL) {
@@ -327,6 +331,14 @@ function applyPayloadRuntimeOverrides(payload) {
         ? { ...tool, search_context_size: process.env.OPENAI_SEARCH_CONTEXT_SIZE }
         : tool
     ));
+  }
+
+  if (Array.isArray(nextPayload.input)) {
+    const userMessage = nextPayload.input.find((item) => item?.role === "user" && Array.isArray(item.content));
+    const textBlock = userMessage?.content?.find((block) => typeof block?.text === "string");
+    if (textBlock && !textBlock.text.includes("RUNTIME CONTEXT:")) {
+      textBlock.text += runtimeInstruction(generatedAt);
+    }
   }
 
   return nextPayload;
@@ -411,7 +423,10 @@ function sourceTimestamp(metadata, fallback) {
 }
 
 function formatDateLabel(metadata, fallbackTimestamp) {
-  const source = parseIstDate(metadata?.date) || fallbackTimestamp;
+  const source = parseIstDate(metadata?.dataCutoffTimeIST)
+    || parseIstDate(metadata?.preparedTimeIST)
+    || parseIstDate(metadata?.date)
+    || fallbackTimestamp;
   const date = new Date(source);
   if (Number.isNaN(date.getTime())) {
     return normalizeText(metadata?.date, "Date unavailable").toUpperCase();
@@ -794,7 +809,7 @@ async function generateWithOpenAI({ rawMarketData, template, generatedAt }) {
 
   const payload = await loadOpenAiPayload();
   if (payload) {
-    const requestBody = applyPayloadRuntimeOverrides(payload);
+    const requestBody = applyPayloadRuntimeOverrides(payload, generatedAt);
 
     console.log("Generating morning brief with configured OpenAI payload...");
     const parsedResponse = await callOpenAI({ apiKey, body: requestBody });

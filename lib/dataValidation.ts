@@ -1,9 +1,26 @@
 import type { DataPoint, MorningBriefData } from "./types";
+import { morningBriefData } from "./morningBriefData";
 
 const STALE_AFTER_HOURS = 48;
 
 function isDataPoint(value: unknown): value is DataPoint<unknown> {
   return Boolean(value && typeof value === "object" && "status" in value && "source" in value && "asOf" in value);
+}
+
+function isDataPointShape(value: unknown): value is DataPoint<unknown> {
+  return Boolean(value && typeof value === "object" && "value" in value && "status" in value && "source" in value && "asOf" in value);
+}
+
+function markUnavailable<T>(point: DataPoint<T>, now: Date): DataPoint<T> {
+  return {
+    ...point,
+    value: null,
+    change: null,
+    changePercent: null,
+    status: "unavailable",
+    source: "Data unavailable",
+    asOf: now.toISOString()
+  };
 }
 
 function validatePoint<T>(point: DataPoint<T>, now: Date): DataPoint<T> {
@@ -24,6 +41,51 @@ function validatePoint<T>(point: DataPoint<T>, now: Date): DataPoint<T> {
   return point;
 }
 
+function coerceToTemplateShape(template: unknown, value: unknown, now: Date): unknown {
+  if (isDataPointShape(template)) {
+    if (!isDataPoint(value)) {
+      return markUnavailable(template, now);
+    }
+
+    const merged = {
+      ...template,
+      ...value,
+      change: typeof value.change === "number" ? value.change : null,
+      changePercent: typeof value.changePercent === "number" ? value.changePercent : null
+    } as DataPoint<unknown>;
+
+    if (Array.isArray(template.value) && !Array.isArray(merged.value)) {
+      return markUnavailable(template, now);
+    }
+
+    return validatePoint(merged, now);
+  }
+
+  if (Array.isArray(template)) {
+    if (!Array.isArray(value)) {
+      return template;
+    }
+
+    if (template.length === 0) {
+      return value;
+    }
+
+    return value.map((item, index) => coerceToTemplateShape(template[Math.min(index, template.length - 1)], item, now));
+  }
+
+  if (template && typeof template === "object") {
+    const candidate = value && typeof value === "object" ? value as Record<string, unknown> : {};
+    return Object.fromEntries(
+      Object.entries(template).map(([key, templateValue]) => [
+        key,
+        coerceToTemplateShape(templateValue, candidate[key], now)
+      ])
+    );
+  }
+
+  return value ?? template;
+}
+
 function deepValidate(value: unknown, now: Date): unknown {
   if (Array.isArray(value)) {
     return value.map((item) => deepValidate(item, now));
@@ -41,9 +103,11 @@ function deepValidate(value: unknown, now: Date): unknown {
 }
 
 export function getValidatedMorningBriefData(data: MorningBriefData): MorningBriefData {
-  const validated = deepValidate(data, new Date()) as MorningBriefData;
+  const now = new Date();
+  const shapeSafeData = coerceToTemplateShape(morningBriefData, data, now);
+  const validated = deepValidate(shapeSafeData, now) as MorningBriefData;
   return {
     ...validated,
-    lastRefreshed: new Date().toISOString()
+    lastRefreshed: validated.lastRefreshed || data.lastRefreshed || now.toISOString()
   };
 }

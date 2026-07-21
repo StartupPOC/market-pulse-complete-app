@@ -510,6 +510,49 @@ function levelValue(level) {
   return parseNumber(level?.level ?? level?.value ?? level?.price);
 }
 
+function isAvailablePoint(point) {
+  return Boolean(point && point.status !== "unavailable" && point.value !== null && point.value !== undefined);
+}
+
+function countAvailablePoints(points) {
+  return points.filter(isAvailablePoint).length;
+}
+
+function hasUsefulRows(rows, pickPoint, minimum) {
+  return Array.isArray(rows) && rows.filter((row) => isAvailablePoint(pickPoint(row))).length >= minimum;
+}
+
+function validateGeneratedBriefQuality(data) {
+  const availableSnapshotCount = countAvailablePoints([
+    data.marketSnapshot?.nifty,
+    data.marketSnapshot?.bankNifty,
+    data.marketSnapshot?.giftNifty,
+    data.marketSnapshot?.indiaVix
+  ]);
+  const availableGlobalCueCount = (data.globalCues || []).filter((cue) => isAvailablePoint(cue.metric)).length;
+  const hasFlows = isAvailablePoint(data.fiiDii?.fiiNet) || isAvailablePoint(data.fiiDii?.diiNet);
+  const hasSectors = hasUsefulRows(data.sectors, (sector) => sector.moneyFlowScore, 3);
+  const hasIdeas = hasUsefulRows(data.swingOpportunities, (item) => item.stock, 3)
+    || hasUsefulRows(data.btstIdeas, (item) => item.stock, 3);
+  const hasLevels = countAvailablePoints([
+    data.indexLevels?.resistance1,
+    data.indexLevels?.support1
+  ]) >= 2;
+
+  const failures = [];
+  if (availableSnapshotCount < 2) failures.push(`only ${availableSnapshotCount}/4 market snapshot values available`);
+  if (availableGlobalCueCount < 2) failures.push(`only ${availableGlobalCueCount} global cues available`);
+  if (!hasFlows) failures.push("FII/DII flow unavailable");
+  if (!hasSectors) failures.push("sector rotation is empty or too sparse");
+  if (!hasIdeas) failures.push("watchlists are empty or too sparse");
+  if (!hasLevels) failures.push("index support/resistance levels are too sparse");
+
+  return {
+    ok: failures.length === 0,
+    failures
+  };
+}
+
 function convertOpenAiPayloadResult(result, template, fallbackGeneratedAt) {
   const cards = result.webpage_cards || result.webpageCards || {};
   const metadata = result.metadata || {};
@@ -889,7 +932,21 @@ async function main() {
     console.error(error);
   }
 
-  const data = generated ?? existing ?? template;
+  if (generated) {
+    const quality = validateGeneratedBriefQuality(generated);
+    if (!quality.ok) {
+      console.error("Morning brief data was too sparse. Keeping previous data instead.");
+      quality.failures.forEach((failure) => console.error(`- ${failure}`));
+      generated = null;
+    }
+  }
+
+  if (!generated && existing) {
+    console.log("No complete new morning brief was written. Existing data remains unchanged.");
+    return;
+  }
+
+  const data = generated ?? template;
   const nextData = {
     ...data,
     generatedAt: data.generatedAt || generatedAt,

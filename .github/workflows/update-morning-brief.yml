@@ -2,6 +2,15 @@ name: Update Morning Brief
 
 on:
   workflow_dispatch:
+    inputs:
+      force_refresh:
+        description: "Call OpenAI even if today's data already exists"
+        required: false
+        default: "false"
+        type: choice
+        options:
+          - "false"
+          - "true"
   schedule:
     # 5:00 AM IST, Monday-Friday. GitHub Actions schedules use UTC, so this runs Sunday-Thursday at 11:30 PM UTC.
     - cron: "30 23 * * 0-4"
@@ -35,6 +44,7 @@ jobs:
           OPENAI_SEARCH_CONTEXT_SIZE: medium
           OPENAI_MAX_ATTEMPTS: "3"
           OPENAI_RETRY_DELAY_MS: "20000"
+          OPENAI_FORCE_REFRESH: ${{ github.event.inputs.force_refresh || 'false' }}
         run: npm run generate:brief
 
       - name: Commit updated data

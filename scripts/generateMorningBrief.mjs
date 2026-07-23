@@ -132,6 +132,35 @@ function toIstIso(date = new Date()) {
   return `${istDate.toISOString().replace("Z", "")}+05:30`;
 }
 
+function istDateKey(value) {
+  if (!value) return "";
+
+  const date = new Date(value);
+  if (Number.isNaN(date.getTime())) return "";
+
+  const parts = new Intl.DateTimeFormat("en-CA", {
+    timeZone: "Asia/Kolkata",
+    year: "numeric",
+    month: "2-digit",
+    day: "2-digit"
+  }).formatToParts(date);
+  const byType = Object.fromEntries(parts.map((part) => [part.type, part.value]));
+  return `${byType.year}-${byType.month}-${byType.day}`;
+}
+
+function forceRefreshEnabled() {
+  return /^(1|true|yes)$/i.test(process.env.OPENAI_FORCE_REFRESH || "");
+}
+
+function alreadyRefreshedToday(existing, generatedAt) {
+  if (!existing) return false;
+
+  const existingTimestamp = existing.lastRefreshed || existing.generatedAt;
+  if (!existingTimestamp) return false;
+
+  return istDateKey(existingTimestamp) === istDateKey(generatedAt);
+}
+
 function validateDataPoint(point, pathLabel) {
   if (!point || typeof point !== "object" || Array.isArray(point)) {
     throw new Error(`${pathLabel} must be a data point object.`);
@@ -921,9 +950,15 @@ async function generateWithOpenAI({ rawMarketData, template, generatedAt }) {
 async function main() {
   const generatedAt = toIstIso();
   const template = await loadMockMorningBriefData();
-  const rawMarketData = await loadRawMarketData();
   const existing = await loadExistingMorningBriefData();
   let generated = null;
+
+  if (!forceRefreshEnabled() && alreadyRefreshedToday(existing, generatedAt)) {
+    console.log(`Morning brief already refreshed today (${existing.lastRefreshed || existing.generatedAt}). Skipping OpenAI call.`);
+    return;
+  }
+
+  const rawMarketData = await loadRawMarketData();
 
   try {
     generated = await generateWithOpenAI({ rawMarketData, template, generatedAt });

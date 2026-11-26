@@ -1,14 +1,14 @@
 {
-  "generatedAt": "2026-11-18T00:00:00.000Z",
-  "lastRefreshed": "2026-11-18T10:08:41.965+05:30",
+  "generatedAt": "2026-11-26T00:00:00.000Z",
+  "lastRefreshed": "2026-11-26T10:48:52.786+05:30",
   "page": {
     "dateLabel": {
-      "value": "WED, 18 NOVEMBER 2026",
+      "value": "THU, 26 NOVEMBER 2026",
       "change": null,
       "changePercent": null,
       "status": "verified",
       "source": "MarketPulse analysis based on verified inputs",
-      "asOf": "2026-11-18T00:00:00.000Z"
+      "asOf": "2026-11-26T00:00:00.000Z"
     },
     "title": {
       "value": "Morning Market Brief",
@@ -16,15 +16,15 @@
       "changePercent": null,
       "status": "verified",
       "source": "MarketPulse analysis based on verified inputs",
-      "asOf": "2026-11-18T00:00:00.000Z"
+      "asOf": "2026-11-26T00:00:00.000Z"
     },
     "summary": {
-      "value": "Oil price stability and lack of global cues suggest range‑bound start; domestic flows supportive",
+      "value": "Cautious optimism globally; energy strength supports cyclicals",
       "change": null,
       "changePercent": null,
       "status": "verified",
       "source": "MarketPulse analysis based on verified inputs",
-      "asOf": "2026-11-18T00:00:00.000Z"
+      "asOf": "2026-11-26T00:00:00.000Z"
     },
     "bias": {
       "value": "Bullish",
@@ -32,33 +32,33 @@
       "changePercent": null,
       "status": "verified",
       "source": "MarketPulse analysis based on verified inputs",
-      "asOf": "2026-11-18T00:00:00.000Z"
+      "asOf": "2026-11-26T00:00:00.000Z"
     },
     "timestamp": {
-      "value": "10:00:00",
+      "value": "10:00 IST",
       "change": null,
       "changePercent": null,
       "status": "verified",
       "source": "MarketPulse analysis based on verified inputs",
-      "asOf": "2026-11-18T00:00:00.000Z"
+      "asOf": "2026-11-26T00:00:00.000Z"
     }
   },
   "moodIndex": {
     "score": {
-      "value": 60,
+      "value": 80,
       "change": null,
       "changePercent": null,
       "status": "verified",
       "source": "MarketPulse analysis based on verified inputs",
-      "asOf": "2026-11-18T00:00:00.000Z"
+      "asOf": "2026-11-26T00:00:00.000Z"
     },
     "label": {
-      "value": "Greed",
+      "value": "Extreme Greed",
       "change": null,
       "changePercent": null,
       "status": "verified",
       "source": "MarketPulse analysis based on verified inputs",
-      "asOf": "2026-11-18T00:00:00.000Z"
+      "asOf": "2026-11-26T00:00:00.000Z"
     },
     "ranges": [
       {
@@ -90,36 +90,36 @@
   },
   "marketSnapshot": {
     "nifty": {
+      "value": 25819.25,
+      "change": 1.85,
+      "changePercent": 1.85,
+      "status": "verified",
+      "source": "FlashFinance",
+      "asOf": "25 Nov 2026 close"
+    },
+    "bankNifty": {
+      "value": 63703.25,
+      "change": 1.79,
+      "changePercent": 1.79,
+      "status": "verified",
+      "source": "FlashFinance",
+      "asOf": "25 Nov 2026 close"
+    },
+    "giftNifty": {
       "value": null,
       "change": null,
       "changePercent": null,
       "status": "unavailable",
       "source": "Data unavailable",
-      "asOf": "2026-11-18T00:00:00.000Z"
-    },
-    "bankNifty": {
-      "value": 62273.3,
-      "change": 697.4,
-      "changePercent": 1.13,
-      "status": "verified",
-      "source": "NSE",
-      "asOf": "2026-11-17T00:00:00.000Z"
-    },
-    "giftNifty": {
-      "value": 25278.5,
-      "change": 108.9,
-      "changePercent": 0.43,
-      "status": "verified",
-      "source": "EquityPandit NSE IX feed",
-      "asOf": "18 Nov 2026, ~09:08 IST"
+      "asOf": "2026-11-26T00:00:00.000Z"
     },
     "indiaVix": {
-      "value": 15.39,
-      "change": -1.85,
-      "changePercent": null,
+      "value": 17.69,
+      "change": 0.16,
+      "changePercent": 0.16,
       "status": "verified",
-      "source": "NSE VIX",
-      "asOf": "2026-11-17T00:00:00.000Z"
+      "source": "AliceBlue/FlashFinance",
+      "asOf": "25 Nov end"
     }
   },
   "globalCues": [
@@ -134,7 +134,7 @@
         "changePercent": null,
         "status": "unavailable",
         "source": "Data unavailable",
-        "asOf": "2026-11-18T00:00:00.000Z"
+        "asOf": "2026-11-26T00:00:00.000Z"
       }
     },
     {
@@ -148,27 +148,27 @@
         "changePercent": null,
         "status": "unavailable",
         "source": "Data unavailable",
-        "asOf": "2026-11-18T00:00:00.000Z"
+        "asOf": "2026-11-26T00:00:00.000Z"
       }
     },
     {
       "name": "Brent Crude",
-      "displayValue": "~$93.1",
-      "changeLabel": "+0.8%",
+      "displayValue": "USD 94.6–94.8/bbl",
+      "changeLabel": "+3.5%",
       "tone": "positive",
       "metric": {
-        "value": 93.1,
-        "change": 0.8,
-        "changePercent": 0.8,
+        "value": 94.6,
+        "change": 3.5,
+        "changePercent": 3.5,
         "status": "verified",
-        "source": "AP News",
-        "asOf": "2026-11-18T00:00:00.000Z"
+        "source": "AP / Tindex / Reddit",
+        "asOf": "25–26 Nov"
       }
     },
     {
       "name": "USD Index",
       "displayValue": "Unavailable",
-      "changeLabel": "Unavailable",
+      "changeLabel": "Data unavailable",
       "tone": "neutral",
       "metric": {
         "value": null,
@@ -176,79 +176,79 @@
         "changePercent": null,
         "status": "unavailable",
         "source": "Data unavailable",
-        "asOf": "2026-11-18T00:00:00.000Z"
+        "asOf": "2026-11-26T00:00:00.000Z"
       }
     },
     {
       "name": "Gold (Spot)",
-      "displayValue": "~$3,852/oz",
-      "changeLabel": "+0.03%",
+      "displayValue": "₹12,327/g",
+      "changeLabel": "− ₹1",
       "tone": "positive",
       "metric": {
-        "value": 3852,
-        "change": 0.03,
-        "changePercent": 0.03,
+        "value": 12327,
+        "change": 1,
+        "changePercent": null,
         "status": "verified",
-        "source": "CompanyStockPrice",
-        "asOf": "2026-11-18T00:00:00.000Z"
+        "source": "Goodreturns",
+        "asOf": "2001-11-26T00:00:00.000Z"
       }
     }
   ],
   "fiiDii": {
     "fiiNet": {
-      "value": 4195,
-      "change": 4195,
+      "value": 122101,
+      "change": 122101,
       "changePercent": null,
       "status": "verified",
-      "source": "StockParser / NSE provisional data",
-      "asOf": "2026-11-17T00:00:00.000Z"
+      "source": "Tapetide",
+      "asOf": "2026-11-01T00:00:00.000Z"
     },
     "diiNet": {
-      "value": 197,
-      "change": 197,
+      "value": 60528,
+      "change": 60528,
       "changePercent": null,
       "status": "verified",
-      "source": "StockParser / NSE provisional data",
-      "asOf": "2026-11-17T00:00:00.000Z"
+      "source": "Tapetide",
+      "asOf": "2026-11-01T00:00:00.000Z"
     },
     "interpretation": {
-      "value": "Strong net inflow from FIIs and DIIs — bullish bias",
+      "value": "FII strength outweighs DII selling",
       "change": null,
       "changePercent": null,
       "status": "verified",
-      "source": "StockParser / NSE provisional data",
-      "asOf": "2026-11-17T00:00:00.000Z"
+      "source": "Tapetide",
+      "asOf": "2026-11-01T00:00:00.000Z"
     }
   },
   "confidence": {
     "score": {
-      "value": 6,
+      "value": 8,
       "change": null,
       "changePercent": null,
       "status": "verified",
       "source": "MarketPulse analysis based on verified inputs",
-      "asOf": "2026-11-18T00:00:00.000Z"
+      "asOf": "2026-11-26T00:00:00.000Z"
     },
     "label": {
-      "value": "Cautiously Optimistic",
+      "value": "Bullish",
       "change": null,
       "changePercent": null,
       "status": "verified",
       "source": "MarketPulse analysis based on verified inputs",
-      "asOf": "2026-11-18T00:00:00.000Z"
+      "asOf": "2026-11-26T00:00:00.000Z"
     }
   },
   "sectors": [
     {
       "rank": 1,
-      "sector": "Financials (Banking)",
+      "sector": "Banks",
       "moneyFlowScore": {
-        "value": 80,
+        "value": 75,
         "change": null,
         "changePercent": null,
         "status": "verified",
         "source": "MarketPulse analysis based on verified inputs",
-        "asOf": "2026-11-18T00:00:00.000Z"
+        "asOf": "2026-11-26T00:00:00.000Z"
       },
       "statusVsPrevious": {
         "value": "Leading",
@@ -256,50 +256,103 @@
         "changePercent": null,
         "status": "verified",
         "source": "MarketPulse analysis based on verified inputs",
-        "asOf": "2026-11-18T00:00:00.000Z"
+        "asOf": "2026-11-26T00:00:00.000Z"
       },
       "whyMoving": {
         "value": [
-          "Bank Nifty up 1.1% vs Nifty 0.4%",
-          "Strong FII flows and sector leadership",
-          "Positive momentum, look for continuation"
+          "Outperformance vs Nifty",
+          "FII flows and market breadth",
+          "Positive bias"
         ],
         "change": null,
         "changePercent": null,
         "status": "verified",
         "source": "MarketPulse analysis based on verified inputs",
-        "asOf": "2026-11-18T00:00:00.000Z"
+        "asOf": "2026-11-26T00:00:00.000Z"
       },
       "beneficiaries": {
         "value": [
+          "ICICI Bank",
           "HDFC Bank",
-          "Kotak Bank"
+          "SBIN"
         ],
         "change": null,
         "changePercent": null,
         "status": "verified",
         "source": "MarketPulse analysis based on verified inputs",
-        "asOf": "2026-11-18T00:00:00.000Z"
+        "asOf": "2026-11-26T00:00:00.000Z"
       },
       "bestFnoPick": {
-        "value": "HDFC Bank",
+        "value": "ICICI Bank",
         "change": null,
         "changePercent": null,
         "status": "verified",
         "source": "MarketPulse analysis based on verified inputs",
-        "asOf": "2026-11-18T00:00:00.000Z"
+        "asOf": "2026-11-26T00:00:00.000Z"
       }
     },
     {
       "rank": 2,
-      "sector": "Energy",
+      "sector": "Energy/Oil & Gas",
+      "moneyFlowScore": {
+        "value": 70,
+        "change": null,
+        "changePercent": null,
+        "status": "verified",
+        "source": "MarketPulse analysis based on verified inputs",
+        "asOf": "2026-11-26T00:00:00.000Z"
+      },
+      "statusVsPrevious": {
+        "value": "Strong",
+        "change": null,
+        "changePercent": null,
+        "status": "verified",
+        "source": "MarketPulse analysis based on verified inputs",
+        "asOf": "2026-11-26T00:00:00.000Z"
+      },
+      "whyMoving": {
+        "value": [
+          "Energy index up on oil rally",
+          "Brent crude gains",
+          "Bullish bias"
+        ],
+        "change": null,
+        "changePercent": null,
+        "status": "verified",
+        "source": "MarketPulse analysis based on verified inputs",
+        "asOf": "2026-11-26T00:00:00.000Z"
+      },
+      "beneficiaries": {
+        "value": [
+          "IOC",
+          "BPCL",
+          "ONGC"
+        ],
+        "change": null,
+        "changePercent": null,
+        "status": "verified",
+        "source": "MarketPulse analysis based on verified inputs",
+        "asOf": "2026-11-26T00:00:00.000Z"
+      },
+      "bestFnoPick": {
+        "value": "IOC",
+        "change": null,
+        "changePercent": null,
+        "status": "verified",
+        "source": "MarketPulse analysis based on verified inputs",
+        "asOf": "2026-11-26T00:00:00.000Z"
+      }
+    },
+    {
+      "rank": 3,
+      "sector": "IT",
       "moneyFlowScore": {
         "value": 60,
         "change": null,
         "changePercent": null,
         "status": "verified",
         "source": "MarketPulse analysis based on verified inputs",
-        "asOf": "2026-11-18T00:00:00.000Z"
+        "asOf": "2026-11-26T00:00:00.000Z"
       },
       "statusVsPrevious": {
         "value": "Moderate",
@@ -307,70 +360,19 @@
         "changePercent": null,
         "status": "verified",
         "source": "MarketPulse analysis based on verified inputs",
-        "asOf": "2026-11-18T00:00:00.000Z"
+        "asOf": "2026-11-26T00:00:00.000Z"
       },
       "whyMoving": {
         "value": [
-          "Brent firm, WTI mixed",
-          "Oil prices supportive but US inventory may cap upside",
-          "Watch intraday crude moves"
+          "Global tech recovery signs",
+          "External cues supportive but volatile",
+          "Cautious bullish"
         ],
         "change": null,
         "changePercent": null,
         "status": "verified",
         "source": "MarketPulse analysis based on verified inputs",
-        "asOf": "2026-11-18T00:00:00.000Z"
-      },
-      "beneficiaries": {
-        "value": [
-          "ONGC",
-          "Reliance Energy"
-        ],
-        "change": null,
-        "changePercent": null,
-        "status": "verified",
-        "source": "MarketPulse analysis based on verified inputs",
-        "asOf": "2026-11-18T00:00:00.000Z"
-      },
-      "bestFnoPick": {
-        "value": "ONGC",
-        "change": null,
-        "changePercent": null,
-        "status": "verified",
-        "source": "MarketPulse analysis based on verified inputs",
-        "asOf": "2026-11-18T00:00:00.000Z"
-      }
-    },
-    {
-      "rank": 3,
-      "sector": "IT/Tech",
-      "moneyFlowScore": {
-        "value": 40,
-        "change": null,
-        "changePercent": null,
-        "status": "verified",
-        "source": "MarketPulse analysis based on verified inputs",
-        "asOf": "2026-11-18T00:00:00.000Z"
-      },
-      "statusVsPrevious": {
-        "value": "Weak",
-        "change": null,
-        "changePercent": null,
-        "status": "verified",
-        "source": "MarketPulse analysis based on verified inputs",
-        "asOf": "2026-11-18T00:00:00.000Z"
-      },
-      "whyMoving": {
-        "value": [
-          "Global tech outlook weak",
-          "Lack of global tech support, jittery volume",
-          "Cautious, avoid aggressive longs"
-        ],
-        "change": null,
-        "changePercent": null,
-        "status": "verified",
-        "source": "MarketPulse analysis based on verified inputs",
-        "asOf": "2026-11-18T00:00:00.000Z"
+        "asOf": "2026-11-26T00:00:00.000Z"
       },
       "beneficiaries": {
         "value": [
@@ -381,7 +383,7 @@
         "changePercent": null,
         "status": "verified",
         "source": "MarketPulse analysis based on verified inputs",
-        "asOf": "2026-11-18T00:00:00.000Z"
+        "asOf": "2026-11-26T00:00:00.000Z"
       },
       "bestFnoPick": {
         "value": "Infosys",
@@ -389,226 +391,225 @@
         "changePercent": null,
         "status": "verified",
         "source": "MarketPulse analysis based on verified inputs",
-        "asOf": "2026-11-18T00:00:00.000Z"
-      }
-    }
-  ],
-  "swingOpportunities": [
-    {
-      "stock": {
-        "value": "HDFC Bank",
-        "change": null,
-        "changePercent": null,
-        "status": "verified",
-        "source": "MarketPulse analysis based on verified inputs",
-        "asOf": "2026-11-18T00:00:00.000Z"
-      },
-      "sector": {
-        "value": "Swing long",
-        "change": null,
-        "changePercent": null,
-        "status": "verified",
-        "source": "MarketPulse analysis based on verified inputs",
-        "asOf": "2026-11-18T00:00:00.000Z"
-      },
-      "conviction": {
-        "value": "8/10",
-        "change": null,
-        "changePercent": null,
-        "status": "verified",
-        "source": "MarketPulse analysis based on verified inputs",
-        "asOf": "2026-11-18T00:00:00.000Z"
-      },
-      "reason": {
-        "value": "Banking leadership, FII flows",
-        "change": null,
-        "changePercent": null,
-        "status": "verified",
-        "source": "MarketPulse analysis based on verified inputs",
-        "asOf": "2026-11-18T00:00:00.000Z"
+        "asOf": "2026-11-26T00:00:00.000Z"
       }
     },
     {
-      "stock": {
-        "value": "ONGC",
+      "rank": 4,
+      "sector": "Pharma",
+      "moneyFlowScore": {
+        "value": 50,
         "change": null,
         "changePercent": null,
         "status": "verified",
         "source": "MarketPulse analysis based on verified inputs",
-        "asOf": "2026-11-18T00:00:00.000Z"
+        "asOf": "2026-11-26T00:00:00.000Z"
       },
-      "sector": {
-        "value": "Intraday momentum",
+      "statusVsPrevious": {
+        "value": "Neutral",
         "change": null,
         "changePercent": null,
         "status": "verified",
         "source": "MarketPulse analysis based on verified inputs",
-        "asOf": "2026-11-18T00:00:00.000Z"
+        "asOf": "2026-11-26T00:00:00.000Z"
       },
-      "conviction": {
-        "value": "6/10",
+      "whyMoving": {
+        "value": [
+          "Stable, no clear trend",
+          "Lack of domestic triggers",
+          "Hold/monitor"
+        ],
         "change": null,
         "changePercent": null,
         "status": "verified",
         "source": "MarketPulse analysis based on verified inputs",
-        "asOf": "2026-11-18T00:00:00.000Z"
+        "asOf": "2026-11-26T00:00:00.000Z"
       },
-      "reason": {
-        "value": "Brent crude support",
+      "beneficiaries": {
+        "value": [
+          "Sun Pharma",
+          "Dr Reddy's"
+        ],
         "change": null,
         "changePercent": null,
         "status": "verified",
         "source": "MarketPulse analysis based on verified inputs",
-        "asOf": "2026-11-18T00:00:00.000Z"
+        "asOf": "2026-11-26T00:00:00.000Z"
+      },
+      "bestFnoPick": {
+        "value": "Sun Pharma",
+        "change": null,
+        "changePercent": null,
+        "status": "verified",
+        "source": "MarketPulse analysis based on verified inputs",
+        "asOf": "2026-11-26T00:00:00.000Z"
       }
     },
     {
-      "stock": {
-        "value": "Infosys",
+      "rank": 5,
+      "sector": "Consumer",
+      "moneyFlowScore": {
+        "value": 45,
         "change": null,
         "changePercent": null,
         "status": "verified",
         "source": "MarketPulse analysis based on verified inputs",
-        "asOf": "2026-11-18T00:00:00.000Z"
+        "asOf": "2026-11-26T00:00:00.000Z"
       },
-      "sector": {
-        "value": "BTST watchlist",
+      "statusVsPrevious": {
+        "value": "Weak",
         "change": null,
         "changePercent": null,
         "status": "verified",
         "source": "MarketPulse analysis based on verified inputs",
-        "asOf": "2026-11-18T00:00:00.000Z"
+        "asOf": "2026-11-26T00:00:00.000Z"
       },
-      "conviction": {
-        "value": "5/10",
+      "whyMoving": {
+        "value": [
+          "Lagging index gains",
+          "Margin pressure, gold weak",
+          "Avoid new longs"
+        ],
         "change": null,
         "changePercent": null,
         "status": "verified",
         "source": "MarketPulse analysis based on verified inputs",
-        "asOf": "2026-11-18T00:00:00.000Z"
+        "asOf": "2026-11-26T00:00:00.000Z"
       },
-      "reason": {
-        "value": "Potential tech rebound",
+      "beneficiaries": {
+        "value": [
+          "Asian Paints",
+          "Nestle"
+        ],
         "change": null,
         "changePercent": null,
         "status": "verified",
         "source": "MarketPulse analysis based on verified inputs",
-        "asOf": "2026-11-18T00:00:00.000Z"
+        "asOf": "2026-11-26T00:00:00.000Z"
+      },
+      "bestFnoPick": {
+        "value": "Asian Paints",
+        "change": null,
+        "changePercent": null,
+        "status": "verified",
+        "source": "MarketPulse analysis based on verified inputs",
+        "asOf": "2026-11-26T00:00:00.000Z"
       }
     }
   ],
+  "swingOpportunities": [],
   "btstIdeas": [
     {
       "stock": {
-        "value": "Infosys",
+        "value": "ICICI Bank",
         "change": null,
         "changePercent": null,
         "status": "verified",
         "source": "MarketPulse analysis based on verified inputs",
-        "asOf": "2026-11-18T00:00:00.000Z"
+        "asOf": "2026-11-26T00:00:00.000Z"
       },
       "entry": {
-        "value": "₹1,130",
+        "value": "₹950",
         "change": null,
         "changePercent": null,
         "status": "verified",
         "source": "MarketPulse analysis based on verified inputs",
-        "asOf": "2026-11-18T00:00:00.000Z"
+        "asOf": "2026-11-26T00:00:00.000Z"
       },
       "stopLoss": {
-        "value": "₹1,110",
+        "value": "₹930",
         "change": null,
         "changePercent": null,
         "status": "verified",
         "source": "MarketPulse analysis based on verified inputs",
-        "asOf": "2026-11-18T00:00:00.000Z"
+        "asOf": "2026-11-26T00:00:00.000Z"
       },
       "target": {
-        "value": "₹1,160 / ₹1,180",
+        "value": "₹980 / ₹1,000",
         "change": null,
         "changePercent": null,
         "status": "verified",
         "source": "MarketPulse analysis based on verified inputs",
-        "asOf": "2026-11-18T00:00:00.000Z"
+        "asOf": "2026-11-26T00:00:00.000Z"
       }
     },
     {
       "stock": {
-        "value": "HDFC Bank",
+        "value": "IOC",
         "change": null,
         "changePercent": null,
         "status": "verified",
         "source": "MarketPulse analysis based on verified inputs",
-        "asOf": "2026-11-18T00:00:00.000Z"
+        "asOf": "2026-11-26T00:00:00.000Z"
       },
       "entry": {
-        "value": "₹1,780",
+        "value": "₹125",
         "change": null,
         "changePercent": null,
         "status": "verified",
         "source": "MarketPulse analysis based on verified inputs",
-        "asOf": "2026-11-18T00:00:00.000Z"
+        "asOf": "2026-11-26T00:00:00.000Z"
       },
       "stopLoss": {
-        "value": "₹1,740",
+        "value": "₹120",
         "change": null,
         "changePercent": null,
         "status": "verified",
         "source": "MarketPulse analysis based on verified inputs",
-        "asOf": "2026-11-18T00:00:00.000Z"
+        "asOf": "2026-11-26T00:00:00.000Z"
       },
       "target": {
-        "value": "₹1,830 / ₹1,870",
+        "value": "₹130 / ₹135",
         "change": null,
         "changePercent": null,
         "status": "verified",
         "source": "MarketPulse analysis based on verified inputs",
-        "asOf": "2026-11-18T00:00:00.000Z"
+        "asOf": "2026-11-26T00:00:00.000Z"
       }
     },
     {
       "stock": {
-        "value": "ONGC",
+        "value": "BPCL",
         "change": null,
         "changePercent": null,
         "status": "verified",
         "source": "MarketPulse analysis based on verified inputs",
-        "asOf": "2026-11-18T00:00:00.000Z"
+        "asOf": "2026-11-26T00:00:00.000Z"
       },
       "entry": {
-        "value": "₹210",
+        "value": "₹410",
         "change": null,
         "changePercent": null,
         "status": "verified",
         "source": "MarketPulse analysis based on verified inputs",
-        "asOf": "2026-11-18T00:00:00.000Z"
+        "asOf": "2026-11-26T00:00:00.000Z"
       },
       "stopLoss": {
-        "value": "₹205",
+        "value": "₹400",
         "change": null,
         "changePercent": null,
         "status": "verified",
         "source": "MarketPulse analysis based on verified inputs",
-        "asOf": "2026-11-18T00:00:00.000Z"
+        "asOf": "2026-11-26T00:00:00.000Z"
       },
       "target": {
-        "value": "₹220 / ₹225",
+        "value": "₹425 / ₹435",
         "change": null,
         "changePercent": null,
         "status": "verified",
         "source": "MarketPulse analysis based on verified inputs",
-        "asOf": "2026-11-18T00:00:00.000Z"
+        "asOf": "2026-11-26T00:00:00.000Z"
       }
     }
   ],
   "indexLevels": {
     "resistance1": {
-      "value": 25400,
+      "value": 26000,
       "change": null,
       "changePercent": null,
       "status": "verified",
       "source": "MarketPulse analysis based on verified inputs",
-      "asOf": "2026-11-18T00:00:00.000Z"
+      "asOf": "2026-11-26T00:00:00.000Z"
     },
     "resistance2": {
       "value": null,
@@ -616,15 +617,15 @@
       "changePercent": null,
       "status": "unavailable",
       "source": "Data unavailable",
-      "asOf": "2026-11-18T00:00:00.000Z"
+      "asOf": "2026-11-26T00:00:00.000Z"
     },
     "support1": {
-      "value": 25300,
+      "value": 25500,
       "change": null,
       "changePercent": null,
       "status": "verified",
       "source": "MarketPulse analysis based on verified inputs",
-      "asOf": "2026-11-18T00:00:00.000Z"
+      "asOf": "2026-11-26T00:00:00.000Z"
     },
     "support2": {
       "value": null,
@@ -632,15 +633,15 @@
       "changePercent": null,
       "status": "unavailable",
       "source": "Data unavailable",
-      "asOf": "2026-11-18T00:00:00.000Z"
+      "asOf": "2026-11-26T00:00:00.000Z"
     },
     "trend": {
-      "value": "Crude oil price movement",
+      "value": "Oil price rise",
       "change": null,
       "changePercent": null,
       "status": "verified",
       "source": "MarketPulse analysis based on verified inputs",
-      "asOf": "2026-11-18T00:00:00.000Z"
+      "asOf": "2026-11-26T00:00:00.000Z"
     },
     "bias": {
       "value": "Mild Positive",
@@ -648,25 +649,25 @@
       "changePercent": null,
       "status": "verified",
       "source": "MarketPulse analysis based on verified inputs",
-      "asOf": "2026-11-18T00:00:00.000Z"
+      "asOf": "2026-11-26T00:00:00.000Z"
     }
   },
   "optionsSetup": {
     "pcr": {
-      "value": null,
+      "value": 0.91,
       "change": null,
       "changePercent": null,
-      "status": "unavailable",
-      "source": "Data unavailable",
-      "asOf": "2026-11-18T00:00:00.000Z"
+      "status": "verified",
+      "source": "TBTflow / ChartMine",
+      "asOf": "2026-11-26T00:00:00.000Z"
     },
     "maxPain": {
-      "value": null,
+      "value": 25700,
       "change": null,
       "changePercent": null,
-      "status": "unavailable",
-      "source": "Data unavailable",
-      "asOf": "2026-11-18T00:00:00.000Z"
+      "status": "verified",
+      "source": "TBTflow / ChartMine",
+      "asOf": "2026-11-26T00:00:00.000Z"
     },
     "maxCallOi": {
       "value": null,
@@ -674,7 +675,7 @@
       "changePercent": null,
       "status": "unavailable",
       "source": "Data unavailable",
-      "asOf": "2026-11-18T00:00:00.000Z"
+      "asOf": "2026-11-26T00:00:00.000Z"
     },
     "maxPutOi": {
       "value": null,
@@ -682,7 +683,7 @@
       "changePercent": null,
       "status": "unavailable",
       "source": "Data unavailable",
-      "asOf": "2026-11-18T00:00:00.000Z"
+      "asOf": "2026-11-26T00:00:00.000Z"
     },
     "freshLongBuildUp": {
       "value": null,
@@ -690,7 +691,7 @@
       "changePercent": null,
       "status": "unavailable",
       "source": "Data unavailable",
-      "asOf": "2026-11-18T00:00:00.000Z"
+      "asOf": "2026-11-26T00:00:00.000Z"
     },
     "freshShortBuildUp": {
       "value": null,
@@ -698,42 +699,42 @@
       "changePercent": null,
       "status": "unavailable",
       "source": "Data unavailable",
-      "asOf": "2026-11-18T00:00:00.000Z"
+      "asOf": "2026-11-26T00:00:00.000Z"
     }
   },
   "macroCalendar": [
     {
       "time": {
-        "value": "18 Nov 2026, 21:00 IST",
+        "value": "Earlier this week",
         "change": null,
         "changePercent": null,
         "status": "verified",
-        "source": "Weekly calendar",
-        "asOf": "2026-11-18T00:00:00.000Z"
+        "source": "Kiplinger",
+        "asOf": "2026-11-26T00:00:00.000Z"
       },
       "event": {
-        "value": "US Crude Oil Inventories",
+        "value": "US PCE / Core PCE",
         "change": null,
         "changePercent": null,
         "status": "verified",
-        "source": "Weekly calendar",
-        "asOf": "2026-11-18T00:00:00.000Z"
+        "source": "Kiplinger",
+        "asOf": "2026-11-26T00:00:00.000Z"
       },
       "importance": {
         "value": 5,
         "change": null,
         "changePercent": null,
         "status": "verified",
-        "source": "Weekly calendar",
-        "asOf": "2026-11-18T00:00:00.000Z"
+        "source": "Kiplinger",
+        "asOf": "2026-11-26T00:00:00.000Z"
       },
       "affectedSectors": {
-        "value": "Energy",
+        "value": "All",
         "change": null,
         "changePercent": null,
         "status": "verified",
-        "source": "Weekly calendar",
-        "asOf": "2026-11-18T00:00:00.000Z"
+        "source": "Kiplinger",
+        "asOf": "2026-11-26T00:00:00.000Z"
       },
       "expectedImpact": {
         "value": null,
@@ -741,33 +742,75 @@
         "changePercent": null,
         "status": "unavailable",
         "source": "Data unavailable",
-        "asOf": "2026-11-18T00:00:00.000Z"
+        "asOf": "2026-11-26T00:00:00.000Z"
       }
     },
     {
       "time": {
-        "value": "18–19 Nov 2026",
+        "value": "26 Nov",
         "change": null,
         "changePercent": null,
         "status": "verified",
-        "source": "Typical economic schedule",
-        "asOf": "2026-11-18T00:00:00.000Z"
+        "source": "Kiplinger",
+        "asOf": "2026-11-26T00:00:00.000Z"
       },
       "event": {
-        "value": "US Fed minutes / speeches",
+        "value": "No major data today",
         "change": null,
         "changePercent": null,
         "status": "verified",
-        "source": "Typical economic schedule",
-        "asOf": "2026-11-18T00:00:00.000Z"
+        "source": "Kiplinger",
+        "asOf": "2026-11-26T00:00:00.000Z"
+      },
+      "importance": {
+        "value": 1,
+        "change": null,
+        "changePercent": null,
+        "status": "verified",
+        "source": "Kiplinger",
+        "asOf": "2026-11-26T00:00:00.000Z"
+      },
+      "affectedSectors": {
+        "value": "—",
+        "change": null,
+        "changePercent": null,
+        "status": "verified",
+        "source": "Kiplinger",
+        "asOf": "2026-11-26T00:00:00.000Z"
+      },
+      "expectedImpact": {
+        "value": "Neutral",
+        "change": null,
+        "changePercent": null,
+        "status": "verified",
+        "source": "Kiplinger",
+        "asOf": "2026-11-26T00:00:00.000Z"
+      }
+    },
+    {
+      "time": {
+        "value": "27–30 Nov",
+        "change": null,
+        "changePercent": null,
+        "status": "verified",
+        "source": "General calendar",
+        "asOf": "2026-11-26T00:00:00.000Z"
+      },
+      "event": {
+        "value": "Global central bank speeches",
+        "change": null,
+        "changePercent": null,
+        "status": "verified",
+        "source": "General calendar",
+        "asOf": "2026-11-26T00:00:00.000Z"
       },
       "importance": {
         "value": 3,
         "change": null,
         "changePercent": null,
         "status": "verified",
-        "source": "Typical economic schedule",
-        "asOf": "2026-11-18T00:00:00.000Z"
+        "source": "General calendar",
+        "asOf": "2026-11-26T00:00:00.000Z"
       },
       "affectedSectors": {
         "value": null,
@@ -775,107 +818,107 @@
         "changePercent": null,
         "status": "unavailable",
         "source": "Data unavailable",
-        "asOf": "2026-11-18T00:00:00.000Z"
+        "asOf": "2026-11-26T00:00:00.000Z"
       },
       "expectedImpact": {
-        "value": "Global yields/currency",
+        "value": "Volatility",
         "change": null,
         "changePercent": null,
         "status": "verified",
-        "source": "Typical economic schedule",
-        "asOf": "2026-11-18T00:00:00.000Z"
+        "source": "General calendar",
+        "asOf": "2026-11-26T00:00:00.000Z"
       }
     },
     {
       "time": {
-        "value": "--",
+        "value": "26–27 Nov",
         "change": null,
         "changePercent": null,
         "status": "verified",
-        "source": "RBI calendar (not today)",
-        "asOf": "2026-11-18T00:00:00.000Z"
+        "source": "Market schedule",
+        "asOf": "2026-11-26T00:00:00.000Z"
       },
       "event": {
-        "value": "RBI meeting – next scheduled",
+        "value": "US Thanksgiving holiday",
         "change": null,
         "changePercent": null,
         "status": "verified",
-        "source": "RBI calendar (not today)",
-        "asOf": "2026-11-18T00:00:00.000Z"
+        "source": "Market schedule",
+        "asOf": "2026-11-26T00:00:00.000Z"
       },
       "importance": {
         "value": 5,
         "change": null,
         "changePercent": null,
         "status": "verified",
-        "source": "RBI calendar (not today)",
-        "asOf": "2026-11-18T00:00:00.000Z"
+        "source": "Market schedule",
+        "asOf": "2026-11-26T00:00:00.000Z"
       },
       "affectedSectors": {
-        "value": "BFSI",
+        "value": "All",
         "change": null,
         "changePercent": null,
         "status": "verified",
-        "source": "RBI calendar (not today)",
-        "asOf": "2026-11-18T00:00:00.000Z"
+        "source": "Market schedule",
+        "asOf": "2026-11-26T00:00:00.000Z"
       },
       "expectedImpact": {
-        "value": "Rates and debt yields",
+        "value": "Low trading volumes",
         "change": null,
         "changePercent": null,
         "status": "verified",
-        "source": "RBI calendar (not today)",
-        "asOf": "2026-11-18T00:00:00.000Z"
+        "source": "Market schedule",
+        "asOf": "2026-11-26T00:00:00.000Z"
       }
     }
   ],
   "keyRisks": {
     "value": [
-      "Midcap & Smallcap Indices: Fetch from NSE/BSE live data",
-      "Dollar Index (DXY): Obtain from global FX feed",
-      "Indian 10Y yield: Fetch from RBI or India bond yield source",
-      "Options Setup – Nifty details: Fetch NSE option‑chain live data",
-      "Stock‑futures build‑up: Fetch F&O participant OI change data"
+      "GIFT Nifty: Fetch from GIFT terminal",
+      "US Markets / Asian Markets live: Integrate live feed",
+      "DXY, US 10Y, Indian 10Y yields: Add bond/yield data source",
+      "Stock futures build‑up: Fetch from exchange F&O files",
+      "Oil rally (~3–3.5%): Upward bias on energy index"
     ],
     "change": null,
     "changePercent": null,
     "status": "verified",
     "source": "MarketPulse analysis based on verified inputs",
-    "asOf": "2026-11-18T00:00:00.000Z"
+    "asOf": "2026-11-26T00:00:00.000Z"
   },
   "tradingPlan": {
     "gapUp": {
       "value": [
-        "FII inflows continue and Bank Nifty sustains strength",
-        "Data unavailable"
+        "Sustained FII flows and low volatility post‑gain",
+        "Break and close above resistance with low IV"
       ],
       "change": null,
       "changePercent": null,
       "status": "verified",
       "source": "MarketPulse analysis based on verified inputs",
-      "asOf": "2026-11-18T00:00:00.000Z"
+      "asOf": "2026-11-26T00:00:00.000Z"
     },
     "flat": {
       "value": [
-        "GIFT Nifty remains weak pre‑open",
-        "Data unavailable"
+        "Mixed cues, volatility stable",
+        "Between 25,500–26,000 for Nifty"
       ],
       "change": null,
       "changePercent": null,
       "status": "verified",
       "source": "MarketPulse analysis based on verified inputs",
-      "asOf": "2026-11-18T00:00:00.000Z"
+      "asOf": "2026-11-26T00:00:00.000Z"
     },
     "gapDown": {
       "value": [
-        "Any decline in crude or US yield would jar Energy and Financials",
-        "Data unavailable"
+        "Rising VIX, FII outflows, sector weakness",
+        "Bounce from support with momentum"
       ],
       "change": null,
       "changePercent": null,
       "status": "verified",
       "source": "MarketPulse analysis based on verified inputs",
-      "asOf": "2026-11-18T00:00:00.000Z"
+      "asOf": "2026-11-26T00:00:00.000Z"
     }
   },
   "footer": {
